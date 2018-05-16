@@ -1,0 +1,356 @@
+{
+  "blocks": {
+    "callToAction": {
+      "call": "THE NEXT STEP?",
+      "header": "Request a consultation call.",
+      "text": [
+        "Speak with a legal professional in an obligation-free ",
+        "initial consultation."
+      ],
+      "link": {
+        "text": "GET IN TOUCH",
+        "href": "/contact"
+      }
+    },
+    "footer": {
+      "bigText": "A team with experience & vision.",
+      "links": [
+        {"text": "SERVICES", "href": "/services"},
+        {"text": "OUR TEAM", "href": "/team"},
+        {"text": "ARTICLES", "href": "/articles"},
+        {"text": "CONTACT", "href": "/contact"}
+      ],
+      "contact": {
+        "call": "(310) 246-0316",
+        "visit": "433 N. Camden Drive, Suite 600, Beverly Hills",
+        "email": "akim@arthurkimlaw.com",
+        "follow": {
+          "visible": false,
+          "socials": [
+            {
+              "href": "http://linkedin.com",
+              "icon": "/img/linkedin.svg"
+            },
+            {
+              "href": "http://google.com",
+              "icon": "/img/googleplus.svg"
+            },
+            {
+              "href": "http://facebook.com",
+              "icon": "/img/facebook.svg"
+            },
+            {
+              "href": "http://twitter.com",
+              "icon": "/img/twitter.svg"
+            }
+          ]
+        }
+      }
+    },
+    "nav": {
+      "links": [
+        {
+          "href": "/",
+          "text": "HOME"
+        },
+        {
+          "href": "/profile",
+          "text": "ABOUT MR. KIM"
+        },
+        {
+          "href": "/services",
+          "text": "AREAS OF PRACTICE"
+        }
+      ],
+      "bigLink": {
+        "href": "/contact",
+        "text": "GET IN TOUCH"
+      }
+    }
+  },
+  "head": {
+    "title": "Preview - Arthur Kim Law Firm"
+  },
+  "pages": {
+    "home": {
+      "splash": {
+        "header": "Arthur Kim Law Firm",
+        "text": [
+          "Los Angeles Employment and Business Lawyer",
+          "Fighting for Employees and Businesses"
+        ]
+      },
+      "list": {
+        "header": "REPRESENTING CLIENTS IN:",
+        "listItems": [
+          "Wrongful Termination",
+          "Unpaid Wages / Overtime",
+          "Sexual Harrasment",
+          "Whistleblower Cases",
+          "Class Actions"
+        ]
+      },
+      "tiles": [
+        {
+          "header": "Employment Law",
+          "text": [
+            "Are you an employee who is looking for representation? Learn more about our areas of expertise"
+          ],
+          "linkText": "OUR SERVICES",
+          "linkHref": "/services",
+          "img": "http://uploads.webflow.com/58f556b54513f478483fb655/58f6a138aa1ab6491f478c73_Feature-3.jpg"
+        },
+        {
+          "header": "Dedicated and Loyal",
+          "text": [
+            "The complex, important and often ground-breaking matters on which we work attract the best and brightest to join the firm."
+          ],
+          "linkText": "Learn more about us",
+          "linkHref": "/profile",
+          "img": "http://uploads.webflow.com/58f556b54513f478483fb655/58faa1bbc114b30fc76a633f_Feature-2.jpg"
+        }
+      ],
+      "testimonials": [
+        {"text": "Arthur is very tenacious. He never gives up, and will dedicate himself to your case. I highly recommend Arthur to anyone looking for an excellent employment attorney.", "attribution": "Employment Attorney — San Francisco, CA"},
+        {"text": "I didn't realize how much nicer these things can go when you are working with true professionals. If I should ever find myself needing these types of services in the future, there is no question who my first choice is.", "attribution": "Former Client — Anaheim, CA"}
+      ],
+      "services": {
+        "header": "Firm News",
+        "tiles": [
+          {
+            "header": "Class Action",
+            "topLink": {
+              "text": "$600,000+ Wage and Hour Settlement",
+              "href": "/services"
+            },
+            "blurb": "The firm obtained final approval of a class settlement in a wage and hour case.  The settlement was valued in excess of $600,000.",
+            "bottomLink": {
+              "text": "LEARN MORE",
+              "href": "/services"
+            }
+          },
+          {
+            "header": "Wrongful Termination",
+            "topLink": {
+              "text": "Jury Finds for Wrongful Termination Client",
+              "href": "/services"
+            },
+            "blurb": "The firm obtained a successful jury verdict in an action for wrongful termination in violation of public policy. The case was tried in Los Angeles Superior Court.",
+            "bottomLink": {
+              "text": "LEARN MORE",
+              "href": "/services"
+            }
+          },
+          {
+            "header": "Family Leave",
+            "topLink": {
+              "text": "$450,000+ Award in Family Medical Leave Case",
+              "href": "/services"
+            },
+            "blurb": "After a five-day arbitration hearing, the firm obtained an arbitration award for more than $450,000 in compensatory damages, fees, and costs.",
+            "bottomLink": {
+              "text": "LEARN MORE",
+              "href": "/services"
+            }
+          }
+        ]
+      }
+    },
+    "profile": {
+      "splash": {
+        "header": "Building Enduring Partnerships",
+        "text": [
+          "Providing stellar legal counsel and representation",
+          "to Australian Businesses for over 40 years."
+        ]
+      },
+      "quote": {
+        "text": "Over the past 40 years, our company has become renowned for passionate and effective legal representation and valued leadership in the wider legal community",
+        "attribution": "John Carpenter — Partner"
+      },
+      "slider": [
+        "http://uploads.webflow.com/58f556b54513f478483fb655/58faa1bbc114b30fc76a633f_Feature-2.jpg",
+        "http://uploads.webflow.com/58f556b54513f478483fb655/58f6a138aa1ab6491f478c73_Feature-3.jpg"
+      ],
+      "profile": {
+        "header": "A Unique, Client-Centered Approach to Law",
+        "text": [
+          "How does your web copy stack up against your competitors’? Entrepreneurs and marketing executives will sometimes decide to take on the copywriting themselves to save cost on the total project. Most people have at least basic writing skills, and it’s not like you need specialized technological skills or software to do it.",
+          "It can be tempting, after a survey of products that are out there, to develop an exhaustive backlog of must-have features for your product and to set out designing a slicker version of the status quo.",
+          "A paragraph (from the Greek paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose."
+        ]
+      },
+      "metrics": [
+        {
+          "metric": "1978",
+          "blurb": "The year our firm was founded by Jonathan Clarke"
+        },
+        {
+          "metric": "3000+",
+          "blurb": "Clients we've assisted in proceedings"
+        },
+        {
+          "metric": "18",
+          "blurb": "Awards for Customer Service Excellence"
+        },
+        {
+          "metric": "4",
+          "blurb": "Passionate Legal Professionals"
+        }
+      ]
+    },
+    "services": {
+      "splash": {
+        "header": "Service With Substance",
+        "text": [
+          "Offering expert legal counsel across a broad ",
+          "range of disciplines"
+        ]
+      },
+      "services": [
+        {
+          "header": "Civil Litigation",
+          "subheader": "our litigation experts:",
+          "list": [
+            "John Carpenter",
+            "Ursula Rucker"
+          ],
+          "button": {
+            "text": "Enquire now",
+            "href": "/contact"
+          },
+          "text": [
+            "However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet.",
+            "In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live."
+          ]
+        },
+        {
+          "header": "Civil Litigation",
+          "subheader": "our litigation experts:",
+          "list": [
+            "John Carpenter",
+            "Ursula Rucker"
+          ],
+          "button": {
+            "text": "Enquire now",
+            "href": "/contact"
+          },
+          "text": [
+            "However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet.",
+            "In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live."
+          ]
+        },
+        {
+          "header": "Civil Litigation",
+          "subheader": "our litigation experts:",
+          "list": [
+            "John Carpenter",
+            "Ursula Rucker"
+          ],
+          "button": {
+            "text": "Enquire now",
+            "href": "/contact"
+          },
+          "text": [
+            "However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet.",
+            "In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live."
+          ]
+        },
+        {
+          "header": "Civil Litigation",
+          "subheader": "our litigation experts:",
+          "list": [
+            "John Carpenter",
+            "Ursula Rucker"
+          ],
+          "button": {
+            "text": "Enquire now",
+            "href": "/contact"
+          },
+          "text": [
+            "However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet.",
+            "In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live."
+          ]
+        }
+      ],
+      "testimonials": [
+        {
+          "text": "We’ve relied on them on several occasions where client discretion was of the utmost importance",
+          "attribution": "Joe Thompson — IP Client"
+        },
+        {
+          "text": "We wouldn't feel comfortable trusting anyone else to represent our company in legal matters",
+          "attribution": "Helen McNaught — Patent Law Client"
+        }
+      ]
+    },
+    "team": {
+      "splash": {
+        "header": "A team with experience & vision.",
+        "text": [
+          "Our diverse team is unified by their professional approach",
+          "and dedication to delivering excellence"
+        ]
+      },
+      "members": [
+        {
+          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/590016bd042c175f2eb8363d_Team-John.jpg",
+          "name": "John Carpenter",
+          "title": "Partner, Intellectual Property Expert",
+          "link": {
+            "href": "/team/john-carpenter",
+            "text": "READ MORE"
+          }
+        },
+        {
+          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/590016b0eeeee8691ce9ba7d_Team-Lucy.jpg",
+          "name": "Lucy Pemberton",
+          "title": "Partner, Public Relations Expert",
+          "link": {
+            "href": "/team/lucy-pemberton",
+            "text": "READ MORE"
+          }
+        },
+        {
+          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/590016a466747c37cab41681_Team-Ursula.jpg",
+          "name": "Ursula Rucker",
+          "title": "Senior Advisor, Litigation Expert",
+          "link": {
+            "href": "/team/ursula-rucker",
+            "text": "READ MORE"
+          }
+        },
+        {
+          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/5900168124b4577e0f17def9_Team-Ashley.jpg",
+          "name": "Ashley Bramiche",
+          "title": "Senior Advisor, Patent Law Expert",
+          "link": {
+            "href": "/team/ashley-bramiche",
+            "text": "READ MORE"
+          }
+        }
+      ]
+    },
+    "contact": {
+      "splash": {
+        "header": "Here for you, Australia-wide.",
+        "text": [
+          "Providing stellar legal counsel and representation",
+          "to Melbourne for over 70 years."
+        ]
+      },
+      "information": {
+        "blurb": "We're open from 9am - 5:30pm Monday - Friday",
+        "visit": [
+          "1291 Glenferrie Road",
+          "Kooyong, Victoria 3146"
+        ],
+        "call": [
+          "1800 411 572"
+        ],
+        "email": "emailus@attorneys.com",
+        "latLng": "-37.8080036,145.0380925"
+      }
+    }
+  }
+}
