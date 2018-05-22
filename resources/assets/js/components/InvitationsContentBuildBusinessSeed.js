@@ -96,7 +96,6 @@ export default class InvitationsContentBuildBusinessSeed extends Component {
 
   render() {
     const panes = this.setPanes()
-    console.log(this.state.seed)
     return (
       <Container>
         <Tab menu={{fluid: true, vertical: true, tabular: true}} panes={panes}/>

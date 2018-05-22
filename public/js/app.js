@@ -100011,7 +100011,6 @@ var InvitationsContentBuildBusinessSeed = function (_Component) {
     key: 'render',
     value: function render() {
       var panes = this.setPanes();
-      console.log(this.state.seed);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         Container,
         null,
