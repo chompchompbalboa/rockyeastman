@@ -1,0 +1,19 @@
+ip: 192.168.14.14
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /Users/Balboa/Dropbox/dev/active/sites/rockyeastman
+        to: /home/vagrant/code
+sites:
+    -
+        map: rockyeastman.local
+        to: /home/vagrant/code/public
+databases:
+    - homestead
+name: rockyeastman
+hostname: rockyeastman

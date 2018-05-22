@@ -1,83 +1,15 @@
 {
-  "blocks": {
-    "callToAction": {
-      "call": "THE NEXT STEP?",
-      "header": "Request a consultation call.",
-      "text": [
-        "Speak with a legal professional in an obligation-free ",
-        "initial consultation."
-      ],
-      "link": {
-        "text": "GET IN TOUCH",
-        "href": "/contact"
-      }
-    },
-    "footer": {
-      "bigText": "A team with experience & vision.",
-      "links": [
-        {"text": "SERVICES", "href": "/services"},
-        {"text": "OUR TEAM", "href": "/team"},
-        {"text": "ARTICLES", "href": "/articles"},
-        {"text": "CONTACT", "href": "/contact"}
-      ],
-      "contact": {
-        "call": "1800 433 844 (Free call)",
-        "visit": "1021 Glenferrie Road, Kooyong VIC 3145",
-        "email": "emailus@attorneys.com",
-        "follow": {
-          "visible": false,
-          "socials": [
-            {
-              "href": "http://linkedin.com",
-              "icon": "/img/linkedin.svg"
-            },
-            {
-              "href": "http://google.com",
-              "icon": "/img/googleplus.svg"
-            },
-            {
-              "href": "http://facebook.com",
-              "icon": "/img/facebook.svg"
-            },
-            {
-              "href": "http://twitter.com",
-              "icon": "/img/twitter.svg"
-            }
-          ]
-        }
-      }
-    },
-    "nav": {
-      "links": [
-        {
-          "href": "/",
-          "text": "HOME"
-        },
-        {
-          "href": "/profile",
-          "text": "PROFILE"
-        },
-        {
-          "href": "/services",
-          "text": "SERVICES"
-        }
-      ],
-      "bigLink": {
-        "href": "/contact",
-        "text": "GET IN TOUCH"
-      }
-    }
-  },
   "head": {
     "title": "Preview - Maven"
   },
   "pages": {
     "home": {
+      "visible": true,
       "splash": {
         "header": "A team with experience & vision.",
         "text": [
           "Providing stellar legal counsel and representation",
-          "to Australian Businesses for over 40 years."
+          "to small businesses for over 40 years."
         ]
       },
       "list": {
@@ -159,6 +91,7 @@
       }
     },
     "profile": {
+      "visible": true,
       "splash": {
         "header": "Building Enduring Partnerships",
         "text": [
@@ -202,6 +135,7 @@
       ]
     },
     "services": {
+      "visible": true,
       "splash": {
         "header": "Service With Substance",
         "text": [
@@ -287,6 +221,7 @@
       ]
     },
     "team": {
+      "visible": false,
       "splash": {
         "header": "A team with experience & vision.",
         "text": [
@@ -334,6 +269,7 @@
       ]
     },
     "contact": {
+      "visible": true,
       "splash": {
         "header": "Here for you, Australia-wide.",
         "text": [
@@ -352,6 +288,75 @@
         ],
         "email": "emailus@attorneys.com",
         "latLng": "-37.8080036,145.0380925"
+      }
+    }
+  },
+  "blocks": {
+    "callToAction": {
+      "call": "THE NEXT STEP?",
+      "header": "Request a consultation call.",
+      "text": [
+        "Speak with a legal professional in an obligation-free ",
+        "initial consultation."
+      ],
+      "link": {
+        "text": "GET IN TOUCH",
+        "href": "/contact"
+      }
+    },
+    "footer": {
+      "bigText": "A team with experience & vision.",
+      "links": [
+        {"text": "SERVICES", "href": "/services"},
+        {"text": "OUR TEAM", "href": "/team"},
+        {"text": "ARTICLES", "href": "/articles"},
+        {"text": "CONTACT", "href": "/contact"}
+      ],
+      "contact": {
+        "call": "1800 433 844 (Free call)",
+        "visit": "1021 Glenferrie Road, Kooyong VIC 3145",
+        "email": "emailus@attorneys.com",
+        "follow": {
+          "visible": false,
+          "socials": [
+            {
+              "href": "http://linkedin.com",
+              "icon": "/img/linkedin.svg"
+            },
+            {
+              "href": "http://google.com",
+              "icon": "/img/googleplus.svg"
+            },
+            {
+              "href": "http://facebook.com",
+              "icon": "/img/facebook.svg"
+            },
+            {
+              "href": "http://twitter.com",
+              "icon": "/img/twitter.svg"
+            }
+          ]
+        }
+      }
+    },
+    "nav": {
+      "links": [
+        {
+          "href": "/",
+          "text": "HOME"
+        },
+        {
+          "href": "/profile",
+          "text": "PROFILE"
+        },
+        {
+          "href": "/services",
+          "text": "SERVICES"
+        }
+      ],
+      "bigLink": {
+        "href": "/contact",
+        "text": "GET IN TOUCH"
       }
     }
   }
