@@ -23,7 +23,9 @@ export default class InvitationsContentBuildBusinessInfo extends Component {
     {text: "Uploaded", value: "uploaded"},
     {text: "Built", value: "built"},
     {text: "Sent", value: "sent"},
-    {text: "Rejected", value: "rejected"}
+    {text: "Rejected - Email", value: "rejected-email"},
+    {text: "Rejected - Website", value: "rejected-website"},
+    {text: "Rejected - Other", value: "rejected-other"}
   ]
 
   visitWebsite = (website) => {
