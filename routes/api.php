@@ -20,8 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 $rockyeastman = function() {
 
     Route::get('/invitations/businesses', 'BusinessController@index');
+    Route::get('/invitations/businesses/uploaded', 'BusinessController@getUploaded');
+    Route::get('/invitations/businesses/built', 'BusinessController@getBuilt');
     Route::put('/invitations/businesses/{business}', 'BusinessController@update');
     Route::get('/invitations/businesses/{business}/seed', 'BusinessController@getSeed');
+
+    Route::get('/invitations/emails/templates', 'InvitationController@getEmailTemplates');
 };
 Route::group(['domain' => 'rockyeastman.com'], $rockyeastman);
 Route::group(['domain' => 'rockyeastman.local'], $rockyeastman);

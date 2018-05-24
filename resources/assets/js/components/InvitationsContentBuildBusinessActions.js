@@ -13,13 +13,16 @@ import Save from './actions/Save'
 export default class InvitationsContentBuildBusinessActions extends Component {
 
   static propTypes = {
-    seed: object,
     email: string,
+    seed: object,
+    slug: string,
+    status: string,
     website: string
   }
 
   render() {
-    const { seed, email, website } = this.props
+    console.log(this.props)
+    const {email, seed, slug, status, website } = this.props
     if(seed.id) {
       return (
         <Tab.Pane>
@@ -36,6 +39,8 @@ export default class InvitationsContentBuildBusinessActions extends Component {
                 data={{
                   email: email,
                   seed: seed,
+                  slug: slug, 
+                  status: status,
                   website: website
                 }}
               />

@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import _ from 'lodash'
 
 import { Tab } from 'semantic-ui-react'
-import Business from './InvitationsContentBuildBusiness'
+import Invitation from './InvitationsContentSendInvitation'
 import ChooseBusiness from './InvitationsContentChooseBusiness'
 import Container from './InvitationsContentContainer'
 //-----------------------------------------------------------------------------
@@ -16,18 +16,15 @@ import Container from './InvitationsContentContainer'
 export default class InvitationsContentBuild extends Component {
 
   state = {
-    active: null,
-    businesses: []
-  }
-  
-  defaultBusiness = {
-    id: 0,
-    email: "",
-    website: ""
+    activeBusiness: null,
+    activeEmailTemplate: 0,
+    businesses: [],
+    emailTemplates: []
   }
 
   componentDidMount = () => {
-    fetch('/api/invitations/businesses/uploaded')
+    // Fetch the list of businesses
+    fetch('/api/invitations/businesses/built')
       .then(response => {
         return response.json()
       })
@@ -36,25 +33,43 @@ export default class InvitationsContentBuild extends Component {
           businesses: businesses
         })
       })
+    // Fetch the list of email templates
+    fetch('/api/invitations/emails/templates')
+      .then(response => {
+        return response.json()
+      })
+      .then(emailTemplates => {
+        this.setState({
+          emailTemplates: emailTemplates
+        })
+      })
   }
 
-  updateActive = (e, data) => {
+  updateActiveBusiness = (e, data) => {
     this.setState({
-      active: data.value
+      activeBusiness: data.value
+    })
+  }
+
+  updateActiveEmailTemplate = (e, data) => {
+    this.setState({
+      activeEmailTemplate: data.value
     })
   }
 
   render() {
-    const { active, businesses } = this.state
-    const business = (active === null ? this.defaultBusiness : _.find(businesses, {id: active}))
+    const { activeBusiness, activeEmailTemplate, businesses, emailTemplates } = this.state
     return (
       <Container>
         <ChooseBusiness 
-          active={active}
+          active={activeBusiness}
           businesses={businesses}
-          updateActive={this.updateActive}/>
-        <Business 
-          business={business}/>
+          updateActive={this.updateActiveBusiness}/>
+        <Invitation 
+          activeEmailTemplate={activeEmailTemplate}
+          emailTemplates={emailTemplates}
+          updateActive={this.updateActiveEmailTemplate}
+          />
       </Container>
     )
   }

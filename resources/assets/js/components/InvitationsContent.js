@@ -10,7 +10,7 @@ import Build from './InvitationsContentBuild'
 import FollowUp from './InvitationsContentContainer'
 import InvitationsContainer from './InvitationsContainer'
 import Rejected from './InvitationsContentContainer'
-import Send from './InvitationsContentContainer'
+import Send from './InvitationsContentSend'
 import Sold from './InvitationsContentContainer'
 import Unanswered from './InvitationsContentContainer'
 

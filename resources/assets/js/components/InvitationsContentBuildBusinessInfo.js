@@ -2,10 +2,10 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React, { Component } from 'react'
-import { string } from 'prop-types'
+import { func, string } from 'prop-types'
 import styled from 'styled-components'
 
-import { Input } from 'semantic-ui-react'
+import { Button, Dropdown, Icon, Input, Label } from 'semantic-ui-react'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -13,24 +13,52 @@ export default class InvitationsContentBuildBusinessInfo extends Component {
 
   static propTypes = {
     email: string,
-    website: string
+    slug: string,
+    status: string,
+    website: string,
+    updateBusinessInfo: func
   }
 
+  statusOptions = [
+    {text: "Uploaded", value: "uploaded"},
+    {text: "Built", value: "built"},
+    {text: "Sent", value: "sent"},
+    {text: "Rejected", value: "rejected"}
+  ]
+
   visitWebsite = (website) => {
-    Object.assign(document.createElement('a'), { target: '_blank', href: website}).click();
+    open(website, "_blank")
   }
 
   render() {
-    const { email, website } = this.props
+    const { email, slug, status, website, updateBusinessInfo } = this.props
+    const slugValue = (slug && slug !== null ? slug : "")
+    const previewUrl = "http://" + location.hostname + "/previews/" + slugValue
     return (
       <Container>
         <StyledInput 
           label="Email"
-          value={email}/>
-        <StyledInput 
+          name="email"
+          value={email}
+          onChange={updateBusinessInfo}/>
+        <StyledInput
           label="Website"
-          action={{icon: "external", onClick: () => this.visitWebsite(website)}}
-          value={website}/>
+          name="website"
+          value={website}
+          action={{icon: 'external', onClick: () => this.visitWebsite(website)}}
+          onChange={updateBusinessInfo}/>
+        <StyledInput
+          label="Slug"
+          name="slug"
+          value={slugValue}
+          action={{icon: 'desktop', onClick: () => this.visitWebsite(previewUrl)}}
+          onChange={updateBusinessInfo}/>
+        <StyledDropdown
+          search selection
+          name="status"
+          value={status}
+          options={this.statusOptions}
+          onChange={updateBusinessInfo}/>
       </Container>
     )
   }
@@ -46,5 +74,9 @@ const Container = styled.div`
 `
 
 const StyledInput = styled(Input)`
-  width: 49%;
+  width: 26%;
 `
+
+const StyledDropdown = styled(Dropdown)`
+  width: 12%;
+  `

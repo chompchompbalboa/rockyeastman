@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
 use App\Helpers\Helper;
+use App\Models\Business;
+use App\Models\Seed;
 
 class PreviewController extends Controller
 {
@@ -14,18 +15,23 @@ class PreviewController extends Controller
      * @param  int  $previewID
      * @return Response
      */
-    public function loadPreview($id, $page = "home")
+    public function loadPreview($slug, $page = "home")
     {
         // Set base file paths for views
         $assetsPath = "/assets/previews/maven";
-        $urlPath = "/previews/".$id;
+        $urlPath = "/previews/".$slug;
         $viewPath = "previews.maven";
         $viewName = "previews.maven.".(isset($page) ? $page : "home");
 
         // Load seed
-        $defaultSeedPath = "/assets/previews/maven/seeds/__default.json";
-        $seedPath = "/assets/previews/maven/seeds/".$id.".json";
-        $data = (Helper::fetchJSON($seedPath) ? Helper::fetchJSON($seedPath) : Helper::fetchJSON($defaultSeedPath));
+        $data = Helper::fetchJSON("/assets/previews/maven/seeds/__default.json");
+        $business = Business::where('slug', $slug)->first();
+        if(!is_null($business)) {
+          $seed = Seed::where('business_id', $business->id)->first();
+          if(!is_null($seed)) {
+            $data = json_decode($seed->json);
+          }
+        }
         
         return view($viewName,
             [

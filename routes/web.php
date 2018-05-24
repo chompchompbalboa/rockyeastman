@@ -18,7 +18,7 @@ $rockyeastman = function() {
         return view('rockyeastman.login')->with('path', 'rockyeastman');
     });
 
-    Route::get('/previews/{id}/{page?}',
+    Route::get('/previews/{slug}/{page?}',
         [
             "uses" => "PreviewController@loadPreview",
             "page" => "home"

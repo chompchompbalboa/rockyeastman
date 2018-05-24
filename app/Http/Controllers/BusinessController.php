@@ -19,29 +19,6 @@ class BusinessController extends Controller
     }
 
     /**
-     * Update
-     * 
-     * Update a business
-     */
-    public function update(Request $request, Business $business) {
-      $data = $request->all();
-      // Save the business info
-      $business->email = $data['email'];
-      $business->website = $data['website'];
-      // Save the seed
-      $seed = Seed::where('business_id', $business->id)->first();
-      $seed->json = json_encode($data['seed']['json']);
-      if($business->save() && $seed->save()) {
-        return [
-          "success" => true
-        ];
-      }
-      return [
-        "sucess" => false
-      ];
-    }
-
-    /**
      * Get Seed
      * 
      * Get a business' seed
@@ -58,6 +35,50 @@ class BusinessController extends Controller
         "id" => $seed->id,
         "business_id" => $seed->business_id,
         "json" => json_decode($seed->json)
+      ];
+    }
+
+    /**
+     * Get Built
+     * 
+     * Get every site that has the status "built"
+     */
+    public function getBuilt() {
+      return Business::where('status', "built")->get();
+    }
+
+    /**
+     * Get Uploaded
+     * 
+     * Get every site that has the status "uploaded"
+     */
+    public function getUploaded() {
+      return Business::where('status', "uploaded")->get();
+    }
+
+    /**
+     * Update
+     * 
+     * Update a business
+     */
+    public function update(Request $request, Business $business) {
+      $data = $request->all();
+      // Save the business info
+      $business->email = $data['email'];
+      $business->website = $data['website'];
+      $business->status = $data['status'];
+      $business->slug = $data['slug'];
+      // Save the seed
+      $seed = Seed::where('business_id', $business->id)->first();
+      $seed->json = json_encode($data['seed']['json']);
+
+      if($business->save() && $seed->save()) {
+        return [
+          "success" => true
+        ];
+      }
+      return [
+        "sucess" => false
       ];
     }
 
