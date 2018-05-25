@@ -2,7 +2,7 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React, { Component } from 'react'
-import { func, string } from 'prop-types'
+import { func, shape, string } from 'prop-types'
 import styled from 'styled-components'
 
 import { Button, Dropdown, Icon, Input, Label } from 'semantic-ui-react'
@@ -12,11 +12,13 @@ import { Button, Dropdown, Icon, Input, Label } from 'semantic-ui-react'
 export default class InvitationsContentBuildBusinessInfo extends Component {
 
   static propTypes = {
-    email: string,
-    slug: string,
-    status: string,
-    website: string,
-    updateBusinessInfo: func
+    business: shape({
+      email: string,
+      slug: string,
+      status: string,
+      website: string,
+      updateBusinessInfo: func
+    })
   }
 
   statusOptions = [
@@ -33,34 +35,34 @@ export default class InvitationsContentBuildBusinessInfo extends Component {
   }
 
   render() {
-    const { email, slug, status, website, updateBusinessInfo } = this.props
-    const slugValue = (slug && slug !== null ? slug : "")
+    const { business, updateBusiness } = this.props
+    const slugValue = (business.slug && business.slug !== null ? business.slug : "")
     const previewUrl = "http://" + location.hostname + "/previews/" + slugValue
     return (
       <Container>
         <StyledInput 
           label="Email"
           name="email"
-          value={email}
-          onChange={updateBusinessInfo}/>
+          value={business.email}
+          onChange={updateBusiness}/>
         <StyledInput
           label="Website"
           name="website"
-          value={website}
+          value={business.website}
           action={{icon: 'external', onClick: () => this.visitWebsite(website)}}
-          onChange={updateBusinessInfo}/>
+          onChange={updateBusiness}/>
         <StyledInput
           label="Slug"
           name="slug"
           value={slugValue}
           action={{icon: 'desktop', onClick: () => this.visitWebsite(previewUrl)}}
-          onChange={updateBusinessInfo}/>
+          onChange={updateBusiness}/>
         <StyledDropdown
           search selection
           name="status"
-          value={status}
+          value={business.status}
           options={this.statusOptions}
-          onChange={updateBusinessInfo}/>
+          onChange={updateBusiness}/>
       </Container>
     )
   }

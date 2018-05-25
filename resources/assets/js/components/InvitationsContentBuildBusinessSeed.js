@@ -31,7 +31,7 @@ export default class InvitationsContentBuildBusinessSeed extends Component {
   }
 
   componentDidUpdate = () => {
-    const { id } = this.props
+    const { business: { id }} = this.props
     const { mostRecentlyFetched } = this.state
     if(id > 0 && mostRecentlyFetched !== id) {
       fetch('/api/invitations/businesses/' + id + '/seed')
@@ -48,35 +48,52 @@ export default class InvitationsContentBuildBusinessSeed extends Component {
 
   setPanes = () => {
     const { seed } = this.state
-    const { ...props } = this.props
+    const { business } = this.props
     let panes = []
     // Head
     panes.push({
       menuItem: "Head",
-      render: () => <Head head={seed.json.head} updateJson={this.updateJson}/>
+      render: () => 
+        <Head
+          business={business} 
+          head={seed.json.head} 
+          updateJson={this.updateJson}/>
     })
     // Blocks
     panes.push({
       menuItem: "Blocks",
-      render: () => <Blocks blocks={seed.json.blocks} updateJson={this.updateJson}/>
+      render: () => 
+        <Blocks 
+          blocks={seed.json.blocks} 
+          updateJson={this.updateJson}/>
     })
     // Pages
     panes.push({
       menuItem: "Pages",
-      render: () => <Pages pages={seed.json.pages} updateJson={this.updateJson}/>
+      render: () => 
+        <Pages 
+          pages={seed.json.pages} 
+          updateJson={this.updateJson}/>
     })
     _.map(seed.json.pages, (page, index) => {
       if(page.visible) {
         panes.push({
           menuItem: "   +    " + _.capitalize(index),
-          render: () => <Page page={index} pageSeed={page} updateJson={this.updateJson}/>
+          render: () => 
+            <Page 
+              page={index} 
+              pageSeed={page} 
+              updateJson={this.updateJson}/>
         })
       }
     })
     // Actions
     panes.push({
       menuItem: "Actions",
-      render: () => <Actions seed={seed} {...props}/>
+      render: () => 
+        <Actions 
+          business={business}
+          seed={seed}/>
     })
     return panes
   }
@@ -98,7 +115,9 @@ export default class InvitationsContentBuildBusinessSeed extends Component {
     const panes = this.setPanes()
     return (
       <Container>
-        <Tab menu={{fluid: true, vertical: true, tabular: true}} panes={panes}/>
+        <Tab 
+          menu={{fluid: true, vertical: true, tabular: true}} 
+          panes={panes}/>
       </Container>
     )
   }

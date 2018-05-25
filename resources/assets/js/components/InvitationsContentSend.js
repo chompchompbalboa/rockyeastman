@@ -13,13 +13,17 @@ import Container from './InvitationsContentContainer'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class InvitationsContentBuild extends Component {
+export default class InvitationsContentSend extends Component {
 
   state = {
     activeBusiness: null,
     activeEmailTemplate: 0,
     businesses: [],
-    emailTemplates: []
+    email: {
+      templates: [],
+      message: "",
+      subjectLine: ""
+    }
   }
 
   componentDidMount = () => {
@@ -34,41 +38,62 @@ export default class InvitationsContentBuild extends Component {
         })
       })
     // Fetch the list of email templates
-    fetch('/api/invitations/emails/templates')
+    fetch('/api/invitations/emails/defaults')
       .then(response => {
         return response.json()
       })
-      .then(emailTemplates => {
+      .then(response => {
         this.setState({
-          emailTemplates: emailTemplates
+          email: {
+            templates: response.templates,
+            message: response.message,
+            subjectLine: response.subjectLine
+          }
         })
       })
   }
 
-  updateActiveBusiness = (e, data) => {
+  // Changes
+
+  changeActiveBusiness = (e, data) => {
     this.setState({
       activeBusiness: data.value
     })
   }
 
-  updateActiveEmailTemplate = (e, data) => {
+  changeActiveEmailTemplate = (e, data) => {
     this.setState({
       activeEmailTemplate: data.value
     })
   }
 
+  changeEmail = (e, data) => {
+    let email = Object.assign({}, this.state.email)
+    email[data.name] = data.value
+    this.setState({
+      email: email
+    })
+  }
+
+  // Render
+
   render() {
-    const { activeBusiness, activeEmailTemplate, businesses, emailTemplates } = this.state
+    const { activeBusiness, activeEmailTemplate, businesses, email } = this.state
+    const change = {
+      activeBusiness: this.changeActiveBusiness,
+      activeEmailTemplate: this.changeActiveEmailTemplate,
+      email: this.changeEmail
+    }
     return (
       <Container>
         <ChooseBusiness 
           active={activeBusiness}
           businesses={businesses}
-          updateActive={this.updateActiveBusiness}/>
+          updateActive={change.activeBusiness}/>
         <Invitation 
           activeEmailTemplate={activeEmailTemplate}
-          emailTemplates={emailTemplates}
-          updateActive={this.updateActiveEmailTemplate}
+          email={email}
+          change={change}
           />
       </Container>
     )

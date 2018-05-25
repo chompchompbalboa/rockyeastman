@@ -2841,7 +2841,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addons_Select__ = __webpack_require__(328);
 /* unused harmony reexport Select */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__addons_TextArea__ = __webpack_require__(336);
-/* unused harmony reexport TextArea */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_9__addons_TextArea__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__addons_TransitionablePortal__ = __webpack_require__(748);
 /* unused harmony reexport TransitionablePortal */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__behaviors_Visibility__ = __webpack_require__(750);
@@ -2853,7 +2853,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__collections_Breadcrumb_BreadcrumbSection__ = __webpack_require__(342);
 /* unused harmony reexport BreadcrumbSection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__collections_Form__ = __webpack_require__(754);
-/* unused harmony reexport Form */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_15__collections_Form__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__collections_Form_FormButton__ = __webpack_require__(343);
 /* unused harmony reexport FormButton */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__collections_Form_FormCheckbox__ = __webpack_require__(344);
@@ -2897,7 +2897,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__collections_Message_MessageList__ = __webpack_require__(355);
 /* unused harmony reexport MessageList */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__collections_Table__ = __webpack_require__(760);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_37__collections_Table__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_37__collections_Table__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__collections_Table_TableBody__ = __webpack_require__(356);
 /* unused harmony reexport TableBody */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__collections_Table_TableCell__ = __webpack_require__(133);
@@ -2925,7 +2925,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__elements_Flag__ = __webpack_require__(332);
 /* unused harmony reexport Flag */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__elements_Header__ = __webpack_require__(766);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_51__elements_Header__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_51__elements_Header__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__elements_Header_HeaderContent__ = __webpack_require__(361);
 /* unused harmony reexport HeaderContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__elements_Header_HeaderSubheader__ = __webpack_require__(360);
@@ -2939,7 +2939,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__elements_Image_ImageGroup__ = __webpack_require__(309);
 /* unused harmony reexport ImageGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__elements_Input__ = __webpack_require__(191);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_58__elements_Input__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_58__elements_Input__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__elements_Label__ = __webpack_require__(132);
 /* unused harmony reexport Label */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__elements_Label_LabelDetail__ = __webpack_require__(310);
@@ -2969,7 +2969,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_72__elements_Reveal_RevealContent__ = __webpack_require__(364);
 /* unused harmony reexport RevealContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_73__elements_Segment__ = __webpack_require__(776);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_73__elements_Segment__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_73__elements_Segment__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_74__elements_Segment_SegmentGroup__ = __webpack_require__(366);
 /* unused harmony reexport SegmentGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_75__elements_Step__ = __webpack_require__(777);
@@ -3049,7 +3049,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_112__modules_Sticky__ = __webpack_require__(799);
 /* unused harmony reexport Sticky */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_113__modules_Tab__ = __webpack_require__(801);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_113__modules_Tab__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_113__modules_Tab__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_114__modules_Tab_TabPane__ = __webpack_require__(379);
 /* unused harmony reexport TabPane */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_115__modules_Transition__ = __webpack_require__(337);
@@ -5120,7 +5120,7 @@ var InvitationsContentContainer = function (_Component) {
       var children = this.props.children;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
         null,
         children
       );
@@ -79596,7 +79596,7 @@ var InvitationHeaders = function (_Component) {
         Container,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
           { as: 'h1' },
           'Invitations'
         )
@@ -94423,7 +94423,7 @@ Breadcrumb.Section = __WEBPACK_IMPORTED_MODULE_8__BreadcrumbSection__["a" /* def
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Form__ = __webpack_require__(755);
-/* unused harmony reexport default */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Form__["a"]; });
 
 
 
@@ -94613,7 +94613,7 @@ Form.propTypes =  true ? {
   /** Forms can automatically divide fields to be equal width. */
   widths: __WEBPACK_IMPORTED_MODULE_11_prop_types___default.a.oneOf(['equal'])
 } : {};
-/* unused harmony default export */ var _unused_webpack_default_export = (Form);
+/* harmony default export */ __webpack_exports__["a"] = (Form);
 
 /***/ }),
 /* 756 */
@@ -99628,7 +99628,7 @@ var InvitationContent = function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         Container,
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */], { panes: this.getPanes() })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */], { defaultActiveIndex: 1, panes: this.getPanes() })
       );
     }
   }]);
@@ -99809,10 +99809,11 @@ var InvitationsContentBuildBusiness = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InvitationsContentBuildBusiness.__proto__ || Object.getPrototypeOf(InvitationsContentBuildBusiness)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       id: _this.props.business.id,
       email: _this.props.business.email,
+      name: _this.props.business.name,
       slug: _this.props.business.slug,
       status: _this.props.business.status,
       website: _this.props.business.website
-    }, _this.updateBusinessInfo = function (e, data) {
+    }, _this.updateBusiness = function (e, data) {
       _this.setState(_defineProperty({}, data.name, data.value));
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -99831,17 +99832,10 @@ var InvitationsContentBuildBusiness = function (_Component) {
         Container,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__InvitationsContentBuildBusinessInfo__["a" /* default */], {
-          email: email,
-          slug: slug,
-          status: status,
-          website: website,
-          updateBusinessInfo: this.updateBusinessInfo }),
+          business: this.state,
+          updateBusiness: this.updateBusiness }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__InvitationsContentBuildBusinessSeed__["a" /* default */], {
-          id: id,
-          email: email,
-          slug: slug,
-          status: status,
-          website: website })
+          business: this.state })
       );
     }
   }]);
@@ -99858,6 +99852,7 @@ InvitationsContentBuildBusiness.propTypes = {
   business: Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["shape"])({
     id: __WEBPACK_IMPORTED_MODULE_1_prop_types__["number"],
     email: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    name: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
     slug: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
     status: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
     website: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"]
@@ -99868,6 +99863,7 @@ InvitationsContentBuildBusiness.getDerivedStateFromProps = function (nextProps, 
   return {
     id: nextProps.business.id,
     email: nextProps.business.email,
+    name: nextProps.business.name,
     slug: nextProps.business.slug,
     status: nextProps.business.status,
     website: nextProps.business.website
@@ -99939,13 +99935,10 @@ var InvitationsContentBuildBusinessInfo = function (_Component) {
       var _this2 = this;
 
       var _props = this.props,
-          email = _props.email,
-          slug = _props.slug,
-          status = _props.status,
-          website = _props.website,
-          updateBusinessInfo = _props.updateBusinessInfo;
+          business = _props.business,
+          updateBusiness = _props.updateBusiness;
 
-      var slugValue = slug && slug !== null ? slug : "";
+      var slugValue = business.slug && business.slug !== null ? business.slug : "";
       var previewUrl = "http://" + location.hostname + "/previews/" + slugValue;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         Container,
@@ -99953,16 +99946,16 @@ var InvitationsContentBuildBusinessInfo = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledInput, {
           label: 'Email',
           name: 'email',
-          value: email,
-          onChange: updateBusinessInfo }),
+          value: business.email,
+          onChange: updateBusiness }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledInput, {
           label: 'Website',
           name: 'website',
-          value: website,
+          value: business.website,
           action: { icon: 'external', onClick: function onClick() {
               return _this2.visitWebsite(website);
             } },
-          onChange: updateBusinessInfo }),
+          onChange: updateBusiness }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledInput, {
           label: 'Slug',
           name: 'slug',
@@ -99970,13 +99963,13 @@ var InvitationsContentBuildBusinessInfo = function (_Component) {
           action: { icon: 'desktop', onClick: function onClick() {
               return _this2.visitWebsite(previewUrl);
             } },
-          onChange: updateBusinessInfo }),
+          onChange: updateBusiness }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledDropdown, {
           search: true, selection: true,
           name: 'status',
-          value: status,
+          value: business.status,
           options: this.statusOptions,
-          onChange: updateBusinessInfo })
+          onChange: updateBusiness })
       );
     }
   }]);
@@ -99990,16 +99983,18 @@ var InvitationsContentBuildBusinessInfo = function (_Component) {
 
 
 InvitationsContentBuildBusinessInfo.propTypes = {
-  email: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  slug: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  status: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  website: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  updateBusinessInfo: __WEBPACK_IMPORTED_MODULE_1_prop_types__["func"]
+  business: Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["shape"])({
+    email: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    slug: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    status: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    website: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    updateBusinessInfo: __WEBPACK_IMPORTED_MODULE_1_prop_types__["func"]
+  })
 };
 /* harmony default export */ __webpack_exports__["a"] = (InvitationsContentBuildBusinessInfo);
 var Container = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject);
 
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject2);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject2);
 
 var StyledDropdown = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["c" /* Dropdown */])(_templateObject3);
 
@@ -100021,15 +100016,11 @@ var StyledDropdown = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__editors_maven_MavenHead__ = __webpack_require__(819);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__editors_maven_MavenPage__ = __webpack_require__(820);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__editors_maven_MavenPages__ = __webpack_require__(826);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n  margin-top: 2vh;\n'], ['\n  margin-top: 2vh;\n']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -100081,7 +100072,7 @@ var InvitationsContentBuildBusinessSeed = function (_Component) {
         }
       }
     }, _this.componentDidUpdate = function () {
-      var id = _this.props.id;
+      var id = _this.props.business.id;
       var mostRecentlyFetched = _this.state.mostRecentlyFetched;
 
       if (id > 0 && mostRecentlyFetched !== id) {
@@ -100096,29 +100087,35 @@ var InvitationsContentBuildBusinessSeed = function (_Component) {
       }
     }, _this.setPanes = function () {
       var seed = _this.state.seed;
-
-      var props = _objectWithoutProperties(_this.props, []);
+      var business = _this.props.business;
 
       var panes = [];
       // Head
       panes.push({
         menuItem: "Head",
         render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__editors_maven_MavenHead__["a" /* default */], { head: seed.json.head, updateJson: _this.updateJson });
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__editors_maven_MavenHead__["a" /* default */], {
+            business: business,
+            head: seed.json.head,
+            updateJson: _this.updateJson });
         }
       });
       // Blocks
       panes.push({
         menuItem: "Blocks",
         render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__editors_maven_MavenBlocks__["a" /* default */], { blocks: seed.json.blocks, updateJson: _this.updateJson });
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__editors_maven_MavenBlocks__["a" /* default */], {
+            blocks: seed.json.blocks,
+            updateJson: _this.updateJson });
         }
       });
       // Pages
       panes.push({
         menuItem: "Pages",
         render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__editors_maven_MavenPages__["a" /* default */], { pages: seed.json.pages, updateJson: _this.updateJson });
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__editors_maven_MavenPages__["a" /* default */], {
+            pages: seed.json.pages,
+            updateJson: _this.updateJson });
         }
       });
       __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(seed.json.pages, function (page, index) {
@@ -100126,7 +100123,10 @@ var InvitationsContentBuildBusinessSeed = function (_Component) {
           panes.push({
             menuItem: "   +    " + __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.capitalize(index),
             render: function render() {
-              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__editors_maven_MavenPage__["a" /* default */], { page: index, pageSeed: page, updateJson: _this.updateJson });
+              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__editors_maven_MavenPage__["a" /* default */], {
+                page: index,
+                pageSeed: page,
+                updateJson: _this.updateJson });
             }
           });
         }
@@ -100135,7 +100135,9 @@ var InvitationsContentBuildBusinessSeed = function (_Component) {
       panes.push({
         menuItem: "Actions",
         render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__InvitationsContentBuildBusinessActions__["a" /* default */], _extends({ seed: seed }, props));
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__InvitationsContentBuildBusinessActions__["a" /* default */], {
+            business: business,
+            seed: seed });
         }
       });
       return panes;
@@ -100164,7 +100166,9 @@ var InvitationsContentBuildBusinessSeed = function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         Container,
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Tab */], { menu: { fluid: true, vertical: true, tabular: true }, panes: panes })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["h" /* Tab */], {
+          menu: { fluid: true, vertical: true, tabular: true },
+          panes: panes })
       );
     }
   }]);
@@ -100229,57 +100233,50 @@ var InvitationsContentBuildBusinessActions = function (_Component) {
   _createClass(InvitationsContentBuildBusinessActions, [{
     key: 'render',
     value: function render() {
-      console.log(this.props);
       var _props = this.props,
-          email = _props.email,
-          seed = _props.seed,
-          slug = _props.slug,
-          status = _props.status,
-          website = _props.website;
+          business = _props.business,
+          seed = _props.seed;
 
       if (seed.id) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].Header,
+              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].Header,
               null,
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].Row,
+                __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].Row,
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].HeaderCell,
+                  __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].HeaderCell,
                   { collapsing: true },
                   'Action'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].HeaderCell,
+                  __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].HeaderCell,
                   null,
                   'Status'
                 )
               )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].Body,
+              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].Body,
               null,
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__actions_Save__["a" /* default */], {
                 url: '/api/invitations/businesses/' + seed.id,
                 data: {
-                  email: email,
-                  seed: seed,
-                  slug: slug,
-                  status: status,
-                  website: website
+                  business: business,
+                  seed: seed
                 }
               })
             )
           )
         );
       } else {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane, null);
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane, null);
       }
     }
   }]);
@@ -100293,11 +100290,8 @@ var InvitationsContentBuildBusinessActions = function (_Component) {
 
 
 InvitationsContentBuildBusinessActions.propTypes = {
-  email: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  seed: __WEBPACK_IMPORTED_MODULE_1_prop_types__["object"],
-  slug: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  status: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
-  website: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"]
+  business: __WEBPACK_IMPORTED_MODULE_1_prop_types__["object"],
+  seed: __WEBPACK_IMPORTED_MODULE_1_prop_types__["object"]
 };
 /* harmony default export */ __webpack_exports__["a"] = (InvitationsContentBuildBusinessActions);
 var Container = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject);
@@ -100392,15 +100386,15 @@ var Save = function (_Component) {
       var status = this.state.status;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].Row,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].Row,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].Cell,
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].Cell,
           { collapsing: true },
           'Save'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Table */].Cell,
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["i" /* Table */].Cell,
           null,
           this.statusMessages[status]
         )
@@ -100471,13 +100465,13 @@ var MavenBlocks = function (_Component) {
 
       if (blocks) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
               { as: 'h4' },
               'Nav'
             ),
@@ -100519,10 +100513,10 @@ var MavenBlocks = function (_Component) {
             })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
               { as: 'h4' },
               'Call To Action'
             ),
@@ -100564,10 +100558,10 @@ var MavenBlocks = function (_Component) {
               onChange: updateJson })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+              __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
               { as: 'h4' },
               'Footer'
             ),
@@ -100619,7 +100613,7 @@ var MavenBlocks = function (_Component) {
           )
         );
       } else {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane, null);
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane, null);
       }
     }
   }]);
@@ -100633,7 +100627,7 @@ var MavenBlocks = function (_Component) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (MavenBlocks);
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject);
 
 var HorizontalContainer = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject2);
 
@@ -100686,9 +100680,9 @@ var InvitationsContentBuildBusinessSeedPane = function (_Component) {
 
       if (head) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
           null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */], {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */], {
             fluid: true,
             label: 'Title',
             name: 'head.title',
@@ -100696,7 +100690,7 @@ var InvitationsContentBuildBusinessSeedPane = function (_Component) {
             onChange: updateJson })
         );
       }
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane, null);
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane, null);
     }
   }]);
 
@@ -100780,7 +100774,7 @@ var MavenPage = function (_Component) {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__MavenPageTeam__["a" /* default */], { team: pageSeed, updateJson: updateJson });
           break;
         default:
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane, null);
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane, null);
           break;
       }
     }
@@ -100844,13 +100838,13 @@ var MavenPageContact = function (_Component) {
           updateJson = _props.updateJson;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Splash'
           ),
@@ -100874,10 +100868,10 @@ var MavenPageContact = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Information'
           ),
@@ -100931,7 +100925,7 @@ var MavenPageContact = function (_Component) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (MavenPageContact);
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject);
 
 /***/ }),
 /* 822 */
@@ -100986,13 +100980,13 @@ var MavenPageHome = function (_Component) {
           updateJson = _props.updateJson;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Splash'
           ),
@@ -101016,10 +101010,10 @@ var MavenPageHome = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'List'
           ),
@@ -101040,10 +101034,10 @@ var MavenPageHome = function (_Component) {
           })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Tile One'
           ),
@@ -101082,10 +101076,10 @@ var MavenPageHome = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Tile Two'
           ),
@@ -101124,10 +101118,10 @@ var MavenPageHome = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Testimonials'
           ),
@@ -101165,7 +101159,7 @@ var MavenPageHome = function (_Component) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (MavenPageHome);
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject);
 
 /***/ }),
 /* 823 */
@@ -101220,13 +101214,13 @@ var MavenPageProfile = function (_Component) {
           updateJson = _props.updateJson;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Splash'
           ),
@@ -101250,10 +101244,10 @@ var MavenPageProfile = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Quote'
           ),
@@ -101271,10 +101265,10 @@ var MavenPageProfile = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Slider'
           ),
@@ -101289,10 +101283,10 @@ var MavenPageProfile = function (_Component) {
           })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Profile'
           ),
@@ -101313,10 +101307,10 @@ var MavenPageProfile = function (_Component) {
           })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Metrics'
           ),
@@ -101354,7 +101348,7 @@ var MavenPageProfile = function (_Component) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (MavenPageProfile);
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject);
 
 /***/ }),
 /* 824 */
@@ -101409,13 +101403,13 @@ var MavenPageServices = function (_Component) {
           updateJson = _props.updateJson;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Splash'
           ),
@@ -101439,10 +101433,10 @@ var MavenPageServices = function (_Component) {
             onChange: updateJson })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Services'
           ),
@@ -101514,7 +101508,7 @@ var MavenPageServices = function (_Component) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (MavenPageServices);
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject);
 
 /***/ }),
 /* 825 */
@@ -101569,13 +101563,13 @@ var MavenPageTeam = function (_Component) {
           updateJson = _props.updateJson;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */].Pane,
+        __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */].Pane,
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Segment */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["d" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Header */],
             { as: 'h4' },
             'Splash'
           ),
@@ -101611,7 +101605,7 @@ var MavenPageTeam = function (_Component) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (MavenPageTeam);
-var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["e" /* Input */])(_templateObject);
+var StyledInput = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["f" /* Input */])(_templateObject);
 
 /***/ }),
 /* 826 */
@@ -101669,7 +101663,7 @@ var MavenPages = function (_Component) {
 
       if (pages) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Tab */].Pane,
+          __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["h" /* Tab */].Pane,
           null,
           __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(pages, function (page, index) {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledCheckbox, {
@@ -101681,7 +101675,7 @@ var MavenPages = function (_Component) {
           })
         );
       }
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Tab */].Pane, null);
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["h" /* Tab */].Pane, null);
     }
   }]);
 
@@ -101736,25 +101730,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // Component
 //-----------------------------------------------------------------------------
 
-var InvitationsContentBuild = function (_Component) {
-  _inherits(InvitationsContentBuild, _Component);
+var InvitationsContentSend = function (_Component) {
+  _inherits(InvitationsContentSend, _Component);
 
-  function InvitationsContentBuild() {
+  function InvitationsContentSend() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, InvitationsContentBuild);
+    _classCallCheck(this, InvitationsContentSend);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InvitationsContentBuild.__proto__ || Object.getPrototypeOf(InvitationsContentBuild)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InvitationsContentSend.__proto__ || Object.getPrototypeOf(InvitationsContentSend)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       activeBusiness: null,
       activeEmailTemplate: 0,
       businesses: [],
-      emailTemplates: []
+      email: {
+        templates: [],
+        message: "",
+        subjectLine: ""
+      }
     }, _this.componentDidMount = function () {
       // Fetch the list of businesses
       fetch('/api/invitations/businesses/built').then(function (response) {
@@ -101765,50 +101763,71 @@ var InvitationsContentBuild = function (_Component) {
         });
       });
       // Fetch the list of email templates
-      fetch('/api/invitations/emails/templates').then(function (response) {
+      fetch('/api/invitations/emails/defaults').then(function (response) {
         return response.json();
-      }).then(function (emailTemplates) {
+      }).then(function (response) {
         _this.setState({
-          emailTemplates: emailTemplates
+          email: {
+            templates: response.templates,
+            message: response.message,
+            subjectLine: response.subjectLine
+          }
         });
       });
-    }, _this.updateActiveBusiness = function (e, data) {
+    }, _this.changeActiveBusiness = function (e, data) {
       _this.setState({
         activeBusiness: data.value
       });
-    }, _this.updateActiveEmailTemplate = function (e, data) {
+    }, _this.changeActiveEmailTemplate = function (e, data) {
       _this.setState({
         activeEmailTemplate: data.value
+      });
+    }, _this.changeEmail = function (e, data) {
+      var email = Object.assign({}, _this.state.email);
+      email[data.name] = data.value;
+      _this.setState({
+        email: email
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(InvitationsContentBuild, [{
+  // Changes
+
+  _createClass(InvitationsContentSend, [{
     key: 'render',
+
+
+    // Render
+
     value: function render() {
       var _state = this.state,
           activeBusiness = _state.activeBusiness,
           activeEmailTemplate = _state.activeEmailTemplate,
           businesses = _state.businesses,
-          emailTemplates = _state.emailTemplates;
+          email = _state.email;
 
+      var change = {
+        activeBusiness: this.changeActiveBusiness,
+        activeEmailTemplate: this.changeActiveEmailTemplate,
+        email: this.changeEmail
+      };
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_7__InvitationsContentContainer__["a" /* default */],
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__InvitationsContentChooseBusiness__["a" /* default */], {
           active: activeBusiness,
           businesses: businesses,
-          updateActive: this.updateActiveBusiness }),
+          updateActive: change.activeBusiness }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__InvitationsContentSendInvitation__["a" /* default */], {
           activeEmailTemplate: activeEmailTemplate,
-          emailTemplates: emailTemplates,
-          updateActive: this.updateActiveEmailTemplate
+          email: email,
+          change: change
         })
       );
     }
   }]);
 
-  return InvitationsContentBuild;
+  return InvitationsContentSend;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 //-----------------------------------------------------------------------------
@@ -101816,7 +101835,7 @@ var InvitationsContentBuild = function (_Component) {
 //-----------------------------------------------------------------------------
 
 
-/* harmony default export */ __webpack_exports__["a"] = (InvitationsContentBuild);
+/* harmony default export */ __webpack_exports__["a"] = (InvitationsContentSend);
 
 /***/ }),
 /* 828 */
@@ -101829,7 +101848,7 @@ var InvitationsContentBuild = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InvitationsContentSendInvitationTemplate__ = __webpack_require__(829);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InvitationsContentSendInvitationMessage__ = __webpack_require__(835);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n  margin-top: 2vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n'], ['\n  margin-top: 2vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n']);
@@ -101872,29 +101891,25 @@ var InvitationsContentBuildBusiness = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InvitationsContentBuildBusiness.__proto__ || Object.getPrototypeOf(InvitationsContentBuildBusiness)).call.apply(_ref, [this].concat(args))), _this), _this.setPanes = function () {
       var _this$props = _this.props,
           activeEmailTemplate = _this$props.activeEmailTemplate,
-          emailTemplates = _this$props.emailTemplates,
-          updateActive = _this$props.updateActive;
+          change = _this$props.change,
+          email = _this$props.email;
 
       var panes = [];
       // Template
       panes.push({
-        menuItem: "Template",
+        menuItem: "Message",
         render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__InvitationsContentSendInvitationTemplate__["a" /* default */], { active: activeEmailTemplate, emailTemplates: emailTemplates, updateActive: updateActive });
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__InvitationsContentSendInvitationMessage__["a" /* default */], {
+            active: activeEmailTemplate,
+            email: email,
+            change: change });
         }
       });
       // Message
       panes.push({
-        menuItem: "Message",
-        render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__InvitationsContentSendInvitationTemplate__["a" /* default */], null);
-        }
-      });
-      // Schedule
-      panes.push({
         menuItem: "Schedule",
         render: function render() {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__InvitationsContentSendInvitationTemplate__["a" /* default */], null);
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Template, null);
         }
       });
       return panes;
@@ -101908,7 +101923,7 @@ var InvitationsContentBuildBusiness = function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         Container,
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["g" /* Tab */], { menu: { fluid: true, vertical: true, tabular: true }, panes: panes })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_semantic_ui_react__["h" /* Tab */], { menu: { fluid: true, vertical: true, tabular: true }, panes: panes })
       );
     }
   }]);
@@ -101923,13 +101938,27 @@ var InvitationsContentBuildBusiness = function (_Component) {
 
 InvitationsContentBuildBusiness.propTypes = {
   activeEmailTemplate: __WEBPACK_IMPORTED_MODULE_1_prop_types__["number"],
-  emailTemplates: __WEBPACK_IMPORTED_MODULE_1_prop_types__["array"]
+  email: Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["shape"])({
+    message: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    templates: __WEBPACK_IMPORTED_MODULE_1_prop_types__["array"]
+  })
 };
 /* harmony default export */ __webpack_exports__["a"] = (InvitationsContentBuildBusiness);
 var Container = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject);
 
 /***/ }),
-/* 829 */
+/* 829 */,
+/* 830 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 831 */,
+/* 832 */,
+/* 833 */,
+/* 834 */,
+/* 835 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -101983,7 +102012,7 @@ var InvitationsContentSendInvitationTemplate = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InvitationsContentSendInvitationTemplate.__proto__ || Object.getPrototypeOf(InvitationsContentSendInvitationTemplate)).call.apply(_ref, [this].concat(args))), _this), _this.convertEmailTemplatesToOptions = function (templates) {
       return templates.map(function (template, index) {
         return {
-          value: index, text: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.capitalize(template)
+          value: index, text: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.capitalize(template).replace(".blade.php", "")
         };
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -101994,20 +102023,69 @@ var InvitationsContentSendInvitationTemplate = function (_Component) {
     value: function render() {
       var _props = this.props,
           active = _props.active,
-          emailTemplates = _props.emailTemplates,
-          updateActive = _props.updateActive;
+          email = _props.email,
+          change = _props.change;
 
-      var options = this.convertEmailTemplatesToOptions(emailTemplates);
+      var options = this.convertEmailTemplatesToOptions(email.templates);
       var value = options[active] ? options[active].value : "";
       if (true) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Tab */].Pane,
+          __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["h" /* Tab */].Pane,
           null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["c" /* Dropdown */], {
-            fluid: true, search: true, selection: true,
-            options: options,
-            value: value,
-            onChange: updateActive })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Segment */],
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["e" /* Header */],
+              { as: 'h4' },
+              'Template'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["c" /* Dropdown */], {
+              fluid: true, search: true, selection: true,
+              options: options,
+              value: value,
+              onChange: function onChange() {
+                return change.activeEmailTemplate();
+              } })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Segment */],
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["e" /* Header */],
+              { as: 'h4' },
+              'Subject Line'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["d" /* Form */],
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["f" /* Input */], {
+                fluid: true,
+                name: 'subjectLine',
+                value: email.subjectLine,
+                onChange: function onChange(e, data) {
+                  return change.email(e, data);
+                } })
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["g" /* Segment */],
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["e" /* Header */],
+              { as: 'h4' },
+              'Message'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["d" /* Form */],
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_semantic_ui_react__["j" /* TextArea */], {
+                autoHeight: true,
+                name: 'message',
+                value: email.message,
+                onChange: change.email })
+            )
+          )
         );
       } else {
         return React.createElement(Tab.Pane, null);
@@ -102024,16 +102102,13 @@ var InvitationsContentSendInvitationTemplate = function (_Component) {
 
 
 InvitationsContentSendInvitationTemplate.propTypes = {
-  emailTemplates: __WEBPACK_IMPORTED_MODULE_1_prop_types__["array"]
+  email: Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["shape"])({
+    message: __WEBPACK_IMPORTED_MODULE_1_prop_types__["string"],
+    templates: __WEBPACK_IMPORTED_MODULE_1_prop_types__["array"]
+  })
 };
 /* harmony default export */ __webpack_exports__["a"] = (InvitationsContentSendInvitationTemplate);
 var Container = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject);
-
-/***/ }),
-/* 830 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

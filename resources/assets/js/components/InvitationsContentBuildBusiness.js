@@ -16,6 +16,7 @@ export default class InvitationsContentBuildBusiness extends Component {
   state = {
     id: this.props.business.id,
     email: this.props.business.email,
+    name: this.props.business.name,
     slug: this.props.business.slug,
     status: this.props.business.status,
     website: this.props.business.website
@@ -25,6 +26,7 @@ export default class InvitationsContentBuildBusiness extends Component {
     business: shape({
       id: number,
       email: string,
+      name: string,
       slug: string,
       status: string,
       website: string
@@ -35,13 +37,14 @@ export default class InvitationsContentBuildBusiness extends Component {
     return {
       id: nextProps.business.id,
       email: nextProps.business.email,
+      name: nextProps.business.name,
       slug: nextProps.business.slug,
       status: nextProps.business.status,
       website: nextProps.business.website
     }
   }
 
-  updateBusinessInfo = (e, data) => {
+  updateBusiness = (e, data) => {
     this.setState({
       [data.name]: data.value
     })
@@ -52,17 +55,10 @@ export default class InvitationsContentBuildBusiness extends Component {
     return (
       <Container>
         <BuildBusinessInfo
-          email={email}
-          slug={slug}
-          status={status}
-          website={website}
-          updateBusinessInfo={this.updateBusinessInfo}/>
+          business={this.state}
+          updateBusiness={this.updateBusiness}/>
         <BuildBusinessSeed
-          id={id}
-          email={email}
-          slug={slug}
-          status={status}
-          website={website}/>
+          business={this.state}/>
       </Container>
     )
   }

@@ -33,7 +33,7 @@ export default class InvitationContent extends Component {
   render() {
     return (
       <Container>
-        <Tab panes={this.getPanes()}/>
+        <Tab defaultActiveIndex={1} panes={this.getPanes()}/>
       </Container>
     )
   }

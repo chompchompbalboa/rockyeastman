@@ -10,6 +10,7 @@ $rockyeastman = function() {
         return view('rockyeastman.home')->with('path', 'rockyeastman');
     });
 
+    Route::get('/invitations/view', 'InvitationsController@viewEmail');
     Route::get('/invitations', function() {
         return view('rockyeastman.invitations')->with('path', 'rockyeastman');
     });
@@ -19,10 +20,10 @@ $rockyeastman = function() {
     });
 
     Route::get('/previews/{slug}/{page?}',
-        [
-            "uses" => "PreviewController@loadPreview",
-            "page" => "home"
-        ]);
+      [
+        "uses" => "PreviewController@loadPreview",
+        "page" => "home"
+    ]);
 
 };
 Route::group(['domain' => 'rockyeastman.com'], $rockyeastman);

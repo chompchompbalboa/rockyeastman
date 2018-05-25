@@ -2,7 +2,7 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React, { Component } from 'react'
-import { object, string } from 'prop-types'
+import { object } from 'prop-types'
 import styled from 'styled-components'
 
 import { Tab, Table } from 'semantic-ui-react'
@@ -13,16 +13,12 @@ import Save from './actions/Save'
 export default class InvitationsContentBuildBusinessActions extends Component {
 
   static propTypes = {
-    email: string,
-    seed: object,
-    slug: string,
-    status: string,
-    website: string
+    business: object,
+    seed: object
   }
 
   render() {
-    console.log(this.props)
-    const {email, seed, slug, status, website } = this.props
+    const { business, seed } = this.props
     if(seed.id) {
       return (
         <Tab.Pane>
@@ -37,11 +33,8 @@ export default class InvitationsContentBuildBusinessActions extends Component {
               <Save
                 url={'/api/invitations/businesses/' + seed.id}
                 data={{
-                  email: email,
-                  seed: seed,
-                  slug: slug, 
-                  status: status,
-                  website: website
+                  business: business,
+                  seed: seed
                 }}
               />
             </Table.Body>
