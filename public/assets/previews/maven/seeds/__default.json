@@ -307,9 +307,9 @@
     "footer": {
       "bigText": "A team with experience & vision.",
       "links": [
+        {"text": "HOME", "href": "/"},
+        {"text": "PROFILE", "href": "/profile"},
         {"text": "SERVICES", "href": "/services"},
-        {"text": "OUR TEAM", "href": "/team"},
-        {"text": "ARTICLES", "href": "/articles"},
         {"text": "CONTACT", "href": "/contact"}
       ],
       "contact": {

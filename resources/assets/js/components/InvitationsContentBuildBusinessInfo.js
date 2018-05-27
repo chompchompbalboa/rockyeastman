@@ -6,6 +6,8 @@ import { func, shape, string } from 'prop-types'
 import styled from 'styled-components'
 
 import { Button, Dropdown, Icon, Input, Label } from 'semantic-ui-react'
+import InputAction from './lib/InputAction/InputAction'
+import InputActionCopy from './lib/InputAction/InputActionCopy'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -40,29 +42,48 @@ export default class InvitationsContentBuildBusinessInfo extends Component {
     const previewUrl = "http://" + location.hostname + "/previews/" + slugValue
     return (
       <Container>
-        <StyledInput 
-          label="Email"
+        <StyledInput
+          action fluid
           name="email"
+          labelPosition="left"
+          innerRef={c => this.emailInput = c}
           value={business.email}
-          onChange={updateBusiness}/>
+          onChange={updateBusiness}>
+          <Label>Email</Label>
+          <input/>
+          <InputActionCopy input={this.emailInput && this.emailInput.inputRef}/>
+        </StyledInput>
         <StyledInput
-          label="Website"
+          action fluid
           name="website"
+          labelPosition="left"
+          innerRef={c => this.websiteInput = c}
           value={business.website}
-          action={{icon: 'external', onClick: () => this.visitWebsite(website)}}
-          onChange={updateBusiness}/>
+          onChange={updateBusiness}>
+          <Label>Website</Label>
+          <input/>
+          <InputAction icon="external" onClick={() => this.visitWebsite(business.website)}/>
+          <InputActionCopy input={this.websiteInput && this.websiteInput.inputRef}/>
+        </StyledInput>
         <StyledInput
-          label="Slug"
+          action fluid
           name="slug"
+          labelPosition="left"
+          innerRef={c => this.slugInput = c}
           value={slugValue}
-          action={{icon: 'desktop', onClick: () => this.visitWebsite(previewUrl)}}
-          onChange={updateBusiness}/>
+          onChange={updateBusiness}>
+          <Label>Slug</Label>
+          <input/>
+          <InputAction icon="external" onClick={() => this.visitWebsite(previewUrl)}/>
+          <InputActionCopy input={this.slugInput && this.slugInput.inputRef}/>
+        </StyledInput>
         <StyledDropdown
           search selection
           name="status"
           value={business.status}
           options={this.statusOptions}
-          onChange={updateBusiness}/>
+          onChange={updateBusiness}
+          style={{minWidth: "auto"}}/>
       </Container>
     )
   }
@@ -78,9 +99,9 @@ const Container = styled.div`
 `
 
 const StyledInput = styled(Input)`
-  width: 26%;
+  width: 27%;
 `
 
 const StyledDropdown = styled(Dropdown)`
-  width: 12%;
+  width: 14%;
   `

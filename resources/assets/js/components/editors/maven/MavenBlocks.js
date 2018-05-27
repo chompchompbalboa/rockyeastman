@@ -19,20 +19,6 @@ export default class MavenBlocks extends Component {
 
         <Segment>
           <Header as="h4">Nav</Header>
-          <HorizontalContainer>
-            <StyledInput
-              label="Big Link Text"
-              name="blocks.nav.bigLink.text"
-              value={blocks.nav.bigLink.text}
-              onChange={updateJson}
-              style={{width: "49%"}}/>
-            <StyledInput
-              label="Big Link Href"
-              name="blocks.nav.bigLink.href"
-              value={blocks.nav.bigLink.href}
-              onChange={updateJson}
-              style={{width: "49%"}}/>
-          </HorizontalContainer>
           {blocks.nav.links.map((item, index) => {
             return (
               <HorizontalContainer key={index}>
@@ -53,6 +39,20 @@ export default class MavenBlocks extends Component {
               </HorizontalContainer>
             )
           })}
+          <HorizontalContainer>
+            <StyledInput
+              label="Big Link Text"
+              name="blocks.nav.bigLink.text"
+              value={blocks.nav.bigLink.text}
+              onChange={updateJson}
+              style={{width: "49%"}}/>
+            <StyledInput
+              label="Big Link Href"
+              name="blocks.nav.bigLink.href"
+              value={blocks.nav.bigLink.href}
+              onChange={updateJson}
+              style={{width: "49%"}}/>
+          </HorizontalContainer>
         </Segment>
 
         <Segment>
