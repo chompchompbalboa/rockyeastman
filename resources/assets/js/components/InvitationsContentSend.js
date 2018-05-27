@@ -5,24 +5,30 @@ import React, { Component } from 'react'
 import { } from 'prop-types'
 import styled from 'styled-components'
 import _ from 'lodash'
+import scheduleHelpers from '../helpers/schedule'
 
 import { Tab } from 'semantic-ui-react'
-import Invitation from './InvitationsContentSendInvitation'
-import ChooseBusiness from './InvitationsContentChooseBusiness'
 import Container from './InvitationsContentContainer'
+import InvitationsContentSendInvitation from './InvitationsContentSendInvitation'
+import InvitationsContentChooseBusiness from './InvitationsContentChooseBusiness'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
 export default class InvitationsContentSend extends Component {
 
   state = {
-    activeBusiness: null,
-    activeEmailTemplate: 0,
+    active: {
+      business: null,
+      emailTemplate: 0
+    },
     businesses: [],
     email: {
       templates: [],
       message: "",
       subjectLine: ""
+    },
+    schedule: {
+      time: scheduleHelpers.getNextSendDate()
     }
   }
 
@@ -37,8 +43,8 @@ export default class InvitationsContentSend extends Component {
           businesses: businesses
         })
       })
-    // Fetch the list of email templates
-    fetch('/api/invitations/emails/defaults')
+    // Fetch the default content for the email
+    fetch('/api/invitations/send/email-defaults')
       .then(response => {
         return response.json()
       })
@@ -55,15 +61,11 @@ export default class InvitationsContentSend extends Component {
 
   // Changes
 
-  changeActiveBusiness = (e, data) => {
+  changeActive = (e, data) => {
+    let active = Object.assign({}, this.state.active)
+    active[data.name] = data.value
     this.setState({
-      activeBusiness: data.value
-    })
-  }
-
-  changeActiveEmailTemplate = (e, data) => {
-    this.setState({
-      activeEmailTemplate: data.value
+      active: active
     })
   }
 
@@ -75,24 +77,33 @@ export default class InvitationsContentSend extends Component {
     })
   }
 
+  changeScheduleTime = (newTime) => {
+    this.setState({
+      schedule: {
+        time: newTime
+      }
+    })
+  }
+
   // Render
 
   render() {
-    const { activeBusiness, activeEmailTemplate, businesses, email } = this.state
+    const { active, businesses, email, schedule } = this.state
     const change = {
-      activeBusiness: this.changeActiveBusiness,
-      activeEmailTemplate: this.changeActiveEmailTemplate,
-      email: this.changeEmail
+      active: this.changeActive,
+      email: this.changeEmail,
+      scheduleTime: this.changeScheduleTime
     }
     return (
       <Container>
-        <ChooseBusiness 
-          active={activeBusiness}
+        <InvitationsContentChooseBusiness 
+          active={active.business}
           businesses={businesses}
-          updateActive={change.activeBusiness}/>
-        <Invitation 
-          activeEmailTemplate={activeEmailTemplate}
+          changeActive={change.active}/>
+        <InvitationsContentSendInvitation 
+          active={active}
           email={email}
+          schedule={schedule}
           change={change}
           />
       </Container>

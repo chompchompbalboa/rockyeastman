@@ -25,7 +25,8 @@ $rockyeastman = function() {
     Route::put('/invitations/businesses/{business}', 'BusinessController@update');
     Route::get('/invitations/businesses/{business}/seed', 'BusinessController@getSeed');
 
-    Route::get('/invitations/emails/defaults', 'InvitationsController@getDefaults');
+    Route::get('/invitations/send/email-defaults', 'InvitationsController@getEmailDefaults');
+    Route::put('/invitations/send/schedule-email', 'InvitationsController@scheduleEmail');
 };
 Route::group(['domain' => 'rockyeastman.com'], $rockyeastman);
 Route::group(['domain' => 'rockyeastman.local'], $rockyeastman);

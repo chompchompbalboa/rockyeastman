@@ -16,7 +16,9 @@ import Container from './InvitationsContentContainer'
 export default class InvitationsContentBuild extends Component {
 
   state = {
-    active: null,
+    active: {
+      business: null
+    },
     businesses: []
   }
   
@@ -33,26 +35,34 @@ export default class InvitationsContentBuild extends Component {
       })
       .then(businesses => {
         this.setState({
-          businesses: businesses
+          businesses: businesses,
+          active: {
+            business: businesses[0].id
+          }
         })
       })
   }
 
-  updateActive = (e, data) => {
+  changeActive = (e, data) => {
+    let active = Object.assign({}, this.state.active)
+    active[data.name] = data.value
     this.setState({
-      active: data.value
+      active: active
     })
   }
 
   render() {
     const { active, businesses } = this.state
-    const business = (active === null ? this.defaultBusiness : _.find(businesses, {id: active}))
+    const business = (active.business === null ? this.defaultBusiness : _.find(businesses, {id: active.business}))
+    const change = {
+      active: this.changeActive
+    }
     return (
       <Container>
         <ChooseBusiness 
-          active={active}
+          active={active.business}
           businesses={businesses}
-          updateActive={this.updateActive}/>
+          changeActive={change.active}/>
         <Business 
           business={business}/>
       </Container>

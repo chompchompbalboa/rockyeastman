@@ -27,7 +27,7 @@ export default class InvitationsContentChooseBusiness extends Component {
   }
 
   render() {
-    const { active, businesses, updateActive } = this.props
+    const { active, businesses, changeActive } = this.props
     const options = this.convertBusinessesToOptions(businesses)
     const count = options.length
     return (
@@ -35,9 +35,10 @@ export default class InvitationsContentChooseBusiness extends Component {
         <Dropdown
           fluid search selection
           placeholder="Select a Business"
+          name="business"
           value={active}
           options={options}
-          onChange={updateActive}/>
+          onChange={(e, data) => changeActive(e, data)}/>
         <Count>({count})</Count>
       </Container>
     )

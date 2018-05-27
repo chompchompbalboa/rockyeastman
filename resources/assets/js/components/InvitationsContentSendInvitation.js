@@ -6,7 +6,9 @@ import { array, number, shape, string } from 'prop-types'
 import styled from 'styled-components'
 
 import { Tab } from 'semantic-ui-react'
+import Actions from './InvitationsContentSendInvitationActions'
 import Message from './InvitationsContentSendInvitationMessage'
+import Schedule from './InvitationsContentSendInvitationSchedule'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -21,21 +23,33 @@ export default class InvitationsContentBuildBusiness extends Component {
   }
 
   setPanes = () => {
-    const { activeEmailTemplate, change, email } = this.props
-    let panes = [];
-    // Template
+    const { active, change, email, schedule } = this.props
+    let panes = []
+    // Message
     panes.push({
       menuItem: "Message",
       render: () => 
         <Message
-          active={activeEmailTemplate} 
+          active={active} 
           email={email} 
           change={change}/>
     })
-    // Message
+    // Schedule
     panes.push({
       menuItem: "Schedule",
-      render: () => <Template />
+      render: () => 
+        <Schedule 
+          schedule={schedule}
+          change={change}/>
+    })
+    // Schedule
+    panes.push({
+      menuItem: "Actions",
+      render: () => 
+        <Actions 
+          active={active}
+          email={email}
+          schedule={schedule}/>
     })
     return panes
   }

@@ -6,7 +6,7 @@ import { object } from 'prop-types'
 import styled from 'styled-components'
 
 import { Tab, Table } from 'semantic-ui-react'
-import Save from './actions/Save'
+import SendData from './actions/SendData'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -30,11 +30,16 @@ export default class InvitationsContentBuildBusinessActions extends Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              <Save
+              <SendData
                 url={'/api/invitations/businesses/' + seed.id}
                 data={{
                   business: business,
                   seed: seed
+                }}
+                messages={{
+                  SENDING: "Saving, please wait...",
+                  SUCCESS: "Saved",
+                  ERROR: "There was a problem saving, please try again"
                 }}
               />
             </Table.Body>

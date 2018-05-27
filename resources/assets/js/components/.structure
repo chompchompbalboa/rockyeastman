@@ -1,0 +1,19 @@
+<Invitations>
+  <InvitationsHeader />
+  <InvitationsContent />
+    <InvitationsContentBuild />(InvitationsContentContainer) "/api/invitations/businesses/uploaded"
+      <InvitationsContentChooseBusiness />
+      InvitationsContentBuildBusiness
+        InvitationsContentBuildBusinessInfo
+        InvitationsContentBuildBusinessSeed "/api/invitations/businesses/{id}/seed"
+          MavenHead
+          MavenBlocks
+          MavenPages
+          [MavenPage]
+          InvitationsContentBuildBusinessActions
+    InvitationsContentSend(InvitationsContentContainer)
+      InvitationsContentChooseBusiness
+      InvitationsContentSendInvitation
+        InvitationsContentSendInvitationMessage "/api/invitations/businesses/built", "/api/invitations/emails/defaults"
+        InvitationsContentSendInvitationSchedule
+        InvitationsContentSendInvitationActions
