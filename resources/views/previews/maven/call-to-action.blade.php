@@ -13,12 +13,7 @@
                 {{ $block->header }}
             </h3>
             <h5>
-                @foreach($block->text as $text)
-                    {{ $text }}
-                    @if($loop->last)
-                        <br />
-                    @endif
-                @endforeach
+                {{ $block->text }}
             </h5>
             <a class="button w-button" data-ix="fade-content-out" href="{{ $urlPath.$block->link->href }}">
                 {{ $block->link->text }}

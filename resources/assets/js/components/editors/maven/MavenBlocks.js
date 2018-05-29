@@ -6,6 +6,7 @@ import { string } from 'prop-types'
 import styled from 'styled-components'
 
 import { Divider, Header, Input as SemanticUIInput, Segment, Tab } from 'semantic-ui-react'
+import ListActions from '../../lib/ListActions/ListActions'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -28,14 +29,21 @@ export default class MavenBlocks extends Component {
                   name={"blocks.nav.links." + index + ".text"}
                   value={blocks.nav.links[index].text}
                   onChange={updateJson} 
-                  style={{width: "49%"}}/>
+                  style={{width: "45%"}}/>
                 <StyledInput 
                   key={index + "-href"}
-                  label={"Link " + (index + 1) + " Href"}
+                  label={"Href"}
                   name={"blocks.nav.links." + index + ".href"}
                   value={blocks.nav.links[index].href}
                   onChange={updateJson}
-                  style={{width: "49%"}}/>
+                  style={{width: "33%"}}/>
+                <ListActions
+                  index={index}
+                  itemTemplate={{href: "", text: ""}}
+                  name="blocks.nav.links"
+                  list={blocks.nav.links}
+                  onChange={updateJson} 
+                  />
               </HorizontalContainer>
             )
           })}
@@ -71,15 +79,9 @@ export default class MavenBlocks extends Component {
             onChange={updateJson} />
           <StyledInput 
             fluid
-            label="Text 1"
-            name="blocks.callToAction.text.1"
-            value={blocks.callToAction.text[0]}
-            onChange={updateJson} />
-          <StyledInput 
-            fluid
-            label="Text 2"
-            name="blocks.callToAction.text.2"
-            value={blocks.callToAction.text[1]}
+            label="Text"
+            name="blocks.callToAction.text"
+            value={blocks.callToAction.text}
             onChange={updateJson} />
           <StyledInput 
             fluid

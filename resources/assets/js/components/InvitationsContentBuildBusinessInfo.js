@@ -39,7 +39,7 @@ export default class InvitationsContentBuildBusinessInfo extends Component {
   render() {
     const { business, updateBusiness } = this.props
     const slugValue = (business.slug && business.slug !== null ? business.slug : "")
-    const previewUrl = "http://" + location.hostname + "/previews/" + slugValue
+    const previewUrl = "http://" + location.hostname + "/preview/" + slugValue
     return (
       <Container>
         <StyledInput

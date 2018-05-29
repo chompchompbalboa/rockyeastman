@@ -25,23 +25,17 @@
       "tiles": [
         {
           "header": "Raising the bar",
-          "text": [
-            "We've been providing expert legal counsel",
-            "to Melbourne since 1978"
-          ],
+          "text": "We've been providing expert legal counsel to Melbourne since 1978",
           "linkText": "READ OUR PROFILE",
           "linkHref": "/profile",
-          "img": "http://uploads.webflow.com/58f556b54513f478483fb655/58f6a138aa1ab6491f478c73_Feature-3.jpg"
+          "img": "/assets/previews/maven/img/tile-1.jpg"
         },
         {
           "header": "Raising the bar",
-          "text": [
-            "We've been providing expert legal counsel",
-            "to Melbourne since 1978"
-          ],
+          "text": "We've been providing expert legal counsel to Melbourne since 1978",
           "linkText": "READ OUR PROFILE",
           "linkHref": "/profile",
-          "img": "http://uploads.webflow.com/58f556b54513f478483fb655/58faa1bbc114b30fc76a633f_Feature-2.jpg"
+          "img": "/assets/previews/maven/img/tile-2.jpg"
         }
       ],
       "testimonials": [
@@ -295,10 +289,7 @@
     "callToAction": {
       "call": "THE NEXT STEP?",
       "header": "Request a consultation call.",
-      "text": [
-        "Speak with a legal professional in an obligation-free ",
-        "initial consultation."
-      ],
+      "text": "Speak with a legal professional in an obligation-free initial consultation.",
       "link": {
         "text": "GET IN TOUCH",
         "href": "/contact"

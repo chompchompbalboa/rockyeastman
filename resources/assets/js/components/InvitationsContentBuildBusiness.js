@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import { number, shape, string } from 'prop-types'
 import styled from 'styled-components'
+import _ from 'lodash'
 
 import { Input } from 'semantic-ui-react'
 import BuildBusinessInfo from './InvitationsContentBuildBusinessInfo'
@@ -38,9 +39,23 @@ export default class InvitationsContentBuildBusiness extends Component {
       id: nextProps.business.id,
       email: nextProps.business.email,
       name: nextProps.business.name,
-      slug: nextProps.business.slug,
+      slug: this.a.setSlug(nextProps.business.slug, nextProps.business.name),
       status: nextProps.business.status,
       website: nextProps.business.website
+    }
+  }
+
+  static setSlug = (slug, name) => {
+    if(slug && slug !== null) {
+      return slug
+    }
+    else {
+      if (typeof slug === "undefined") {
+        return ""
+      }
+      else {
+        return _.lowerCase(name).replace(/ /g,"-")
+      }
     }
   }
 

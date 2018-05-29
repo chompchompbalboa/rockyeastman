@@ -31,7 +31,7 @@ export default class InvitationsContentBuildBusinessActions extends Component {
             </Table.Header>
             <Table.Body>
               <SendData
-                url={'/api/invitations/businesses/' + seed.id}
+                url={'/api/invitations/businesses/' + business.id}
                 data={{
                   business: business,
                   seed: seed

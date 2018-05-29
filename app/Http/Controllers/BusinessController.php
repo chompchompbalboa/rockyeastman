@@ -24,21 +24,39 @@ class BusinessController extends Controller
      * Get a business' seed
      */
     public function getSeed(Business $business) {
+      // Try to find the seed in the database
       $seed = Seed::where('business_id', $business->id)->first();
+      //dd($seed);
+      // If there is no seed in the database, load a default one and save it to the database
       if(is_null($seed)) {
+        // Save the new seed to the database
         $seed = new Seed;
         $seed->business_id = $business->id;
-        $seed->json = json_encode(Helper::fetchJSON("/assets/previews/maven/seeds/__default.json"));
+        // Fetch the default seed
+        $json = Helper::fetchJSON("/assets/previews/maven/seeds/__default.json");
+        // Update the default values to use the current business' info
+        // Page Title
+        $json->head->title = "Preview - ".$business->name;
+        // Street Address
+        $json->blocks->footer->contact->visit = $business->street." ".$business->city." ".$business->state." ".$business->zip;
+        $json->pages->contact->information->visit[0] = $business->street;
+        $json->pages->contact->information->visit[1] = $business->city." ".$business->state." ".$business->zip;
+        // Phone
+        $json->blocks->footer->contact->call = $business->phone;
+        $json->pages->contact->information->call[0] = $business->phone;
+        // Email
+        $json->blocks->footer->contact->email = $business->email;
+        $json->pages->contact->information->email = $business->email;
+        //dd($json);
+        // Save to the database
+        $seed->json = json_encode($json);
         $seed->save();
       }
-      // Automatically update some of the default values to use the current business' info
-      $json = json_decode($seed->json);
-      $json->head->title = ($json->head->title === "Preview - Maven" ? "Preview - ".$business->name : $json->head->title);
-
+      // Payload
       return [
         "id" => $seed->id,
         "business_id" => $seed->business_id,
-        "json" => $json
+        "json" => json_decode($seed->json)
       ];
     }
 

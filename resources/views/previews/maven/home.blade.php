@@ -33,14 +33,7 @@
                 <div class="image-feature top-feature" style="background-image: url({{ $page->tiles[0]->img }})">
                     <div class="image-feature-panel">
                         <h4>{{ $page->tiles[0]->header }}</h4>
-                        <p>
-                            @foreach($page->tiles[0]->text as $textLine)
-                                {{ $textLine }}
-                                @if(!$loop->last)
-                                    <br />
-                                @endif
-                            @endforeach
-                        </p>
+                        <p>{{ $page->tiles[0]->text }}</p>
                         <a class="text-link-uppercase" data-ix="fade-content-out" href="{{ $urlPath.$page->tiles[0]->linkHref }}">
                             {{ $page->tiles[0]->linkText }}
                         </a>
@@ -80,14 +73,7 @@
                 <div class="image-feature bottom-feature" style="background-image: url({{ $page->tiles[1]->img }})">
                     <div class="image-feature-panel image-feature-panel-left">
                         <h4>{{ $page->tiles[1]->header }}</h4>
-                        <p>
-                            @foreach($page->tiles[1]->text as $textLine)
-                                {{ $textLine }}
-                                @if(!$loop->last)
-                                    <br />
-                                @endif
-                            @endforeach
-                        </p>
+                        <p>{{ $page->tiles[1]->text }}</p>
                         <a class="text-link-uppercase" data-ix="fade-content-out" href="{{$urlPath.$page->tiles[1]->linkHref }}">
                             {{ $page->tiles[1]->linkText }}
                         </a>
