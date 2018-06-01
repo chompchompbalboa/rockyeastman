@@ -10,7 +10,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "toin0u/geocoder-laravel": "^4.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -50,6 +51,12 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "post-update-cmd": [
+          "@php artisan cache:clear"
+        ],
+        "post-install-cmd": [
+            "@php artisan cache:clear"
         ]
     },
     "config": {

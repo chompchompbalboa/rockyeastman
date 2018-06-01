@@ -37,17 +37,22 @@ class BusinessController extends Controller
         // Update the default values to use the current business' info
         // Page Title
         $json->head->title = "Preview - ".$business->name;
+        // Home Splash
+        $json->pages->home->splash->header = $business->name;
         // Street Address
-        $json->blocks->footer->contact->visit = $business->street." ".$business->city." ".$business->state." ".$business->zip;
+        $fullAddress = $business->street." ".$business->city." ".$business->state." ".$business->zip;
+        $json->blocks->footer->contact->visit = $fullAddress;
         $json->pages->contact->information->visit[0] = $business->street;
         $json->pages->contact->information->visit[1] = $business->city." ".$business->state." ".$business->zip;
+        // Map LatLng
+        $geocode = app('geocoder')->geocode($fullAddress)->get()->first();
+        $json->pages->contact->information->latLng = $geocode->getCoordinates()->getLatitude().",".$geocode->getCoordinates()->getLongitude();
         // Phone
         $json->blocks->footer->contact->call = $business->phone;
         $json->pages->contact->information->call[0] = $business->phone;
         // Email
         $json->blocks->footer->contact->email = $business->email;
         $json->pages->contact->information->email = $business->email;
-        //dd($json);
         // Save to the database
         $seed->json = json_encode($json);
         $seed->save();

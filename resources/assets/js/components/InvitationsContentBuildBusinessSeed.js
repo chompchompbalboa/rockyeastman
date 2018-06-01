@@ -100,7 +100,7 @@ export default class InvitationsContentBuildBusinessSeed extends Component {
 
   updateJson = (e, data) => {
     const { seed: { id, business_id, json }} = this.state
-    const value = (data.value ? data.value : data.checked)
+    const value = (typeof data.value !== "undefined" ? data.value : data.checked)
     let newJson = _.set(Object.assign({}, json), data.name, value)
     this.setState({
       seed: {

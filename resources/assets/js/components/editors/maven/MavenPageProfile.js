@@ -5,8 +5,9 @@ import React, { Component } from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
 
-import { Header, Input as SemanticUIInput, Segment, Tab } from 'semantic-ui-react'
-
+import { Divider, Form, Header, Input as SemanticUIInput, Segment, Tab, TextArea } from 'semantic-ui-react'
+import CMSImage from '../../lib/CMS/CMSImage'
+import ListActions from '../../lib/ListActions/ListActions'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -59,13 +60,20 @@ export default class MavenPageProfile extends Component {
           <Header as="h4">Slider</Header>
           {profile.slider.map((item, index) => {
             return (
-              <StyledInput 
-                fluid
-                key={index}
-                label={"Slider " + (index + 1)}
-                name={"pages.profile.slider." + index}
-                value={profile.slider[index]}
-                onChange={updateJson} />
+              <VerticalContainer key={index}>
+                <ListActions
+                  index={index}
+                  itemTemplate={""}
+                  name="pages.profile.slider"
+                  list={profile.slider}
+                  onChange={updateJson} />
+                <CMSImage
+                  src={profile.slider[index]}
+                  label="Image"
+                  name={"pages.profile.slider." + index}
+                  onChange={updateJson} />
+                <Divider />
+              </VerticalContainer>
             )
           })}
         </Segment>
@@ -80,13 +88,21 @@ export default class MavenPageProfile extends Component {
             onChange={updateJson} />
           {profile.profile.text.map((item, index) => {
             return (
-              <StyledInput 
-                fluid
-                key={index}
-                label={"List Item " + (index + 1)}
-                name={"pages.profile.profile.text." + index}
-                value={profile.profile.text[index]}
-                onChange={updateJson} />
+              <HorizontalContainer key={index}>
+                <StyledForm>
+                  <TextArea
+                    autoHeight
+                    name={"pages.profile.profile.text." + index}
+                    value={profile.profile.text[index]}
+                    onChange={updateJson}/>
+                </StyledForm>
+                <ListActions
+                  index={index}
+                  itemTemplate={""}
+                  name="pages.profile.profile.text"
+                  list={profile.profile.text}
+                  onChange={updateJson} />
+              </HorizontalContainer>
             )
           })}
         </Segment>
@@ -125,4 +141,21 @@ export default class MavenPageProfile extends Component {
 //-----------------------------------------------------------------------------
 const StyledInput = styled(SemanticUIInput)`
   margin: 1.5vh 0 0 0;
+`
+
+const VerticalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`
+
+const HorizontalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`
+
+const StyledForm = styled(Form)`
+  margin-top: 1.5vh;
+  width: 98%;
 `

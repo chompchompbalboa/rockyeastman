@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "template": "Maven",
+    "version": "0.0.0"
+  },
   "head": {
     "title": "Preview - Maven"
   },
@@ -9,7 +13,7 @@
         "header": "A team with experience & vision.",
         "text": [
           "Providing stellar legal counsel and representation",
-          "to small businesses for over 40 years."
+          "to the greater Los Angeles area since 1978"
         ]
       },
       "list": {
@@ -25,7 +29,7 @@
       "tiles": [
         {
           "header": "Raising the bar",
-          "text": "We've been providing expert legal counsel to Melbourne since 1978",
+          "text": "We've been providing expert legal counsel to businesses of all sizes since 1978",
           "linkText": "READ OUR PROFILE",
           "linkHref": "/profile",
           "img": "/assets/previews/maven/img/tile-1.jpg"
@@ -90,7 +94,7 @@
         "header": "Building Enduring Partnerships",
         "text": [
           "Providing stellar legal counsel and representation",
-          "to Australian Businesses for over 40 years."
+          "to businesses of all sizes."
         ]
       },
       "quote": {
@@ -98,8 +102,8 @@
         "attribution": "John Carpenter — Partner"
       },
       "slider": [
-        "http://uploads.webflow.com/58f556b54513f478483fb655/58faa1bbc114b30fc76a633f_Feature-2.jpg",
-        "http://uploads.webflow.com/58f556b54513f478483fb655/58f6a138aa1ab6491f478c73_Feature-3.jpg"
+        "/assets/previews/maven/img/tile-1.jpg",
+        "/assets/previews/maven/img/tile-2.jpg"
       ],
       "profile": {
         "header": "A Unique, Client-Centered Approach to Law",

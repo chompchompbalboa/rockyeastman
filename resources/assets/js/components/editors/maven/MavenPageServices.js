@@ -5,8 +5,8 @@ import React, { Component } from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
 
-import { Divider, Header, Input as SemanticUIInput, Segment, Tab } from 'semantic-ui-react'
-
+import { Divider, Form, Header, Input as SemanticUIInput, Segment, Tab, TextArea } from 'semantic-ui-react'
+import ListActions from '../../lib/ListActions/ListActions'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -45,6 +45,24 @@ export default class MavenPageServices extends Component {
             const lastIndex = services.services.length - 1
             return (
               <React.Fragment key={index}>
+                <HorizontalContainer>
+                  <Header as="h5">{services.services[index].header}</Header>
+                  <ListActions 
+                    index={index}
+                    itemTemplate={{
+                      header: "",
+                      subheader: "",
+                      list: [""],
+                      button: {
+                        text: "",
+                        href: ""
+                      },
+                      text: [""]
+                    }}
+                    name="pages.services.services"
+                    list={services.services}
+                    onChange={updateJson} />
+                </HorizontalContainer>
                 <StyledInput 
                   fluid
                   key={index + "-header"}
@@ -61,13 +79,20 @@ export default class MavenPageServices extends Component {
                   onChange={updateJson} />
                   {service.list.map((item, listIndex) => {
                     return (
-                      <StyledInput 
-                        fluid
-                        key={index + "-" + listIndex}
-                        label={"Service " + (index + 1) + " List Item " + (listIndex + 1)}
-                        name={"pages.services.services.list." + listIndex}
-                        value={item}
-                        onChange={updateJson} />
+                      <HorizontalContainer key={listIndex}>
+                        <StyledInput
+                          label={"Service " + (index + 1) + " List Item " + (listIndex + 1)}
+                          name={"pages.services.services." + index + ".list." + listIndex}
+                          value={item}
+                          onChange={updateJson}
+                          style={{width: "78%"}}/>
+                        <ListActions 
+                          index={listIndex}
+                          itemTemplate={""}
+                          name={"pages.services.services." + index + ".list"}
+                          list={services.services[index].list}
+                          onChange={updateJson} />
+                      </HorizontalContainer>
                     )
                   })}
                   <StyledInput 
@@ -86,13 +111,14 @@ export default class MavenPageServices extends Component {
                     onChange={updateJson} />
                   {service.text.map((item, textIndex) => {
                     return (
-                      <StyledInput 
-                        fluid
-                        key={index + "-" + textIndex}
-                        label={"Service " + (index + 1) + " Text " + (textIndex + 1)}
-                        name={"pages.services.services.text." + textIndex}
-                        value={item}
-                        onChange={updateJson} />
+                      <StyledForm key={index + "-" + textIndex}>
+                        <TextArea
+                          autoHeight
+                          label={"Service " + (index + 1) + " Text " + (textIndex + 1)}
+                          name={"pages.services.services." + index + ".text." + textIndex}
+                          value={item}
+                          onChange={updateJson}/>
+                      </StyledForm>
                     )
                   })}
                   {index !== lastIndex && <Divider section/>}
@@ -111,4 +137,15 @@ export default class MavenPageServices extends Component {
 //-----------------------------------------------------------------------------
 const StyledInput = styled(SemanticUIInput)`
   margin: 1.5vh 0 0 0;
+`
+
+const StyledForm = styled(Form)`
+  margin-top: 1.5vh;
+`
+
+const HorizontalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `

@@ -81,7 +81,9 @@
                     </div>
                 </div>
             </div>
-            {{ $testimonialsAlreadyRendered = true}}
+            @php
+              $testimonialsAlreadyRendered = true
+            @endphp
         @endif  
     @endforeach
     @include($viewPath.'.call-to-action')
