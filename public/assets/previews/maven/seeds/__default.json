@@ -229,38 +229,38 @@
       },
       "members": [
         {
-          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/590016bd042c175f2eb8363d_Team-John.jpg",
+          "img": "/assets/previews/maven/img/team-john.jpg",
           "name": "John Carpenter",
           "title": "Partner, Intellectual Property Expert",
           "link": {
-            "href": "/team/john-carpenter",
+            "href": "john-carpenter",
             "text": "READ MORE"
           }
         },
         {
-          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/590016b0eeeee8691ce9ba7d_Team-Lucy.jpg",
+          "img": "/assets/previews/maven/img/team-lucy.jpg",
           "name": "Lucy Pemberton",
           "title": "Partner, Public Relations Expert",
           "link": {
-            "href": "/team/lucy-pemberton",
+            "href": "lucy-pemberton",
             "text": "READ MORE"
           }
         },
         {
-          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/590016a466747c37cab41681_Team-Ursula.jpg",
+          "img": "/assets/previews/maven/img/team-ursula.jpg",
           "name": "Ursula Rucker",
           "title": "Senior Advisor, Litigation Expert",
           "link": {
-            "href": "/team/ursula-rucker",
+            "href": "ursula-rucker",
             "text": "READ MORE"
           }
         },
         {
-          "img": "https://daks2k3a4ib2z.cloudfront.net/58f6a49cb45a921b9e5e8b57/5900168124b4577e0f17def9_Team-Ashley.jpg",
+          "img": "/assets/previews/maven/img/team-ashley.jpg",
           "name": "Ashley Bramiche",
           "title": "Senior Advisor, Patent Law Expert",
           "link": {
-            "href": "/team/ashley-bramiche",
+            "href": "ashley-bramiche",
             "text": "READ MORE"
           }
         }
@@ -287,6 +287,66 @@
         "email": "emailus@attorneys.com",
         "latLng": "-37.8080036,145.0380925"
       }
+    },
+    "articles": {
+      "visible": false,
+      "splash": {
+        "header": "News & Collective Insight",
+        "text": [
+          "Regular news updates from our firm and professional",
+          "insight from our team of expert advisors."
+        ]
+      },
+      "articles": [
+        {
+          "slug": "re-capping-q1-2018",
+          "title": "Re-capping Q1 2018",
+          "date": "April 26, 2018",
+          "blurb": "A most productive start to the year saw many changes for us",
+          "author": "John Carpenter",
+          "article": []
+        },
+        {
+          "slug": "the-nature-of-efficacy-in-a-modern-legal-practice",
+          "title": "The Nature of Efficacy In A Modern Legal Practice",
+          "date": "April 26, 2018",
+          "blurb": "Working together to acheive actionable, just-in-time results",
+          "author": "John Carpenter",
+          "article": []
+        },
+        {
+          "slug": "transforming-legal-team-communication-in-2018",
+          "title": "Transforming Legal Team Communication in 2018",
+          "date": "April 21, 2018",
+          "blurb": "Strategies for managing multiple stakeholders in an online environment",
+          "author": "John Carpenter",
+          "article": []
+        },
+        {
+          "slug": "building-client-trust-starts-with-us",
+          "title": "Building Client Trust Starts With Us",
+          "date": "April 21, 2018",
+          "blurb": "A brief overview of our Client-Centered philosophy",
+          "author": "John Carpenter",
+          "article": []
+        },
+        {
+          "slug": "why-strategy-and-research-need-to-work-in-tandem",
+          "title": "Why Strategy and Research Need To Work In Tandem",
+          "date": "April 19, 2018",
+          "blurb": "Many firms tend to treat the strategy and research as sequential",
+          "author": "John Carpenter",
+          "article": []
+        },
+        {
+          "slug": "what-matters-now-the-client-experience",
+          "title": "What Matters Now: The Client Experience",
+          "date": "April 19, 2018",
+          "blurb": "How can we better improve outcomes for our clients?",
+          "author": "John Carpenter",
+          "article": []
+        }
+      ]
     }
   },
   "blocks": {

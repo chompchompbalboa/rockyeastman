@@ -29,7 +29,6 @@ class BusinessController extends Controller
       //dd($seed);
       // If there is no seed in the database, load a default one and save it to the database
       if(is_null($seed)) {
-        // Save the new seed to the database
         $seed = new Seed;
         $seed->business_id = $business->id;
         // Fetch the default seed
@@ -39,6 +38,7 @@ class BusinessController extends Controller
         $json->head->title = "Preview - ".$business->name;
         // Home Splash
         $json->pages->home->splash->header = $business->name;
+        $json->pages->home->splash->text[1] = str_replace(",", "", str_replace("Los Angeles", $business->city, $json->pages->home->splash->text[1]));
         // Street Address
         $fullAddress = $business->street." ".$business->city." ".$business->state." ".$business->zip;
         $json->blocks->footer->contact->visit = $fullAddress;

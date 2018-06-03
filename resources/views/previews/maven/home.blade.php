@@ -31,7 +31,7 @@
         <div class="container">
             <div class="column-fullwidth">
                 <div class="image-feature top-feature" style="background-image: url({{ $page->tiles[0]->img }})">
-                    <div class="image-feature-panel">
+                    <div class="image-feature-panel image-feature-panel-left">
                         <h4>{{ $page->tiles[0]->header }}</h4>
                         <p>{{ $page->tiles[0]->text }}</p>
                         <a class="text-link-uppercase" data-ix="fade-content-out" href="{{ $urlPath.$page->tiles[0]->linkHref }}">
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="column-fullwidth">
                 <div class="image-feature bottom-feature" style="background-image: url({{ $page->tiles[1]->img }})">
-                    <div class="image-feature-panel image-feature-panel-left">
+                    <div class="image-feature-panel">
                         <h4>{{ $page->tiles[1]->header }}</h4>
                         <p>{{ $page->tiles[1]->text }}</p>
                         <a class="text-link-uppercase" data-ix="fade-content-out" href="{{$urlPath.$page->tiles[1]->linkHref }}">

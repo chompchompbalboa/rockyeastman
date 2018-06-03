@@ -21,7 +21,7 @@
                                     <div class="team-member-position">
                                         {{ $member->title }}
                                     </div>
-                                    <a class="text-link-uppercase" data-ix="fade-content-out" href="{{ $urlPath.$member->link->href }}">
+                                    <a class="text-link-uppercase" data-ix="fade-content-out" href="{{ $urlPath}}/team-member/{{ $member->link->href }}">
                                         {{ $member->link->text }}
                                     </a>
                                 </div>
