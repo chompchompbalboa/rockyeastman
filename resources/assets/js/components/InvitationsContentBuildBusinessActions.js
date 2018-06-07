@@ -10,7 +10,7 @@ import SendData from './actions/SendData'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class InvitationsContentBuildBusinessActions extends Component {
+export default class InvitationsContentEditBusinessActions extends Component {
 
   static propTypes = {
     business: object,

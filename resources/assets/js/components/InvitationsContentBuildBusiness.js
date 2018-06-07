@@ -2,7 +2,7 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React, { Component } from 'react'
-import { number, shape, string } from 'prop-types'
+import { number, object, shape, string } from 'prop-types'
 import styled from 'styled-components'
 import _ from 'lodash'
 
@@ -15,12 +15,15 @@ import BuildBusinessSeed from './InvitationsContentBuildBusinessSeed'
 export default class InvitationsContentBuildBusiness extends Component {
 
   state = {
-    id: this.props.business.id,
-    email: this.props.business.email,
-    name: this.props.business.name,
-    slug: this.props.business.slug,
-    status: this.props.business.status,
-    website: this.props.business.website
+    business: {
+      id: this.props.business.id,
+      email: this.props.business.email,
+      name: this.props.business.name,
+      slug: this.props.business.slug,
+      status: this.props.business.status,
+      website: this.props.business.website
+    },
+    seed: this.props.seed
   }
 
   static propTypes = {
@@ -31,17 +34,21 @@ export default class InvitationsContentBuildBusiness extends Component {
       slug: string,
       status: string,
       website: string
-    })
+    }),
+    seed: object
   }
 
   static getDerivedStateFromProps = (nextProps, prevState) => {
     return {
-      id: nextProps.business.id,
-      email: nextProps.business.email,
-      name: nextProps.business.name,
-      slug: this.a.setSlug(nextProps.business.slug, nextProps.business.name),
-      status: nextProps.business.status,
-      website: nextProps.business.website
+      business: {
+        id: nextProps.business.id,
+        email: nextProps.business.email,
+        name: nextProps.business.name,
+        slug: this.a.setSlug(nextProps.business.slug, nextProps.business.name),
+        status: nextProps.business.status,
+        website: nextProps.business.website
+      },
+      seed: nextProps.seed
     }
   }
 
@@ -65,15 +72,25 @@ export default class InvitationsContentBuildBusiness extends Component {
     })
   }
 
+  updateSeed = (e, data) => {
+    const { seed } = this.state
+    const value = (typeof data.value !== "undefined" ? data.value : data.checked)
+    let newSeed = _.set(Object.assign({}, seed), data.name, value)
+    this.setState({
+      seed: newSeed
+    })
+  }
+
   render() {
-    const { id, email, slug, status, website } = this.state
+    const { id, email, seed, slug, status, website } = this.state
     return (
       <Container>
         <BuildBusinessInfo
-          business={this.state}
+          business={this.state.business}
           updateBusiness={this.updateBusiness}/>
         <BuildBusinessSeed
-          business={this.state}/>
+          seed={this.state.seed}
+          updateSeed={this.updateSeed}/>
       </Container>
     )
   }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Business;
 use App\Models\Seed;
 use App\Helpers\Helper;
+use App\Helpers\Maven;
 
 class BusinessController extends Controller
 {
@@ -19,6 +20,58 @@ class BusinessController extends Controller
     }
 
     /**
+     * Get Built
+     * 
+     * Get every site that has the status "built"
+     */
+    public function getBuilt() {
+      return Business::where('status', "built")->get();
+    }
+
+    /**
+     * Get Next
+     * 
+     * Save the current built business and get the next one to be built
+     */
+    public function getNext(Request $request) {
+      // Get the request data
+      $data = $request->all();
+      // Save the current business
+      if(isset($data['business'])) {
+        $currentBusiness = Business::find($data['business']['id']);
+        $currentBusiness->slug = $data['business']['slug'];
+        $currentBusiness->email = $data['business']['email'];
+        $currentBusiness->status = $data['status'];
+        $currentBusiness->save();
+
+        $currentSeed = Seed::where('business_id', $data['business']['id'])->first();
+        $currentSeed->json = json_encode($data['seed']);
+        $currentSeed->save();
+      }
+      // Get the next business
+      $nextBusiness = Business::where('status', "uploaded")->first();
+      // Check for an existing seed
+      $nextSeed = Seed::where('business_id', $nextBusiness->id)->first();
+      if(is_null($nextSeed)) {
+        // Build a new seed
+        $nextSeed = new Seed;
+        $nextSeed->business_id = $nextBusiness->id;
+        // Load the default json
+        $defaultJson = Helper::fetchJSON("/assets/previews/maven/seeds/__default.json");
+        // Update the default values to use the current business' info
+        $json = Maven::replaceDefaultValues($nextBusiness, $defaultJson);
+        // Save the seed to the database
+        $nextSeed->json = json_encode($json);
+        $nextSeed->save();
+      }
+      // Payload
+      return [
+        "business" => $nextBusiness,
+        "seed" => json_decode($nextSeed->json)
+      ];
+    }
+
+    /**
      * Get Seed
      * 
      * Get a business' seed
@@ -26,52 +79,16 @@ class BusinessController extends Controller
     public function getSeed(Business $business) {
       // Try to find the seed in the database
       $seed = Seed::where('business_id', $business->id)->first();
-      //dd($seed);
-      // If there is no seed in the database, load a default one and save it to the database
-      if(is_null($seed)) {
-        $seed = new Seed;
-        $seed->business_id = $business->id;
-        // Fetch the default seed
-        $json = Helper::fetchJSON("/assets/previews/maven/seeds/__default.json");
-        // Update the default values to use the current business' info
-        // Page Title
-        $json->head->title = "Preview - ".$business->name;
-        // Home Splash
-        $json->pages->home->splash->header = $business->name;
-        $json->pages->home->splash->text[1] = str_replace(",", "", str_replace("Los Angeles", $business->city, $json->pages->home->splash->text[1]));
-        // Street Address
-        $fullAddress = $business->street." ".$business->city." ".$business->state." ".$business->zip;
-        $json->blocks->footer->contact->visit = $fullAddress;
-        $json->pages->contact->information->visit[0] = $business->street;
-        $json->pages->contact->information->visit[1] = $business->city." ".$business->state." ".$business->zip;
-        // Map LatLng
-        $geocode = app('geocoder')->geocode($fullAddress)->get()->first();
-        $json->pages->contact->information->latLng = $geocode->getCoordinates()->getLatitude().",".$geocode->getCoordinates()->getLongitude();
-        // Phone
-        $json->blocks->footer->contact->call = $business->phone;
-        $json->pages->contact->information->call[0] = $business->phone;
-        // Email
-        $json->blocks->footer->contact->email = $business->email;
-        $json->pages->contact->information->email = $business->email;
-        // Save to the database
-        $seed->json = json_encode($json);
-        $seed->save();
+      // Return the seed if it exists
+      if(!is_null($seed)) {
+        return [
+          "id" => $seed->id,
+          "business_id" => $seed->business_id,
+          "json" => json_decode($seed->json)
+        ];
       }
-      // Payload
-      return [
-        "id" => $seed->id,
-        "business_id" => $seed->business_id,
-        "json" => json_decode($seed->json)
-      ];
-    }
-
-    /**
-     * Get Built
-     * 
-     * Get every site that has the status "built"
-     */
-    public function getBuilt() {
-      return Business::where('status', "built")->get();
+      // If not, return an empty payload
+      return null;
     }
 
     /**

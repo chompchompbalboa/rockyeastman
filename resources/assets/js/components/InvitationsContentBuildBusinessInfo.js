@@ -11,7 +11,7 @@ import InputActionCopy from './lib/InputAction/InputActionCopy'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class InvitationsContentBuildBusinessInfo extends Component {
+export default class InvitationsContentEditBusinessInfo extends Component {
 
   static propTypes = {
     business: shape({

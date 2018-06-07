@@ -22,6 +22,7 @@ $rockyeastman = function() {
     Route::get('/invitations/businesses', 'BusinessController@index');
     Route::get('/invitations/businesses/uploaded', 'BusinessController@getUploaded');
     Route::get('/invitations/businesses/built', 'BusinessController@getBuilt');
+    Route::put('/invitations/businesses/next', 'BusinessController@getNext');
     Route::put('/invitations/businesses/{business}', 'BusinessController@update');
     Route::get('/invitations/businesses/{business}/seed', 'BusinessController@getSeed');
 

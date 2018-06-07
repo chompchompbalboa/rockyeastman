@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 import { Tab } from 'semantic-ui-react'
 import Build from './InvitationsContentBuild'
+import Edit from './InvitationsContentEdit'
 import InvitationsContainer from './InvitationsContainer'
 import Send from './InvitationsContentSend'
 
@@ -18,6 +19,7 @@ export default class InvitationContent extends Component {
   getPanes() {
     return [
       {menuItem: "Build", render: () => <Build />},
+      {menuItem: "Edit", render: () => <Edit />},
       {menuItem: "Send", render: () => <Send />}
     ]
   }

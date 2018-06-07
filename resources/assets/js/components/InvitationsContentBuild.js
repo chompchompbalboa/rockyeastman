@@ -7,8 +7,8 @@ import styled from 'styled-components'
 import _ from 'lodash'
 
 import { Tab } from 'semantic-ui-react'
-import Business from './InvitationsContentBuildBusiness'
-import ChooseBusiness from './InvitationsContentChooseBusiness'
+import BuildBusiness from './InvitationsContentBuildBusiness'
+import ChangeBusiness from './InvitationsContentChangeBusiness'
 import Container from './InvitationsContentContainer'
 //-----------------------------------------------------------------------------
 // Component
@@ -16,55 +16,65 @@ import Container from './InvitationsContentContainer'
 export default class InvitationsContentBuild extends Component {
 
   state = {
-    active: {
-      business: null
+    business: {
+      id: 0,
+      email: "",
+      website: ""
     },
-    businesses: []
-  }
-  
-  defaultBusiness = {
-    id: 0,
-    email: "",
-    website: ""
+    seed: {}
   }
 
   componentDidMount = () => {
-    fetch('/api/invitations/businesses/uploaded')
-      .then(response => {
+    fetch('/api/invitations/businesses/next', {
+      method: "PUT",
+      body: JSON.stringify({}),
+      headers: {
+        'content-type': 'application/json'
+    }}).then(response => {
         return response.json()
       })
-      .then(businesses => {
+      .then(response => {
+        //console.log(response)
         this.setState({
-          businesses: businesses,
-          active: {
-            business: businesses[0].id
-          }
+          business: response.business,
+          seed: response.seed
         })
       })
   }
 
-  changeActive = (e, data) => {
-    let active = Object.assign({}, this.state.active)
-    active[data.name] = data.value
-    this.setState({
-      active: active
-    })
+  getNextBusiness = (status) => {
+    const { business, seed } = this.state
+    fetch('/api/invitations/businesses/next', {
+      method: "PUT",
+      body: JSON.stringify({
+        business: business,
+        seed: seed,
+        status: status
+      }),
+      headers: {
+      'content-type': 'application/json'
+    }}).then(response => {
+        return response.json()
+      })
+      .then(response => {
+        //console.log(response)
+        this.setState({
+          business: response.business,
+          seed: response.seed
+        })
+      })
   }
 
   render() {
-    const { active, businesses } = this.state
-    const business = (active.business === null ? this.defaultBusiness : _.find(businesses, {id: active.business}))
-    const change = {
-      active: this.changeActive
-    }
+    const { business, seed } = this.state
     return (
       <Container>
-        <ChooseBusiness 
-          active={active.business}
-          businesses={businesses}
-          changeActive={change.active}/>
-        <Business 
-          business={business}/>
+        <ChangeBusiness 
+          business={business}
+          getNextBusiness={this.getNextBusiness}/>
+        <BuildBusiness 
+          business={business}
+          seed={seed}/>
       </Container>
     )
   }
