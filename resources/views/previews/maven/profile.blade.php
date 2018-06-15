@@ -4,6 +4,10 @@
     $page = $data->pages->profile
 @endphp
 
+@section('message')
+  memsmsalsdkjfal;sdjr;eiaje;ijf
+@endsection
+
 @section('content')
     @include($viewPath.'.splash', ['splash' => $page->splash])
     <div class="no-space-top section">

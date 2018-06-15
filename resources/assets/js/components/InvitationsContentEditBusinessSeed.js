@@ -57,7 +57,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
         <Head
           business={business} 
           head={seed.json.head} 
-          updateJson={this.updateJson}/>
+          update={this.updateJson}/>
     })
     // Blocks
     panes.push({
@@ -65,7 +65,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
       render: () => 
         <Blocks 
           blocks={seed.json.blocks} 
-          updateJson={this.updateJson}/>
+          update={this.updateJson}/>
     })
     // Pages
     panes.push({
@@ -73,7 +73,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
       render: () => 
         <Pages 
           pages={seed.json.pages} 
-          updateJson={this.updateJson}/>
+          update={this.updateJson}/>
     })
     _.map(seed.json.pages, (page, index) => {
       if(page.visible) {
@@ -83,7 +83,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
             <Page 
               page={index} 
               pageSeed={page} 
-              updateJson={this.updateJson}/>
+              update={this.updateJson}/>
         })
       }
     })

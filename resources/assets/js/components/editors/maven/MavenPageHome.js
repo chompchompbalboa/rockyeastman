@@ -14,7 +14,7 @@ import ListActions from '../../lib/ListActions/ListActions'
 export default class MavenPageHome extends Component {
 
   render() {
-    const { home, updateJson } = this.props
+    const { home, update } = this.props
     return (
       <Tab.Pane>
 
@@ -25,19 +25,25 @@ export default class MavenPageHome extends Component {
             label="Header"
             name="pages.home.splash.header"
             value={home.splash.header}
-            onChange={updateJson} />
-          <StyledInput 
-            fluid
-            label="Line 1"
-            name="pages.home.splash.text.0"
-            value={home.splash.text[0]}
-            onChange={updateJson} />
-          <StyledInput 
-            fluid
-            label="Line 2"
-            name="pages.home.splash.text.1"
-            value={home.splash.text[1]}
-            onChange={updateJson} />
+            onChange={update} />
+          {home.splash.text.map((item, index) => {
+            return (
+              <HorizontalContainer key={index}>
+                <StyledInput 
+                  label={"Splash " + (index + 1)}
+                  name={"pages.home.splash.text." + index}
+                  value={home.splash.text[index]}
+                  onChange={update} 
+                  style={{width: "78%"}}/>
+                <ListActions
+                  index={index}
+                  itemTemplate=""
+                  name="pages.home.splash.text"
+                  list={home.splash.text}
+                  onChange={update} />
+              </HorizontalContainer>
+            )
+          })}
         </Segment>
 
         <Segment>
@@ -47,7 +53,7 @@ export default class MavenPageHome extends Component {
             label="Header"
             name="pages.home.list.header"
             value={home.list.header}
-            onChange={updateJson} />
+            onChange={update} />
           {home.list.listItems.map((item, index) => {
             return (
               <HorizontalContainer key={index}>
@@ -55,14 +61,14 @@ export default class MavenPageHome extends Component {
                   label={"List Item " + (index + 1)}
                   name={"pages.home.list.listItems." + index}
                   value={home.list.listItems[index]}
-                  onChange={updateJson} 
+                  onChange={update} 
                   style={{width: "78%"}}/>
                 <ListActions
                   index={index}
                   itemTemplate=""
                   name="pages.home.list.listItems"
                   list={home.list.listItems}
-                  onChange={updateJson} />
+                  onChange={update} />
               </HorizontalContainer>
             )
           })}
@@ -75,30 +81,30 @@ export default class MavenPageHome extends Component {
             label="Header"
             name="pages.home.tiles.0.header"
             value={home.tiles[0].header}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label={"Text "}
             name={"pages.home.tiles.0.text"}
             value={home.tiles[0].text}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Link Text"
             name="pages.home.tiles.0.linkText"
             value={home.tiles[0].linkText}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Link Href"
             name="pages.home.tiles.0.linkHref"
             value={home.tiles[0].linkHref}
-            onChange={updateJson} />
+            onChange={update} />
           <CMSImage
             src={home.tiles[0].img}
             label="Image"
             name="pages.home.tiles.0.img"
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
         <Segment>
@@ -108,36 +114,36 @@ export default class MavenPageHome extends Component {
             label="Header"
             name="pages.home.tiles.1.header"
             value={home.tiles[1].header}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label={"Text "}
             name={"pages.home.tiles.1.text"}
             value={home.tiles[1].text}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Link Text"
             name="pages.home.tiles.1.linkText"
             value={home.tiles[1].linkText}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Link Href"
             name="pages.home.tiles.1.linkHref"
             value={home.tiles[1].linkHref}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Image"
             name="pages.home.tiles.1.img"
             value={home.tiles[1].img}
-            onChange={updateJson} />
+            onChange={update} />
           <CMSImage
             src={home.tiles[1].img}
             label="Image"
             name="pages.home.tiles.1.img"
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
         <Segment>
@@ -152,14 +158,14 @@ export default class MavenPageHome extends Component {
                   label={"Text"}
                   name={"pages.home.testimonials." + index + ".text"}
                   value={home.testimonials[index].text}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <StyledInput 
                   fluid
                   key={index + "-attribution"}
                   label={"Attribution"}
                   name={"pages.home.testimonials." + index + ".attribution"}
                   value={home.testimonials[index].attribution}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <Divider />
               </React.Fragment>
             )
@@ -173,7 +179,7 @@ export default class MavenPageHome extends Component {
             label="Header"
             name="pages.home.services.header"
             value={home.services.header}
-            onChange={updateJson} />
+            onChange={update} />
           {home.services.tiles.map((service, index) => {
             return (
               <React.Fragment key={index}>
@@ -183,19 +189,19 @@ export default class MavenPageHome extends Component {
                   label={"Header"}
                   name={"pages.home.services.tiles." + index + ".header"}
                   value={home.services.tiles[index].header}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <HorizontalContainer>
                   <StyledInput 
                     label={"Top Link Text"}
                     name={"pages.home.services.tiles." + index + ".topLink.text"}
                     value={home.services.tiles[index].topLink.text}
-                    onChange={updateJson}
+                    onChange={update}
                     style={{width: "49%"}} />
                   <StyledInput 
                     label={"Top Link Href"}
                     name={"pages.home.services.tiles." + index + ".topLink.href"}
                     value={home.services.tiles[index].topLink.href}
-                    onChange={updateJson}
+                    onChange={update}
                     style={{width: "49%"}} />
                 </HorizontalContainer>
                 <StyledInput 
@@ -203,19 +209,19 @@ export default class MavenPageHome extends Component {
                   label={"Blurb"}
                   name={"pages.home.services.tiles." + index + ".blurb"}
                   value={home.services.tiles[index].blurb}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <HorizontalContainer>
                   <StyledInput 
                     label={"Bottom Link Text"}
                     name={"pages.home.services.tiles." + index + ".bottomLink.text"}
                     value={home.services.tiles[index].bottomLink.text}
-                    onChange={updateJson}
+                    onChange={update}
                     style={{width: "49%"}} />
                   <StyledInput 
                     label={"Bottom Link Href"}
                     name={"pages.home.services.tiles." + index + ".bottomLink.href"}
                     value={home.services.tiles[index].bottomLink.href}
-                    onChange={updateJson}
+                    onChange={update}
                     style={{width: "49%"}} />
                 </HorizontalContainer>
                 <Divider />

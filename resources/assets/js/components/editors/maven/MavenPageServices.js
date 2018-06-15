@@ -13,7 +13,7 @@ import ListActions from '../../lib/ListActions/ListActions'
 export default class MavenPageServices extends Component {
 
   render() {
-    const { services, updateJson } = this.props
+    const { services, update } = this.props
     return (
       <Tab.Pane>
 
@@ -24,19 +24,19 @@ export default class MavenPageServices extends Component {
             label="Header"
             name="pages.services.splash.header"
             value={services.splash.header}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Line 1"
             name="pages.services.splash.text.0"
             value={services.splash.text[0]}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Line 2"
             name="pages.services.splash.text.1"
             value={services.splash.text[1]}
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
         <Segment>
@@ -61,7 +61,7 @@ export default class MavenPageServices extends Component {
                     }}
                     name="pages.services.services"
                     list={services.services}
-                    onChange={updateJson} />
+                    onChange={update} />
                 </HorizontalContainer>
                 <StyledInput 
                   fluid
@@ -69,14 +69,14 @@ export default class MavenPageServices extends Component {
                   label={"Service " + (index + 1) + " Header"}
                   name={"pages.services.services." + index + ".header"}
                   value={services.services[index].header}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <StyledInput 
                   fluid
                   key={index + "-subheader"}
                   label={"Service " + (index + 1) + " Subheader"}
                   name={"pages.services.services." + index + ".subheader"}
                   value={services.services[index].subheader}
-                  onChange={updateJson} />
+                  onChange={update} />
                   {service.list.map((item, listIndex) => {
                     return (
                       <HorizontalContainer key={listIndex}>
@@ -84,14 +84,14 @@ export default class MavenPageServices extends Component {
                           label={"Service " + (index + 1) + " List Item " + (listIndex + 1)}
                           name={"pages.services.services." + index + ".list." + listIndex}
                           value={item}
-                          onChange={updateJson}
+                          onChange={update}
                           style={{width: "78%"}}/>
                         <ListActions 
                           index={listIndex}
                           itemTemplate={""}
                           name={"pages.services.services." + index + ".list"}
                           list={services.services[index].list}
-                          onChange={updateJson} />
+                          onChange={update} />
                       </HorizontalContainer>
                     )
                   })}
@@ -101,14 +101,14 @@ export default class MavenPageServices extends Component {
                     label={"Service " + (index + 1) + " Button Text"}
                     name={"pages.services.services." + index + ".button.text"}
                     value={services.services[index].button.text}
-                    onChange={updateJson} />
+                    onChange={update} />
                   <StyledInput 
                     fluid
                     key={index + "-buttonHref"}
                     label={"Service " + (index + 1) + " Button Href"}
                     name={"pages.services.services." + index + ".button.href"}
                     value={services.services[index].button.href}
-                    onChange={updateJson} />
+                    onChange={update} />
                   {service.text.map((item, textIndex) => {
                     return (
                       <StyledForm key={index + "-" + textIndex}>
@@ -117,7 +117,7 @@ export default class MavenPageServices extends Component {
                           label={"Service " + (index + 1) + " Text " + (textIndex + 1)}
                           name={"pages.services.services." + index + ".text." + textIndex}
                           value={item}
-                          onChange={updateJson}/>
+                          onChange={update}/>
                       </StyledForm>
                     )
                   })}

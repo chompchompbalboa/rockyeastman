@@ -13,7 +13,7 @@ import { Header, Input as SemanticUIInput, Segment, Tab } from 'semantic-ui-reac
 export default class MavenPageContact extends Component {
 
   render() {
-    const { contact, updateJson } = this.props
+    const { contact, update } = this.props
     return (
       <Tab.Pane>
 
@@ -24,19 +24,19 @@ export default class MavenPageContact extends Component {
             label="Header"
             name="pages.contact.splash.header"
             value={contact.splash.header}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Line 1"
             name="pages.contact.splash.text.0"
             value={contact.splash.text[0]}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Line 2"
             name="pages.contact.splash.text.1"
             value={contact.splash.text[1]}
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
         <Segment>
@@ -46,37 +46,37 @@ export default class MavenPageContact extends Component {
             label="Blurb"
             name="pages.contact.information.blurb"
             value={contact.information.blurb}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Visit 1"
             name="pages.contact.information.visit.0"
             value={contact.information.visit[0]}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Visit 2"
             name="pages.contact.information.visit.1"
             value={contact.information.visit[1]}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Call 1"
             name="pages.contact.information.call.0"
             value={contact.information.call[0]}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Email"
             name="pages.contact.information.email"
             value={contact.information.email}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Email"
             name="pages.contact.information.latLng"
             value={contact.information.latLng}
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
       </Tab.Pane>

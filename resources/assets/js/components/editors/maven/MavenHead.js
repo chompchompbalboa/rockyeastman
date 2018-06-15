@@ -9,10 +9,10 @@ import { Input, Tab } from 'semantic-ui-react'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class InvitationsContentBuildBusinessSeedPane extends Component {
+export default class MavenHead extends Component {
 
   render() {
-    const { head, updateJson } = this.props
+    const { head, update } = this.props
     if(head) {
       return (
         <Tab.Pane>
@@ -21,7 +21,7 @@ export default class InvitationsContentBuildBusinessSeedPane extends Component {
             label="Title"
             name="head.title"
             value={head.title}
-            onChange={updateJson}/>
+            onChange={update}/>
         </Tab.Pane>
       )
     }

@@ -19,9 +19,9 @@ export default class SendData extends Component {
     data: object,
     url: string,
     messages: shape({
-      during: string,
-      success: string,
-      error: string
+      SENDING: string,
+      SUCCESS: string,
+      ERROR: string
     })
   }
 

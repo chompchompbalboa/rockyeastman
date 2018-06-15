@@ -13,7 +13,7 @@ import { Checkbox, Tab } from 'semantic-ui-react'
 export default class MavenPages extends Component {
 
   render() {
-    const { pages, updateJson } = this.props
+    const { pages, update } = this.props
     if (pages) {
       return (
         <Tab.Pane>
@@ -24,7 +24,7 @@ export default class MavenPages extends Component {
                 name={"pages." + index + ".visible"}
                 label={_.capitalize(index)}
                 checked={page.visible}
-                onClick={updateJson}/>
+                onClick={update}/>
             )
           })}
         </Tab.Pane>

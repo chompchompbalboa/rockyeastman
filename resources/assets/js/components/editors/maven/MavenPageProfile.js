@@ -14,7 +14,7 @@ import ListActions from '../../lib/ListActions/ListActions'
 export default class MavenPageProfile extends Component {
 
   render() {
-    const { profile, updateJson } = this.props
+    const { profile, update } = this.props
     return (
       <Tab.Pane>
 
@@ -25,19 +25,19 @@ export default class MavenPageProfile extends Component {
             label="Header"
             name="pages.profile.splash.header"
             value={profile.splash.header}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Line 1"
             name="pages.profile.splash.text.0"
             value={profile.splash.text[0]}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Line 2"
             name="pages.profile.splash.text.1"
             value={profile.splash.text[1]}
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
         <Segment>
@@ -47,13 +47,13 @@ export default class MavenPageProfile extends Component {
             label="Quote Text"
             name="pages.profile.quote.text"
             value={profile.quote.text}
-            onChange={updateJson} />
+            onChange={update} />
           <StyledInput 
             fluid
             label="Quote Attribution"
             name="pages.profile.quote.attribution"
             value={profile.quote.attribution}
-            onChange={updateJson} />
+            onChange={update} />
         </Segment>
 
         <Segment>
@@ -66,12 +66,12 @@ export default class MavenPageProfile extends Component {
                   itemTemplate={""}
                   name="pages.profile.slider"
                   list={profile.slider}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <CMSImage
                   src={profile.slider[index]}
                   label="Image"
                   name={"pages.profile.slider." + index}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <Divider />
               </VerticalContainer>
             )
@@ -85,7 +85,7 @@ export default class MavenPageProfile extends Component {
             label="Header"
             name="pages.profile.profile.header"
             value={profile.profile.header}
-            onChange={updateJson} />
+            onChange={update} />
           {profile.profile.text.map((item, index) => {
             return (
               <HorizontalContainer key={index}>
@@ -94,14 +94,14 @@ export default class MavenPageProfile extends Component {
                     autoHeight
                     name={"pages.profile.profile.text." + index}
                     value={profile.profile.text[index]}
-                    onChange={updateJson}/>
+                    onChange={update}/>
                 </StyledForm>
                 <ListActions
                   index={index}
                   itemTemplate={""}
                   name="pages.profile.profile.text"
                   list={profile.profile.text}
-                  onChange={updateJson} />
+                  onChange={update} />
               </HorizontalContainer>
             )
           })}
@@ -118,14 +118,14 @@ export default class MavenPageProfile extends Component {
                   label={"Metric " + (index + 1) + " Metric"}
                   name={"pages.profile.metrics." + index + ".metric"}
                   value={profile.metrics[index].metric}
-                  onChange={updateJson} />
+                  onChange={update} />
                 <StyledInput 
                   fluid
                   key={index + "-blurb"}
                   label={"Metric " + (index + 1) + " Blurb"}
                   name={"pages.profile.metrics." + index + ".blurb"}
                   value={profile.metrics[index].blurb}
-                  onChange={updateJson} />
+                  onChange={update} />
               </React.Fragment>
             )
           })}

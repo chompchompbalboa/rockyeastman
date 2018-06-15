@@ -73,6 +73,18 @@ class PreviewController extends Controller
                   "It can be tempting, after a survey of products that are out there, to develop an exhaustive backlog of must-have features for your product and to set out designing a slicker version of the status quo."
                 ]
               ];
+              foreach($data->pages->team->members as $member) {
+                if($member->link->href === $pageId) {
+                  $data->member = [
+                    "name" => $member->name,
+                    "title" => $member->title,
+                    "email" => $member->email,
+                    "phone" => $member->phone,
+                    "img" => $member->img,
+                    "profile" => $member->profile
+                  ];
+                }
+              }
             break;
           }
         }

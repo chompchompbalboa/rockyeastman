@@ -9,6 +9,7 @@ import _ from 'lodash'
 import { Input } from 'semantic-ui-react'
 import BuildBusinessInfo from './InvitationsContentBuildBusinessInfo'
 import BuildBusinessSeed from './InvitationsContentBuildBusinessSeed'
+import StatusBar from './InvitationsContentStatusBar'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -23,7 +24,8 @@ export default class InvitationsContentBuildBusiness extends Component {
       status: this.props.business.status,
       website: this.props.business.website
     },
-    seed: this.props.seed
+    seed: this.props.seed,
+    status: "READY"
   }
 
   static propTypes = {
@@ -52,6 +54,20 @@ export default class InvitationsContentBuildBusiness extends Component {
     }
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    const { business } = this.state
+    if(prevState.business.id !== business.id) {
+      //const slugValue = (business.slug && business.slug !== null ? business.slug : "")
+      //const previewUrl = "http://" + location.hostname + "/preview/" + slugValue
+      //open(previewUrl, "_blank")
+      //open(business.website, "_blank")
+    }
+  }
+
+  componentWillUnmount = () => {
+    clearTimeout(this.timeout)
+  }
+
   static setSlug = (slug, name) => {
     if(slug && slug !== null) {
       return slug
@@ -66,30 +82,73 @@ export default class InvitationsContentBuildBusiness extends Component {
     }
   }
 
+  // Initialize the timeout variable for the update functions below
+  timeout = null
+
   updateBusiness = (e, data) => {
+    const { business } = this.state
+    let newBusiness = Object.assign({}, business)
+    newBusiness[data.name] = data.value
+    clearTimeout(this.timeout)
     this.setState({
-      [data.name]: data.value
+      business: newBusiness,
+      status: "UNSAVED"
     })
+    this.timeout = setTimeout(this.save, 2500)
   }
 
   updateSeed = (e, data) => {
+    clearTimeout(this.timeout)
     const { seed } = this.state
     const value = (typeof data.value !== "undefined" ? data.value : data.checked)
     let newSeed = _.set(Object.assign({}, seed), data.name, value)
     this.setState({
-      seed: newSeed
+      seed: newSeed,
+      status: "UNSAVED"
     })
+    this.timeout = setTimeout(this.save, 2500)
+  }
+
+  save = () => {
+    const { business, seed } = this.state
+    this.setState({
+      status: "SAVING"
+    })
+
+    fetch('/api/invitations/businesses/' + business.id, {
+      method: "PUT",
+      body: JSON.stringify({
+        business: business,
+        seed: {json: seed}
+      }),
+      headers: {
+      'content-type': 'application/json'
+    }}).then(response => {
+        return response.json()
+      })
+      .then(response => {
+        if(response.success) {
+          this.setState({status: "SAVED"})
+        }
+        else {
+          this.setState({status: "ERROR"})
+        }
+      })
   }
 
   render() {
-    const { id, email, seed, slug, status, website } = this.state
+    const { business, seed, status } = this.state
     return (
       <Container>
+        <StatusBar
+          status={status}
+        />
         <BuildBusinessInfo
-          business={this.state.business}
+          business={business}
           updateBusiness={this.updateBusiness}/>
         <BuildBusinessSeed
-          seed={this.state.seed}
+          business={business}
+          seed={seed}
           updateSeed={this.updateSeed}/>
       </Container>
     )

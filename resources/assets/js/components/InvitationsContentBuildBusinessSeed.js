@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import _ from 'lodash'
 
 import { Tab } from 'semantic-ui-react'
-import Actions from './InvitationsContentEditBusinessActions'
 import Blocks from './editors/maven/MavenBlocks'
 import Head from './editors/maven/MavenHead'
 import Page from './editors/maven/MavenPage'
@@ -15,7 +14,7 @@ import Pages from './editors/maven/MavenPages'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class InvitationsContentEditBusinessSeed extends Component {
+export default class InvitationsContentBuildBusinessSeed extends Component {
 
   static propTypes = {
     business: object,
@@ -32,7 +31,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
   }
 
   setPanes = () => {
-    const { business, seed } = this.props
+    const { business, seed, updateSeed } = this.props
     let panes = []
     // Head
     panes.push({
@@ -40,7 +39,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
       render: () => 
         <Head
           head={seed.head} 
-          updateJson={this.updateJson}/>
+          update={updateSeed}/>
     })
     // Blocks
     panes.push({
@@ -48,7 +47,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
       render: () => 
         <Blocks 
           blocks={seed.blocks} 
-          updateJson={this.updateJson}/>
+          update={updateSeed}/>
     })
     // Pages
     panes.push({
@@ -56,7 +55,7 @@ export default class InvitationsContentEditBusinessSeed extends Component {
       render: () => 
         <Pages 
           pages={seed.pages} 
-          updateJson={this.updateJson}/>
+          update={updateSeed}/>
     })
     _.map(seed.pages, (page, index) => {
       if(page.visible) {
@@ -66,17 +65,9 @@ export default class InvitationsContentEditBusinessSeed extends Component {
             <Page 
               page={index} 
               pageSeed={page} 
-              updateJson={this.updateJson}/>
+              update={updateSeed}/>
         })
       }
-    })
-    // Actions
-    panes.push({
-      menuItem: "Actions",
-      render: () => 
-        <Actions 
-          business={business}
-          seed={seed}/>
     })
     return panes
   }

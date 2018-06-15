@@ -17,22 +17,22 @@ import Team from './MavenPageTeam'
 export default class MavenPage extends Component {
 
   render() {
-    const { page, pageSeed, updateJson } = this.props
+    const { page, pageSeed, update } = this.props
     switch(page) {
       case "home":
-        return <Home home={pageSeed} updateJson={updateJson}/>
+        return <Home home={pageSeed} update={update}/>
       break;
       case "contact":
-        return <Contact contact={pageSeed} updateJson={updateJson}/>
+        return <Contact contact={pageSeed} update={update}/>
       break;
       case "profile":
-        return <Profile profile={pageSeed} updateJson={updateJson}/>
+        return <Profile profile={pageSeed} update={update}/>
       break;
       case "services":
-        return <Services services={pageSeed} updateJson={updateJson}/>
+        return <Services services={pageSeed} update={update}/>
       break;
       case "team":
-        return <Team team={pageSeed} updateJson={updateJson}/>
+        return <Team team={pageSeed} update={update}/>
       break;
       default:
         return <Tab.Pane />

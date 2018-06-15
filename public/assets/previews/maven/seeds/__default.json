@@ -219,7 +219,7 @@
       ]
     },
     "team": {
-      "visible": false,
+      "visible": true,
       "splash": {
         "header": "A team with experience & vision.",
         "text": [
@@ -232,37 +232,65 @@
           "img": "/assets/previews/maven/img/team-john.jpg",
           "name": "John Carpenter",
           "title": "Partner, Intellectual Property Expert",
+          "phone": "+614 442 482",
+          "email": "johncarpenter@attorneys.com",
           "link": {
             "href": "john-carpenter",
             "text": "READ MORE"
-          }
+          },
+          "profile": [
+            "Let’s say for example that your client is a financial institution that is redesigning the navigation structure for their website. Because the ownership of the site’s content is often dispersed across several organizational silos, the order, content, and even labeling of the navigation can become a disastrous political debate.",
+            "While looking to competitors for cues may help settle internal debates, it could also show you their dysfunctional organizational structures, too—and it tells you nothing about what your users expect to find where.How does your web copy stack up against your competitors’? Entrepreneurs and marketing executives will sometimes decide to take on the copywriting themselves to save cost on the total project. Most people have at least basic writing skills, and it’s not like you need specialized technological skills or software to do it.",
+            "It can be tempting, after a survey of products that are out there, to develop an exhaustive backlog of must-have features for your product and to set out designing a slicker version of the status quo."
+          ]
         },
         {
           "img": "/assets/previews/maven/img/team-lucy.jpg",
           "name": "Lucy Pemberton",
           "title": "Partner, Public Relations Expert",
+          "phone": "+614 442 482",
+          "email": "lucypemberton@attorneys.com",
           "link": {
             "href": "lucy-pemberton",
             "text": "READ MORE"
-          }
+          },
+          "profile": [
+            "Let’s say for example that your client is a financial institution that is redesigning the navigation structure for their website. Because the ownership of the site’s content is often dispersed across several organizational silos, the order, content, and even labeling of the navigation can become a disastrous political debate.",
+            "While looking to competitors for cues may help settle internal debates, it could also show you their dysfunctional organizational structures, too—and it tells you nothing about what your users expect to find where.How does your web copy stack up against your competitors’? Entrepreneurs and marketing executives will sometimes decide to take on the copywriting themselves to save cost on the total project. Most people have at least basic writing skills, and it’s not like you need specialized technological skills or software to do it.",
+            "It can be tempting, after a survey of products that are out there, to develop an exhaustive backlog of must-have features for your product and to set out designing a slicker version of the status quo."
+          ]
         },
         {
           "img": "/assets/previews/maven/img/team-ursula.jpg",
           "name": "Ursula Rucker",
           "title": "Senior Advisor, Litigation Expert",
+          "phone": "+614 442 482",
+          "email": "ursularucker@attorneys.com",
           "link": {
             "href": "ursula-rucker",
             "text": "READ MORE"
-          }
+          },
+          "profile": [
+            "Let’s say for example that your client is a financial institution that is redesigning the navigation structure for their website. Because the ownership of the site’s content is often dispersed across several organizational silos, the order, content, and even labeling of the navigation can become a disastrous political debate.",
+            "While looking to competitors for cues may help settle internal debates, it could also show you their dysfunctional organizational structures, too—and it tells you nothing about what your users expect to find where.How does your web copy stack up against your competitors’? Entrepreneurs and marketing executives will sometimes decide to take on the copywriting themselves to save cost on the total project. Most people have at least basic writing skills, and it’s not like you need specialized technological skills or software to do it.",
+            "It can be tempting, after a survey of products that are out there, to develop an exhaustive backlog of must-have features for your product and to set out designing a slicker version of the status quo."
+          ]
         },
         {
           "img": "/assets/previews/maven/img/team-ashley.jpg",
           "name": "Ashley Bramiche",
           "title": "Senior Advisor, Patent Law Expert",
+          "phone": "+614 442 482",
+          "email": "ashleybramiche@attorneys.com",
           "link": {
             "href": "ashley-bramiche",
             "text": "READ MORE"
-          }
+          },
+          "profile": [
+            "Let’s say for example that your client is a financial institution that is redesigning the navigation structure for their website. Because the ownership of the site’s content is often dispersed across several organizational silos, the order, content, and even labeling of the navigation can become a disastrous political debate.",
+            "While looking to competitors for cues may help settle internal debates, it could also show you their dysfunctional organizational structures, too—and it tells you nothing about what your users expect to find where.How does your web copy stack up against your competitors’? Entrepreneurs and marketing executives will sometimes decide to take on the copywriting themselves to save cost on the total project. Most people have at least basic writing skills, and it’s not like you need specialized technological skills or software to do it.",
+            "It can be tempting, after a survey of products that are out there, to develop an exhaustive backlog of must-have features for your product and to set out designing a slicker version of the status quo."
+          ]
         }
       ]
     },
