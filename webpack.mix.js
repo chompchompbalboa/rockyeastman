@@ -12,5 +12,6 @@ let mix = require('laravel-mix');
  */
 mix.disableNotifications();
 
-mix.react('resources/assets/js/app.js', 'public/js')
+mix.react('resources/assets/js/loaders/invitations.js', 'public/js/invitations.js')
+   .react('resources/assets/js/loaders/quick.js', 'public/js/quick.js')
    .sass('resources/assets/sass/app.scss', 'public/css');

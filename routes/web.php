@@ -25,6 +25,10 @@ $rockyeastman = function() {
         "page" => "home"
     ]);
 
+    Route::get('/quick', function() {
+        return view('rockyeastman.quick')->with('path', 'rockyeastman');
+    });
+
 };
 Route::group(['domain' => 'rockyeastman.com'], $rockyeastman);
 Route::group(['domain' => 'rockyeastman.local'], $rockyeastman);
