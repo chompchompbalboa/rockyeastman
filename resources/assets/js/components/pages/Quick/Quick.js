@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 import { Header, Tab } from 'semantic-ui-react'
 import QuickBuild from './QuickBuild'
+import QuickCounts from './QuickCounts'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -35,6 +36,12 @@ export default class Quick extends Component {
         sent: "READY",
         uploaded: "READY"
       }
+    },
+    counts: {
+      accepted: null,
+      rejected: null,
+      sent: null,
+      uploaded: null
     }
   }
 
@@ -53,6 +60,10 @@ export default class Quick extends Component {
         this.update("", {
           name: "build.seed",
           value: response.build.seed
+        }, true)
+        this.update("", {
+          name: "counts",
+          value: response.counts
         }, true)
       })
   }
@@ -100,12 +111,14 @@ export default class Quick extends Component {
   }
 
   render() {
-    const { build } = this.state
+    const { build, counts } = this.state
     return (
       <Container>
         <ContentContainer>
           <Header as="h1">Quick</Header>
         </ContentContainer>
+        <QuickCounts
+          counts={counts}/>
         <ContentContainer>
           <Tab
             panes={[

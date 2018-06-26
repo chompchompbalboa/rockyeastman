@@ -55,6 +55,10 @@ export default class QuickBuild extends Component {
           name: "build.seed",
           value: response.nextSeed
         }, true)
+        update("", {
+          name: "counts",
+          value: response.nextCounts
+        }, true)
       })
   }
 

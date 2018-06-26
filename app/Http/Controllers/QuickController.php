@@ -20,11 +20,13 @@ class QuickController extends Controller
    */
   public function initialData() {
     $business = $this->buildGetNextBusiness("uploaded");
+
     return [
       "build" => [
         "business" => $business['business'],
         "seed" => $business['seed']
-      ]
+      ],
+      "counts" => $this->getCounts()
     ];
   }
 
@@ -44,6 +46,7 @@ class QuickController extends Controller
     $nextBusiness = $this->buildGetNextBusiness($data['nextStatus']);
     return [
       "nextBusiness" => $nextBusiness['business'],
+      "nextCounts" => $this->getCounts(),
       "nextSeed" => $nextBusiness['seed'],
       "success" => true
     ];
@@ -91,6 +94,20 @@ class QuickController extends Controller
         "zip" => $nextBusiness->zip,
       ],
       "seed" => json_decode($nextSeed->json)
+    ];
+  }
+
+  /**
+   * Get Counts
+   * 
+   * Save the changes made on the front end to the db
+   */
+  public function getCounts() {
+    return [
+      "accepted" => Business::where('status', "accepted")->count(),
+      "rejected" => Business::where('status', "rejected")->count(),
+      "sent" => Business::where('status', "sent")->count(),
+      "uploaded" => Business::where('status', "uploaded")->count()
     ];
   }
 
