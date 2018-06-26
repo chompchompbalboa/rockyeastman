@@ -11,5 +11,5 @@
   <body class="landing">
       <div id="react"></div>
   </body>
-  <script src="{{ mix('/js/quick.js') }}"></script>
+  <script src="{{ mix('js/quick.js') }}"></script>
 </html>

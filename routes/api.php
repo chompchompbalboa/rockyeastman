@@ -28,6 +28,10 @@ $rockyeastman = function() {
 
     Route::get('/invitations/send/email-defaults', 'InvitationsController@getEmailDefaults');
     Route::put('/invitations/send/schedule-email', 'InvitationsController@scheduleEmail');
+
+    Route::get('/quick/initial-data', 'QuickController@initialData');
+    Route::put('/quick/save', 'QuickController@save');
+    Route::put('/quick/status/{status}/{business}', 'QuickController@updateStatus');
 };
 Route::group(['domain' => 'rockyeastman.com'], $rockyeastman);
 Route::group(['domain' => 'rockyeastman.local'], $rockyeastman);

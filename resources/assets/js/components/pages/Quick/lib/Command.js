@@ -2,21 +2,37 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React, { Component } from 'react'
-import { } from 'prop-types'
+import { func, number, string } from 'prop-types'
 import styled from 'styled-components'
 
-import { } from 'semantic-ui-react'
-
+import { Button, Table } from 'semantic-ui-react'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class QuickSchedule extends Component {
+export default class Command extends Component {
+
+  static propTypes = {
+    action: func,
+    description: string,
+    status: string,
+  }
 
   render() {
+    const { 
+      action,
+      description,
+      status
+     } = this.props
+
     return (
-      <Container>
-        QuickSchedule
-      </Container>
+      <Table.Row>
+        <Table.Cell collapsing>
+          <Button onClick={action}>{description}</Button>
+        </Table.Cell>
+        <Table.Cell>
+          {status}
+        </Table.Cell>
+      </Table.Row>
     )
   }
 }
@@ -24,5 +40,4 @@ export default class QuickSchedule extends Component {
 //-----------------------------------------------------------------------------
 // Styled Components
 //-----------------------------------------------------------------------------
-const Container = styled.div`
-`
+

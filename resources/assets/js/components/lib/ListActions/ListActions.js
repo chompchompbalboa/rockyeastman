@@ -71,7 +71,6 @@ export default class ListActions extends Component {
 // Styled Components
 //-----------------------------------------------------------------------------
 const Container = styled.div`
-  margin-top: 1.5vh;
   width: 20%;
   display: flex;
   justify-content: space-between;

@@ -6,7 +6,8 @@
     <div class="container">
         <div class="navbar w-nav" data-animation="default" data-collapse="small" data-duration="400">
             <div class="w-row">
-                <div class="column w-clearfix w-col w-col-2 w-col-small-6 w-col-tiny-6">
+                <div class="column w-clearfix w-col w-col-2 w-col-small-6 w-col-tiny-6 phone-number">
+                  <img class="phone-logo" src="{{ $assetsPath."/img/phone-logo.png" }}" />{{ $block->call }}
                 </div>
                 <div class="column w-clearfix w-col w-col-10 w-col-small-6 w-col-tiny-6">
                     <div class="menu-button w-nav-button">

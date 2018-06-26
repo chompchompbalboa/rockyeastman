@@ -20,4 +20,17 @@ class Helper
 
         return $json;
     }
+
+    /*
+    * Build Slug
+    *
+    * Build a slug from a string. Essentially, all this does is replace the
+    * spaces in a string with URL friendly dashes and makes every character
+    * lower case
+    */
+    public static function buildSlug($string)
+    {
+        $slug = strtolower(str_replace(" ", "-", $string));
+        return $slug;
+    }
 }

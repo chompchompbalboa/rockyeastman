@@ -13,76 +13,97 @@
         "header": "A team with experience & vision.",
         "text": [
           "Providing stellar legal counsel and representation",
-          "to the greater Los Angeles area since 1978"
+          "to the greater Los Angeles area"
         ]
       },
       "list": {
         "header": "REPRESENTING CLIENTS IN:",
         "listItems": [
-          "Procurement",
-          "Civil Litigation",
-          "Patent Law",
-          "Public Relations",
-          "Intellectual Property"
+          {
+            "text": "Procurement",
+            "href": ""
+          },
+          {
+            "text": "Civil Litigation",
+            "href": ""
+          },
+          {
+            "text": "Patent Law",
+            "href": ""
+          },
+          {
+            "text": "Public Relations",
+            "href": ""
+          },
+          {
+            "text": "Intellectual Property",
+            "href": ""
+          }
         ]
       },
       "tiles": [
         {
           "header": "Raising the bar",
-          "text": "We've been providing expert legal counsel to businesses of all sizes since 1978",
-          "linkText": "READ OUR PROFILE",
-          "linkHref": "/profile",
+          "text": "We pride ourselves on our passionate and effective legal representation - and our valued leadership in the wider legal community",
+          "linkText": "READ MORE ABOUT US",
+          "linkHref": "",
           "img": "/assets/previews/maven/img/tile-1.jpg"
         },
         {
-          "header": "Raising the bar",
-          "text": "We've been providing expert legal counsel to Melbourne since 1978",
-          "linkText": "READ OUR PROFILE",
-          "linkHref": "/profile",
+          "header": "Dedicated expertise",
+          "text": "Our team brings over 100 years of combined experience to every case",
+          "linkText": "MEET OUR TEAM",
+          "linkHref": "",
           "img": "/assets/previews/maven/img/tile-2.jpg"
         }
       ],
       "testimonials": [
-        {"text": "We’ve relied on them on several occasions where client discretion was of the utmost importance", "attribution": "Joe Thompson — IP Client"},
-        {"text": "We wouldn't feel comfortable trusting anyone else to represent our company in legal matters", "attribution": "Helen McNaught — Patent Law Client"}
+        {
+          "text": "They explained all aspects of the case clearly and completely. As the case progressed, they kept me up-to-date not only on progress, but also strategy; explaining why as well as what. At all times their focus was on my best welfare.”", 
+          "attribution": "Patent Law Client, 2018"
+        },
+        {
+          "text": "We’ve relied on them on several occasions where client discretion was of the utmost importance. We wouldn't feel comfortable trusting anyone else to represent our company in legal matters", 
+          "attribution": "Intellectual Property Client, 2018"
+        }
       ],
       "services": {
-        "header": "Learn more",
+        "header": "Learn More About Us",
         "tiles": [
           {
-            "header": "Civil Litigation",
+            "header": "CIVIL LITIGATION",
             "topLink": {
-              "text": "Recapping Q1, 2017",
-              "href": "/services"
+              "text": "Amicable Settlement Reached Between Businesses",
+              "href": ""
             },
-            "blurb": "A most productive start to the year saw many changes for us.",
+            "blurb": "Two former business partners reached an amicable settlement to their dispute over a buyout",
             "bottomLink": {
-              "text": "READ STORY",
-              "href": "/services"
+              "text": "READ ABOUT THE SETTLEMENT",
+              "href": ""
             }
           },
           {
-            "header": "Patent Law",
+            "header": "PATENT LAW",
             "topLink": {
-              "text": "The Nature of Efficacy in A Modern Legal Practice",
-              "href": "/services"
+              "text": "The Nature of Efficacy in Modern Patent Law",
+              "href": ""
             },
-            "blurb": "Working together to achieve actionable, just-in-time results",
+            "blurb": "How important is it for your development team and your legal department to work hand-in-hand?",
             "bottomLink": {
-              "text": "READ STORY",
-              "href": "/services"
+              "text": "LEARN MORE",
+              "href": ""
             }
           },
           {
-            "header": "Public Relations",
+            "header": "PUBLIC RELATIONS",
             "topLink": {
-              "text": "Transforming Legal Team Communication in 2017",
-              "href": "/services"
+              "text": "We Want To Transform Legal Team Communication in 2018",
+              "href": ""
             },
-            "blurb": "Strategies for managing multiple stakeholders in an online environment",
+            "blurb": "Proactive messaging can lead your team to big results",
             "bottomLink": {
-              "text": "READ STORY",
-              "href": "/services"
+              "text": "READ HOW",
+              "href": ""
             }
           }
         ]
@@ -381,23 +402,23 @@
     "callToAction": {
       "call": "THE NEXT STEP?",
       "header": "Request a consultation call.",
-      "text": "Speak with a legal professional in an obligation-free initial consultation.",
+      "text": "Speak with us in an obligation-free initial consultation.",
       "link": {
         "text": "GET IN TOUCH",
-        "href": "/contact"
+        "href": ""
       }
     },
     "footer": {
       "bigText": "A team with experience & vision.",
       "links": [
-        {"text": "HOME", "href": "/"},
-        {"text": "PROFILE", "href": "/profile"},
-        {"text": "SERVICES", "href": "/services"},
-        {"text": "CONTACT", "href": "/contact"}
+        {"text": "HOME", "href": ""},
+        {"text": "PROFILE", "href": ""},
+        {"text": "SERVICES", "href": ""},
+        {"text": "CONTACT", "href": ""}
       ],
       "contact": {
-        "call": "1800 433 844 (Free call)",
-        "visit": "1021 Glenferrie Road, Kooyong VIC 3145",
+        "call": "1-800-555-8447",
+        "visit": "1021 Hillview Ave, Los Angeles, CA 90022",
         "email": "emailus@attorneys.com",
         "follow": {
           "visible": false,
@@ -423,22 +444,31 @@
       }
     },
     "nav": {
+      "call": "1-800-555-8447",
       "links": [
         {
-          "href": "/",
+          "href": "",
           "text": "HOME"
         },
         {
-          "href": "/profile",
+          "href": "",
           "text": "PROFILE"
         },
         {
-          "href": "/services",
+          "href": "",
           "text": "SERVICES"
+        },
+        {
+          "href": "",
+          "text": "OUR TEAM"
+        },
+        {
+          "href": "",
+          "text": "ARTICLES"
         }
       ],
       "bigLink": {
-        "href": "/contact",
+        "href": "",
         "text": "GET IN TOUCH"
       }
     }

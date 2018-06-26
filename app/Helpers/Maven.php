@@ -26,6 +26,7 @@ class Maven
         $geocode = app('geocoder')->geocode($fullAddress)->get()->first();
         $json->pages->contact->information->latLng = $geocode->getCoordinates()->getLatitude().",".$geocode->getCoordinates()->getLongitude();
         // Phone
+        $json->blocks->nav->call = $business->phone;
         $json->blocks->footer->contact->call = $business->phone;
         $json->pages->contact->information->call[0] = $business->phone;
         // Email

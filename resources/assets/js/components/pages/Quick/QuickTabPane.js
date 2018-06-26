@@ -5,18 +5,18 @@ import React, { Component } from 'react'
 import { } from 'prop-types'
 import styled from 'styled-components'
 
-import { } from 'semantic-ui-react'
-
+import { Tab } from 'semantic-ui-react'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-export default class QuickSchedule extends Component {
+export default class QuickTabPane extends Component {
 
   render() {
+    const { children } = this.props
     return (
-      <Container>
-        QuickSchedule
-      </Container>
+      <StyledTabPane>
+        {children}
+      </StyledTabPane>
     )
   }
 }
@@ -24,5 +24,5 @@ export default class QuickSchedule extends Component {
 //-----------------------------------------------------------------------------
 // Styled Components
 //-----------------------------------------------------------------------------
-const Container = styled.div`
+const StyledTabPane = styled(Tab.Pane)`
 `

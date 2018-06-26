@@ -1239,3 +1239,21 @@
        border-bottom-style: solid;
      }
    }
+
+   .phone-number {
+     height: 50px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     color: #c83838;
+     font-family: 'Oswald', sans-serif;
+     font-size: 20px;
+     white-space: nowrap;
+     overflow-x: visible;
+   }
+
+   .phone-logo {
+     height: 20px;
+     width: auto;
+     margin-right: 7px; 
+   }
