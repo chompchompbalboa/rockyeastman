@@ -16,8 +16,8 @@
                     <ul class="link-list services-list">
                         @foreach($page->list->listItems as $listItem)
                             <li class="link-list-item">
-                                <a class="text-link-large" data-ix="fade-content-out" href="{{ $urlPath."/".$listItem->href }}">
-                                    {{ $listItem->text }}@if(!$loop->last),@endif
+                                <a class="text-link-large nowrap" data-ix="fade-content-out" href="{{ $urlPath."/".$listItem->href }}">
+                                    {{ $listItem->text }}@if(!$loop->last),<br/>@endif
                                 </a>
                             </li>
                         @endforeach

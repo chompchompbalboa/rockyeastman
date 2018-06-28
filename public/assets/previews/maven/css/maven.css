@@ -1257,3 +1257,7 @@
      width: auto;
      margin-right: 7px; 
    }
+
+   .nowrap {
+     white-space: nowrap;
+   }
