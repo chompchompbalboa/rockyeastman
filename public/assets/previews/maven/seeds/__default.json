@@ -43,16 +43,16 @@
       },
       "tiles": [
         {
-          "header": "Introduce yourself",
-          "text": "Here is where I think we should place a brief introduction to your firm. If you have a photo of yourself or your team, this would be a great spot for it. The link below would take the visitor to a longer profile page.",
+          "header": "Raising the bar",
+          "text": "We pride ourselves on our passionate and effective legal representation - and our valued leadership in the wider legal community",
           "linkText": "READ MORE ABOUT US",
           "linkHref": "",
           "img": "/assets/previews/maven/img/tile-1.jpg"
         },
         {
-          "header": "Your services",
-          "text": "This is the place to highlight the work your firm specializes in. It could also be a good place to mention an important success. The link below would take the visitor to a full list of your services.",
-          "linkText": "WHAT WE DO",
+          "header": "Dedicated expertise",
+          "text": "Our team brings over 100 years of combined experience to every case",
+          "linkText": "MEET OUR TEAM",
           "linkHref": "",
           "img": "/assets/previews/maven/img/tile-2.jpg"
         }
@@ -60,49 +60,49 @@
       "testimonials": [
         {
           "text": "They explained all aspects of the case clearly and completely. As the case progressed, they kept me up-to-date not only on progress, but also strategy; explaining why as well as what. At all times their focus was on my best welfare.”", 
-          "attribution": "A Sample Testimonial, 2018"
+          "attribution": "Patent Law Client, 2018"
         },
         {
           "text": "We’ve relied on them on several occasions where client discretion was of the utmost importance. We wouldn't feel comfortable trusting anyone else to represent our company in legal matters", 
-          "attribution": "Another Sample Testimonial, 2018"
+          "attribution": "Intellectual Property Client, 2018"
         }
       ],
       "services": {
         "header": "Learn More About Us",
         "tiles": [
           {
-            "header": "FIRM NEWS",
+            "header": "CIVIL LITIGATION",
             "topLink": {
-              "text": "A headline for recent firm news",
+              "text": "Amicable Settlement Reached Between Businesses",
               "href": ""
             },
-            "blurb": "If you have some exciting recent news or your firm was mentioned in the press, here's a great place for a link to it. The three blurbs in this section are excellent places to give the visitor reasons they should hire your firm.",
+            "blurb": "Two former business partners reached an amicable settlement to their dispute over a buyout",
             "bottomLink": {
-              "text": "READ ABOUT IT",
+              "text": "READ ABOUT THE SETTLEMENT",
               "href": ""
             }
           },
           {
-            "header": "ARTICLES",
+            "header": "PATENT LAW",
             "topLink": {
-              "text": "Write an article conveying your expertise",
+              "text": "The Nature of Efficacy in Modern Patent Law",
               "href": ""
             },
-            "blurb": "A great way to convince visitors your firm is the one they want is to write an article or two about topics that are important to your firm. The link below would take the visitor the full article.",
+            "blurb": "How important is it for your development team and your legal department to work hand-in-hand?",
             "bottomLink": {
               "text": "LEARN MORE",
               "href": ""
             }
           },
           {
-            "header": "SERVICES",
+            "header": "PUBLIC RELATIONS",
             "topLink": {
-              "text": "Add more information about your services",
+              "text": "We Want To Transform Legal Team Communication in 2018",
               "href": ""
             },
-            "blurb": "This bottom section can also be an area for you to add additional information about your firm's specialties. A short, engaging paragraph here should convince the visitor to click the link below.",
+            "blurb": "Proactive messaging can lead your team to big results",
             "bottomLink": {
-              "text": "OUR SERVICES",
+              "text": "READ HOW",
               "href": ""
             }
           }
