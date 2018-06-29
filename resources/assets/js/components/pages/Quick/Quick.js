@@ -115,7 +115,7 @@ export default class Quick extends Component {
     return (
       <Container>
         <ContentContainer>
-          <Header as="h1">Quick</Header>
+          <Header as="h1">Quick </Header>
         </ContentContainer>
         <QuickCounts
           counts={counts}/>
