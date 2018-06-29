@@ -9,7 +9,7 @@
     <div class="section service-section">
         <div class="container">
             <div class="w-row">
-                <div class="column w-col w-col-5">
+                <div class="column w-col w-col-6">
                     <h6>
                         {{ $page->list->header}}
                     </h6>

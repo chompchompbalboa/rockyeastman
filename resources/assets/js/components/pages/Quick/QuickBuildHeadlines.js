@@ -29,7 +29,7 @@ export default class QuickBuildHeadlines extends Component {
         <StyledInput 
           fluid
           label="Header"
-          name="seed.pages.home.services.header"
+          name="build.seed.pages.home.services.header"
           value={headlines.header === null ? "" : headlines.header}
           onChange={actions.update} />
         {headlines.tiles.map((service, index) => {
@@ -39,19 +39,19 @@ export default class QuickBuildHeadlines extends Component {
               <StyledInput 
                 fluid
                 label={"Header"}
-                name={"seed.pages.home.services.tiles." + index + ".header"}
+                name={"build.seed.pages.home.services.tiles." + index + ".header"}
                 value={headlines.tiles[index].header === null ? "" : headlines.tiles[index].header}
                 onChange={actions.update} />
               <HorizontalContainer>
                 <StyledInput 
                   label={"Top Link Text"}
-                  name={"seed.pages.home.services.tiles." + index + ".topLink.text"}
+                  name={"build.seed.pages.home.services.tiles." + index + ".topLink.text"}
                   value={headlines.tiles[index].topLink.text === null ? "" : headlines.tiles[index].topLink.text}
                   onChange={actions.update}
                   style={{width: "63%"}} />
                 <StyledInput 
                   label={"Top Link Href"}
-                  name={"seed.pages.home.services.tiles." + index + ".topLink.href"}
+                  name={"build.seed.pages.home.services.tiles." + index + ".topLink.href"}
                   value={headlines.tiles[index].topLink.href === null ? "" : headlines.tiles[index].topLink.href}
                   onChange={actions.update}
                   style={{width: "35%"}} />
@@ -59,19 +59,19 @@ export default class QuickBuildHeadlines extends Component {
               <StyledInput 
                 fluid
                 label={"Blurb"}
-                name={"seed.pages.home.services.tiles." + index + ".blurb"}
+                name={"build.seed.pages.home.services.tiles." + index + ".blurb"}
                 value={headlines.tiles[index].blurb === null ? "" : headlines.tiles[index].blurb}
                 onChange={actions.update} />
               <HorizontalContainer>
                 <StyledInput 
                   label={"Bottom Link Text"}
-                  name={"seed.pages.home.services.tiles." + index + ".bottomLink.text"}
+                  name={"build.seed.pages.home.services.tiles." + index + ".bottomLink.text"}
                   value={headlines.tiles[index].bottomLink.text === null ? "" : headlines.tiles[index].bottomLink.text}
                   onChange={actions.update}
                   style={{width: "63%"}} />
                 <StyledInput 
                   label={"Bottom Link Href"}
-                  name={"seed.pages.home.services.tiles." + index + ".bottomLink.href"}
+                  name={"build.seed.pages.home.services.tiles." + index + ".bottomLink.href"}
                   value={headlines.tiles[index].bottomLink.href === null ? "" : headlines.tiles[index].bottomLink.href}
                   onChange={actions.update}
                   style={{width: "35%"}} />

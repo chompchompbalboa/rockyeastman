@@ -24,7 +24,7 @@ export default class QuickBuildCollapsible extends Component {
   }
 
   static defaultProps = {
-    startOpen: false
+    startOpen: true
   }
 
   render() {

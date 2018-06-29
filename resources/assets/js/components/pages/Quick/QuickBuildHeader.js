@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import clipboard from '../../../helpers/clipboard'
 
 import { Input, Button, Dropdown, Header, Segment } from 'semantic-ui-react'
-import QuickBuildCollapsible from './QuickBuildCollapsible'
+import QuickTabPaneContainer from './QuickTabPaneContainer'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
@@ -60,64 +60,56 @@ export default class QuickBuildBusinessInfo extends Component {
     } = this.props
     const previewHref = (slug === null ? "..." : "http://" + location.hostname + "/preview/" + slug)
     return (
-      <QuickBuildCollapsible header="Business">
+      <Container>
         <HorizontalContainer>
-          <StyledInput 
-            label="Email"
-            name="build.business.email"
-            innerRef={c => this.emailInput = c}
-            value={email === null ? "" : email}
-            onChange={actions.update}/>
-          <Button 
-            size="medium" 
-            onClick={() => clipboard.copyInputContents(this.emailInput && this.emailInput.inputRef)}>
-            Copy
-          </Button>
+          <HeaderContainer>
+            <HeaderInput
+              transparent
+              name="build.business.name"
+              value={name === null ? "Loading..." : name}
+              onChange={actions.update}
+              style={{ fontSize: "24px" }}/>
+            <WebsiteLink target="_blank" href={website}>{website === null ? "..." : website}</WebsiteLink>
+            <LinkSpacer />
+            <WebsiteLink target="_blank" href={previewHref}>{previewHref}</WebsiteLink>
+          </HeaderContainer>
+          <StatusContainer>
+            <ActionsContainer>
+              <SaveStatus>
+                {this.saveMessages[actions.status.save]}
+              </SaveStatus>
+              <StyledDropdown
+                selection
+                name="build.status.dropdown"
+                value={actions.status.dropdown}
+                options={this.statusOptions}
+                onChange={(e, data) => actions.update(e, data, true)}/>
+            </ActionsContainer>
+            <ActionsContainer>
+              <Button 
+                size="medium" 
+                onClick={() => actions.updateBusinessStatus("sent")}>
+                Sent
+              </Button>
+              <Button 
+                size="medium" 
+                onClick={() => actions.updateBusinessStatus("accepted")}>
+                Accepted
+              </Button>
+              <Button 
+                size="medium" 
+                onClick={() => actions.updateBusinessStatus("rejected")}>
+                Rejected
+              </Button>
+              <Button 
+                size="medium" 
+                onClick={() => actions.updateBusinessStatus("uploaded")}>
+                Uploaded
+              </Button>
+            </ActionsContainer>
+          </StatusContainer>
         </HorizontalContainer>
-        <HorizontalContainer>
-          <StyledInput 
-            label="Slug"
-            name="build.business.slug"
-            innerRef={c => this.slugInput = c}
-            value={slug === null ? "" : slug}
-            onChange={actions.update}/>
-          <Button 
-            size="medium" 
-            onClick={() => clipboard.copyInputContents(this.slugInput && this.slugInput.inputRef)}>
-            Copy
-          </Button>
-        </HorizontalContainer>
-        <HorizontalContainer>
-          <StyledInput 
-            label="Phone"
-            name="build.business.phone"
-            value={phone === null ? "" : phone}
-            onChange={actions.update}/>
-        </HorizontalContainer>
-        <HorizontalContainer>
-          <StyledInput 
-            label="Address"
-            name="build.business.street"
-            value={street === null ? "" : street}
-            onChange={actions.update}
-            style={{width: "50%"}}/>
-          <StyledInput
-            name="build.business.city"
-            value={city === null ? "" : city}
-            onChange={actions.update}
-            style={{width: "20%"}}/>
-          <StyledInput
-            name="build.business.state"
-            value={state === null ? "" : state}
-            onChange={actions.update}
-            style={{width: "5%"}}/>
-          <StyledInput
-            name="build.business.zip"
-            value={zip === null ? "" : zip}
-            onChange={actions.update}
-            style={{width: "10%"}}/>
-        </HorizontalContainer>
-      </QuickBuildCollapsible>
+      </Container>
     )
   }
 }
@@ -126,6 +118,15 @@ export default class QuickBuildBusinessInfo extends Component {
 // Styled Components
 //-----------------------------------------------------------------------------
 
+const Container = styled(Segment)`
+  z-index: 1000 !important;
+  position: sticky !important;
+  top: -0.5vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`
 
 const WebsiteLink = styled.a`
   font-size: 18px;
@@ -141,14 +142,6 @@ const HorizontalContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const StickyContainer = styled(HorizontalContainer)`
-  z-index: 1000;
-  padding: 1.5vh 0 1vh 0;
-  margin-bottom: 1.5vh;
-  background-color: white;
-  border-bottom: 1px solid rgb(200,200,200);
 `
 
 const HeaderContainer = styled.div`

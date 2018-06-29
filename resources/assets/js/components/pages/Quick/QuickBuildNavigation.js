@@ -51,6 +51,20 @@ export default class QuickBuildNavigation extends Component {
             </HorizontalContainer>
           )
         })}
+        <HorizontalContainer>
+          <StyledInput
+            label="Big Link Text"
+            name="build.seed.blocks.nav.bigLink.text"
+            value={nav.bigLink.text === null ? "" : nav.bigLink.text}
+            onChange={actions.update}
+            style={{width: "49%"}}/>
+          <StyledInput
+            label="Big Link Href"
+            name="build.seed.blocks.nav.bigLink.href"
+            value={nav.bigLink.href === null ? "" : nav.bigLink.href}
+            onChange={actions.update}
+            style={{width: "49%"}}/>
+        </HorizontalContainer>
       </QuickBuildCollapsible>
     )
   }
