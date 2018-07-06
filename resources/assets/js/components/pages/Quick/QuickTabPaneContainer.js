@@ -2,7 +2,7 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React, { Component } from 'react'
-import { } from 'prop-types'
+import { string } from 'prop-types'
 import styled from 'styled-components'
 
 import { Segment } from 'semantic-ui-react'
@@ -11,10 +11,19 @@ import { Segment } from 'semantic-ui-react'
 //-----------------------------------------------------------------------------
 export default class QuickTabPaneContainer extends Component {
 
+  static propTypes = {
+    color: string
+  }
+
+  static defaultProps = {
+    color: "blue"
+  }
+
   render() {
-    const { children } = this.props
+    const { children, color } = this.props
     return (
-      <Container>
+      <Container
+        color={color}>
         {children}
       </Container>
     )

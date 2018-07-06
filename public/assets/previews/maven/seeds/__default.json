@@ -12,8 +12,8 @@
       "splash": {
         "header": "A team with experience & vision.",
         "text": [
-          "Providing stellar legal counsel and representation",
-          "to the greater Los Angeles area"
+          "We provide unparalleled legal counsel and representation in the greater",
+          "Los Angeles area. Give us a call for an obligation-free initial consultation."
         ]
       },
       "list": {
@@ -45,14 +45,14 @@
         {
           "header": "Raising the bar",
           "text": "We pride ourselves on our passionate and effective legal representation - and our valued leadership in the wider legal community",
-          "linkText": "READ MORE ABOUT US",
+          "linkText": "READ MORE ABOUT WHAT WE DO",
           "linkHref": "",
           "img": "/assets/previews/maven/img/tile-1.jpg"
         },
         {
           "header": "Dedicated expertise",
-          "text": "Our team brings over 100 years of combined experience to every case",
-          "linkText": "MEET OUR TEAM",
+          "text": "Our team brings years of combined experience to every case. We work diligently to ensure that you are receiving the best advice for your needs.",
+          "linkText": "MEET OUR ATTORNEYS",
           "linkHref": "",
           "img": "/assets/previews/maven/img/tile-2.jpg"
         }
@@ -60,49 +60,49 @@
       "testimonials": [
         {
           "text": "They explained all aspects of the case clearly and completely. As the case progressed, they kept me up-to-date not only on progress, but also strategy; explaining why as well as what. At all times their focus was on my best welfare.”", 
-          "attribution": "Patent Law Client, 2018"
+          "attribution": "An example testimonial - 2018"
         },
         {
-          "text": "We’ve relied on them on several occasions where client discretion was of the utmost importance. We wouldn't feel comfortable trusting anyone else to represent our company in legal matters", 
-          "attribution": "Intellectual Property Client, 2018"
+          "text": "We’ve relied on them in several situations with complexities outside the norm. They rose to the occasion each and every time. We wouldn't feel comfortable trusting anyone else to represent our company in legal matters", 
+          "attribution": "An example testimonial - 2017"
         }
       ],
       "services": {
         "header": "Learn More About Us",
         "tiles": [
           {
-            "header": "CIVIL LITIGATION",
+            "header": "OUR SERVICES",
             "topLink": {
-              "text": "Amicable Settlement Reached Between Businesses",
+              "text": "Personal care for every situation",
               "href": ""
             },
-            "blurb": "Two former business partners reached an amicable settlement to their dispute over a buyout",
-            "bottomLink": {
-              "text": "READ ABOUT THE SETTLEMENT",
-              "href": ""
-            }
-          },
-          {
-            "header": "PATENT LAW",
-            "topLink": {
-              "text": "The Nature of Efficacy in Modern Patent Law",
-              "href": ""
-            },
-            "blurb": "How important is it for your development team and your legal department to work hand-in-hand?",
+            "blurb": "We set ourselves apart from other firms with our personal touch. Our effective advocacy is based on our understanding of your needs.",
             "bottomLink": {
               "text": "LEARN MORE",
               "href": ""
             }
           },
           {
-            "header": "PUBLIC RELATIONS",
+            "header": "OUR ATTORNEYS",
             "topLink": {
-              "text": "We Want To Transform Legal Team Communication in 2018",
+              "text": "Passionate and experienced",
               "href": ""
             },
-            "blurb": "Proactive messaging can lead your team to big results",
+            "blurb": "With experience navigating a wide range of difficult environments, our team is ready to deliver the results you're looking for.",
             "bottomLink": {
-              "text": "READ HOW",
+              "text": "OUR TEAM",
+              "href": ""
+            }
+          },
+          {
+            "header": "OUR LOCATION",
+            "topLink": {
+              "text": "Centrally located in Los Angeles",
+              "href": ""
+            },
+            "blurb": "We're easy to find - and there is no substitute for a face-to-face meeting with your legal representation.",
+            "bottomLink": {
+              "text": "COME MEET US",
               "href": ""
             }
           }

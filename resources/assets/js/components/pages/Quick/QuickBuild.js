@@ -6,7 +6,8 @@ import { func, object } from 'prop-types'
 import styled from 'styled-components'
 
 import QuickBuildBusinessInfo from './QuickBuildBusinessInfo'
-import QuickBuildCommands from './QuickBuildCommands'
+import QuickBuildCallToAction from './QuickBuildCallToAction'
+import QuickBuildEmail from './QuickBuildEmail'
 import QuickBuildFooter from './QuickBuildFooter'
 import QuickBuildHeader from './QuickBuildHeader'
 import QuickBuildHeadlines from './QuickBuildHeadlines'
@@ -22,29 +23,16 @@ import QuickTabPane from './QuickTabPane'
 //-----------------------------------------------------------------------------
 export default class QuickBuild extends Component {
 
-  state = {
-    currentStep: 0
-  }
-
   static propTypes = {
     business: object,
+    email: object,
     seed: object,
     status: object,
     update: func
   }
 
-  steps = [
-    {render: () => <QuickBuildBusinessInfo />},
-    {render: () => <QuickBuildNavigation />},
-    {render: () => <QuickBuildSplash />},
-    {render: () => <QuickBuildServices />},
-    {render: () => <QuickBuildHeadlines />},
-    {render: () => <QuickBuildFooter />}
-  ]
-
-  // Accept or reject a business
   updateBusinessStatus = (newStatus) => {
-    const { business, status, update } = this.props
+    const { business, email, status, update } = this.props
     // Update the status to "Sending..."
     update("", {
       name: "build.status." + newStatus,
@@ -53,7 +41,11 @@ export default class QuickBuild extends Component {
     // Send the data to the QuickController
     fetch('/api/quick/status/' + newStatus + '/' + business.id, {
       method: "PUT",
-      body: JSON.stringify({ nextStatus: status.dropdown }),
+      body: JSON.stringify({ 
+        business: business,
+        email: email,
+        nextStatus: status.dropdown
+      }),
       headers: {
       'content-type': 'application/json'
     }}).then(response => {
@@ -80,7 +72,7 @@ export default class QuickBuild extends Component {
   }
 
   render() {
-    const { business, seed, status, update } = this.props
+    const { business, email, seed, status, update } = this.props
     const actions = {
       updateBusinessStatus: this.updateBusinessStatus,
       update: update,
@@ -95,6 +87,9 @@ export default class QuickBuild extends Component {
           <React.Fragment>
             <QuickBuildBusinessInfo 
               business={business}
+              actions={actions}/>
+            <QuickBuildEmail
+              email={email}
               actions={actions}/>
             <QuickBuildNavigation
               nav={seed.blocks.nav}
@@ -113,6 +108,9 @@ export default class QuickBuild extends Component {
               actions={actions}/>
             <QuickBuildTileTwo
               tile={seed.pages.home.tiles[1]}
+              actions={actions}/>
+            <QuickBuildCallToAction
+              callToAction={seed.blocks.callToAction}
               actions={actions}/>
             <QuickBuildHeadlines
               headlines={seed.pages.home.services}

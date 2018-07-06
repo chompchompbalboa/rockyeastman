@@ -11,14 +11,26 @@ class Invitation extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
+    public $day;
+    public $nextPage;
+    public $slug;
+    public $subject;
+    public $template;
+    public $toName;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(String $day, String $nextPage, String $slug, String $subject, String $toName, String $template)
     {
-        //
+        $this->day = $day;
+        $this->nextPage = $nextPage;
+        $this->slug = $slug;
+        $this->subject = $subject;
+        $this->toName = $toName;
+        $this->template = $template;
     }
 
     /**
@@ -28,6 +40,14 @@ class Invitation extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->markdown('emails.invitations.default.default');
+        return $this->view('emails.invitations.'.$this->template.'.html')
+                    ->text('emails.invitations.'.$this->template.'.plain')
+                    ->subject($this->subject)
+                    ->with([
+                      "day" => $this->day,
+                      "nextPage" => $this->nextPage,
+                      "slug" => $this->slug,
+                      "toName" => $this->toName
+                    ]);
     }
 }

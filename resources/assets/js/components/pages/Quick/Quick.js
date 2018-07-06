@@ -27,10 +27,25 @@ export default class Quick extends Component {
         website: null,
         zip: null
       },
+      email: {
+        time: {
+          now: false,
+          year: null,
+          month: null,
+          day: null,
+          hour: null,
+          minute: null,
+          second: null
+        },
+        templates: {
+          active: null,
+          options: null
+        }
+      },
       seed: null,
       status: {
-        dropdown: "uploaded",
         accept: "READY",
+        dropdown: "uploaded",
         reject: "READY",
         save: "READY",
         sent: "READY",
@@ -56,6 +71,10 @@ export default class Quick extends Component {
         this.update("", {
           name: "build.business",
           value: response.build.business
+        }, true)
+        this.update("", {
+          name: "build.email",
+          value: response.build.email
         }, true)
         this.update("", {
           name: "build.seed",
@@ -104,7 +123,8 @@ export default class Quick extends Component {
 
   update = (e, data, dontSave) => {
     !dontSave && clearTimeout(this.timeout)
-    let newState = _.set(Object.assign({}, this.state), data.name, data.value)
+    const value = (typeof data.value !== "undefined" ? data.value : data.checked)
+    let newState = _.set(Object.assign({}, this.state), data.name, value)
     !dontSave && (newState.build.status.save = "UNSAVED")
     this.setState(newState)
     !dontSave && (this.timeout = setTimeout(this.save, 1000))
@@ -127,6 +147,7 @@ export default class Quick extends Component {
                 render: () => 
                   <QuickBuild 
                     business={build.business} 
+                    email={build.email}
                     seed={build.seed} 
                     status={build.status} 
                     update={this.update}/>

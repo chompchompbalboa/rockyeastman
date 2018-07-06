@@ -23,6 +23,7 @@ class CreateBusinessesTable extends Migration
             $table->string('zip');
             $table->string('website');
             $table->string('email');
+            $table->string('email_name');
             $table->string('slug');
             $table->string('status')->default('uploaded');
             $table->timestamps();

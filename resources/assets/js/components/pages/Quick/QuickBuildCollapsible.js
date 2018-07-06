@@ -47,6 +47,7 @@ export default class QuickBuildCollapsible extends Component {
 //-----------------------------------------------------------------------------
 const HeaderContainer = styled.div`
   cursor: pointer;
+  user-select: none;
   margin-bottom: 1vh;
   width: 100%;
   display: flex;

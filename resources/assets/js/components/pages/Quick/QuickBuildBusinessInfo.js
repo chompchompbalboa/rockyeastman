@@ -48,6 +48,7 @@ export default class QuickBuildBusinessInfo extends Component {
       business: {
         name,
         email,
+        emailName,
         city,
         phone,
         state,
@@ -63,6 +64,11 @@ export default class QuickBuildBusinessInfo extends Component {
       <QuickBuildCollapsible header="Business">
         <HorizontalContainer>
           <StyledInput 
+            label="Contact"
+            name="build.business.emailName"
+            value={emailName === null ? "" : emailName}
+            onChange={actions.update}/>
+          <StyledInput 
             label="Email"
             name="build.business.email"
             innerRef={c => this.emailInput = c}
@@ -75,6 +81,11 @@ export default class QuickBuildBusinessInfo extends Component {
           </Button>
         </HorizontalContainer>
         <HorizontalContainer>
+          <StyledInput 
+            label="Website"
+            name="build.business.website"
+            value={website === null ? "" : website}
+            onChange={actions.update}/>
           <StyledInput 
             label="Slug"
             name="build.business.slug"

@@ -32,7 +32,7 @@ export default class ListActions extends Component {
         <StyledInput 
           label={label}
           name={name}
-          value={src}
+          value={src === null ? "" : src}
           onChange={onChange} />
       </Container>
     )
