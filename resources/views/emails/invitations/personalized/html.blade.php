@@ -3,7 +3,7 @@
 @section('message')
   Hi {{ $toName }},
   <br/><br/>
-  I hope your {{ $day }} is going well.
+  I hope your {{ $day }} is going well - and that you have an excellent weekend planned!
   <br/><br/>
   I’m reaching out today because I noticed your firm's website was a little out of date.
   <br/><br/>

@@ -61,6 +61,10 @@ export default class QuickBuild extends Component {
           value: response.nextBusiness
         }, true)
         update("", {
+          name: "build.email",
+          value: response.nextEmail
+        }, true)
+        update("", {
           name: "build.seed",
           value: response.nextSeed
         }, true)
