@@ -26,6 +26,11 @@ export default class QuickBuildNavigation extends Component {
 
     return (
       <QuickBuildCollapsible header="Navigation">
+        <StyledInput
+          label="Call"
+          name="build.seed.blocks.nav.call"
+          value={nav.call === null ? "" : nav.call}
+          onChange={actions.update}/>
         {nav.links.map((item, index) => {
           return (
             <HorizontalContainer key={index}>

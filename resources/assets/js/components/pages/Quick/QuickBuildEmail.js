@@ -28,14 +28,14 @@ export default class QuickBuildEmail extends Component {
       <QuickBuildCollapsible header="Email">
         <HorizontalContainer>
           <StyledInput
-            fluid
-            label="Subject"
+            fluid 
+            label={{ color: 'red', content: 'Subject' }}
             name="build.email.subject"
             value={email.subject === null ? "" : email.subject}
             onChange={actions.update}/>
           <StyledInput
-            fluid
-            label="Next Page"
+            fluid 
+            label={{ color: 'red', content: 'Next Page' }}
             name="build.email.nextPage"
             value={email.nextPage === null ? "" : email.nextPage}
             onChange={actions.update}/>

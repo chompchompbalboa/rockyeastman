@@ -14,4 +14,4 @@ mix.disableNotifications();
 
 mix.react('resources/assets/js/loaders/invitations.js', 'public/js/invitations.js')
    .react('resources/assets/js/loaders/quick.js', 'public/js/quick.js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .react('resources/assets/redlinelaw/js/redlinelaw.js', 'public/assets/redlinelaw/js/redlinelaw.js');

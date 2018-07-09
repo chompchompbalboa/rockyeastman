@@ -14,7 +14,6 @@ class Maven
     {
         // Business Name
         $json->head->title = "Preview - ".$business->name;
-        $json->blocks->footer->bigText = $business->name;
         // Some businesses don't have their street address stored in the db.
         // Testing for an empty string prevents an error from being thrown. It's hacky. Fix it when you've got time.
         if($business->street !== "") {
