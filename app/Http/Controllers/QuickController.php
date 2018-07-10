@@ -27,7 +27,7 @@ class QuickController extends Controller
    */
   public function initialData() {
     $business = $this->getNextBusiness("uploaded");
-    $email = $this->getEmailSettings($business['business'], "personalized", true);
+    $email = $this->getEmailSettings($business['business'], "volume", true);
     return [
       "build" => [
         "business" => $business['business'],
@@ -202,7 +202,7 @@ class QuickController extends Controller
   private function scheduleEmail(Carbon $when, String $template, String $subject, Business $business, String $nextPage) {
     // Make sure that we haven't sent an email to this email address yet
     $scheduledEmail = Schedule::where('email', $business->email)->first();
-    if(is_null($scheduledEmail)) {
+    if(is_null($scheduledEmail) || $business->email === "eastmanrjr@gmail.com") {
       // Setters
       $scheduledEmail = new Schedule;
       $day = Scheduler::getEnglishDayOfWeek($when->dayOfWeek);
