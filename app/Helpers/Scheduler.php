@@ -37,7 +37,7 @@ class Scheduler
     */
     public static function getNextDateTime()
     {
-      $latestScheduled = Schedule::orderBy('datetime', 'asc')->first();
+      $latestScheduled = Schedule::orderBy('datetime', 'desc')->first();
       $nextDateTime = $latestScheduled->datetime->addMinutes(rand(1,23));
       if($nextDateTime->hour >= 19) {
         $nextDateTime->addDay(1);
