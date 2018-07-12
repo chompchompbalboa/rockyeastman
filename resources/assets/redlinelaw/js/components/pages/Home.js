@@ -1,37 +1,83 @@
 //-----------------------------------------------------------------------------
 // Imports
 //-----------------------------------------------------------------------------
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import _ from 'lodash'
 
 import colors from '../../styles/colors'
+import layout from '../../styles/layout'
 
-import Banner from '../tiles/Banner'
-import BusinessInfo from '../tiles/BusinessInfo'
-import Introduction from '../tiles/Introduction'
-import Navigation from '../tiles/Navigation'
-import PowerQuote from '../tiles/PowerQuote'
+import Arrows from '../lib/Arrows'
+import Navigation from '../lib/Navigation'
+import Tiles from '../lib/Tiles'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-const Home = () => {
-  return (
-    <Container>
-      <Navigation backgroundColor={colors.navigation}/>
-      <Banner top left tileHeight="88vh" tileWidth={6.65}/>
-      <BusinessInfo top right backgroundColor={colors.black} tileHeight="88vh" tileWidth={3.35}/>
-      <PowerQuote left overlayColor={colors.redOverlay} tileWidth={3.35}/>
-      <Introduction right tileWidth={6.65} backgroundColor={colors.gray}/>
-    </Container>
-  )
+class Home extends Component {
+
+  state = {
+    activeTile: 0,
+    previouslyActiveTile: null
+  }
+
+  links = [
+    {text: "Redline Law Office", slug: ""},
+    {text: "Areas of Practice", slug: "areas-of-practice"},
+    {text: "About Anita", slug: "about-anita"},
+    {text: "Resources", slug: "resources"},
+    {text: "Initial Consultation", slug: "initial-consultation"}
+  ]
+
+  componentWillMount = () => {
+    const slug = _.last(location.href.split("/"))
+    const index = _.findIndex(this.links, ['slug', slug])
+    const activeTile = (index === -1 ? 0 : index)
+    this.setState({
+      activeTile: activeTile
+    })
+  }
+
+  changeActiveTile = (e, newActiveTile) => {
+    e.preventDefault();
+    const href = "/preview/redline-law/" + this.links[newActiveTile].slug
+    history.pushState(null, null, href)
+    const { activeTile } = this.state
+    this.setState({
+      activeTile: newActiveTile,
+      previouslyActiveTile: activeTile
+    })
+  }
+
+  render() {
+    const { activeTile, previouslyActiveTile } = this.state
+    return (
+      <Container>
+        <Navigation 
+          activeTile={activeTile}
+          backgroundColor={colors.navigationBackground}
+          changeActiveTile={this.changeActiveTile}
+          links={this.links}
+          navigationHeight={layout.navigationHeight}
+          previouslyActiveTile={previouslyActiveTile} />
+        <Tiles
+          activeTile={activeTile}
+          backgroundColor={colors.tilesBackground}
+          changeActiveTile={this.changeActiveTile}
+          navigationHeight={layout.navigationHeight}
+          previouslyActiveTile={previouslyActiveTile}/>
+        <Arrows
+          activeTile={activeTile}
+          changeActiveTile={this.changeActiveTile}
+          tileCount={this.links.length}/>
+      </Container>
+    )
+  }
 }
 //-----------------------------------------------------------------------------
 // Styled Components
 //-----------------------------------------------------------------------------
 const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
 `
 
 export default Home

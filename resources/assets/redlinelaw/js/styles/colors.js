@@ -1,11 +1,7 @@
 export default {
-  black: "rgb(10, 10, 10)",
-  blackOverlay: "rgba(0,0,0,0.85)",
-  brown: "rgb(60,40,20)",
-  brownOverlay: "rgba(60,40,20,0.75)",
-  gray: "rgb(238,238,238)",
-  grayOverlay: "rgb(238,238,238, 0.85)",
-  navigation: "rgb(80, 60, 40)",
-  red: "rgb(175,35,35)",
-  redOverlay: "rgba(175,35,35,0.9)"
+  navigationBackground: "rgb(155,10,10)",
+  tilesBackground: "rgb(0,0,0)",
+  resourcesContainerBackground: "rgb(200,200,200,0.5)",
+  resourceBackground: "rgb(255,255,255,0.75)",
+  resourceButtonBackground: "rgba(155,10,10,1)"
 }

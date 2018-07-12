@@ -23,15 +23,13 @@ $rockyeastman = function() {
     });
 
     // Specific previews
-    /*
-    Route::get('/preview/redline-law', function() {
+    Route::get('/preview/redline-law/{page?}', function() {
         return view('redlinelaw.react')->with([
           "path" => "redlinelaw",
           "assetsPath" => "/assets/redlinelaw",
           "urlPath" => "/"
         ]);
     });
-    */
 
     // Generic previews
     Route::get('/preview/{slug}/{page?}/{pageId?}',
