@@ -123,7 +123,8 @@ const ResourceButtonContainer = styled.div`
   align-items: center;
 `
 
-const ResourceButton = styled.p`
+const ResourceButton = styled.div`
+  cursor: pointer;
   padding: 1.5vh 0;
   width: 90%;
   background-color: ${colors.resourceButtonBackground};
