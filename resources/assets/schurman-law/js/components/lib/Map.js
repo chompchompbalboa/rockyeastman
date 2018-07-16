@@ -23,7 +23,7 @@ const Map = withScriptjs(withGoogleMap((props) => {
 Map.propTypes = {
 }
 Map.defaultProps = {
-  latLng: { lat: -34.397, lng: 150.644 },
+  latLng: { lat: 47.6010575, lng: -122.3345728 },
   isMarkerShown: true,
   googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDpSuaak0-tdnP-LLFG3V7BLeS88xTLbF0&v=3.exp&libraries=geometry,drawing,places",
   loadingElement: <div style={{ height: `100%` }} />,
