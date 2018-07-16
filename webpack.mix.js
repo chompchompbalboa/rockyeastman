@@ -14,4 +14,5 @@ mix.disableNotifications();
 
 mix.react('resources/assets/js/loaders/invitations.js', 'public/js/invitations.js')
    .react('resources/assets/js/loaders/quick.js', 'public/js/quick.js')
-   .react('resources/assets/redlinelaw/js/redlinelaw.js', 'public/assets/redlinelaw/js/redlinelaw.js');
+   .react('resources/assets/redlinelaw/js/redlinelaw.js', 'public/assets/redlinelaw/js/redlinelaw.js')
+   .react('resources/assets/schurman-law/js/schurman-law.js', 'public/assets/schurman-law/js/schurman-law.js');

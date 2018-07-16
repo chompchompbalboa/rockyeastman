@@ -28,6 +28,8 @@
         "lodash-move": "^1.1.1",
         "moment": "^2.22.1",
         "react-datepicker": "^1.4.1",
+        "react-geocode": "0.0.9",
+        "react-google-maps": "^9.4.5",
         "react-json-editor-ajrm": "^2.2.3",
         "react-responsive": "^4.1.0",
         "react-router": "^4.3.1",

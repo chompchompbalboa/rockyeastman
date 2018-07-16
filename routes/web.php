@@ -31,6 +31,14 @@ $rockyeastman = function() {
         ]);
     });
 
+    Route::get('/preview/schurman-law/{page?}', function() {
+        return view('schurman-law.react')->with([
+          "path" => "schurman-law",
+          "assetsPath" => "/assets/schurman-law",
+          "urlPath" => "/"
+        ]);
+    });
+
     // Generic previews
     Route::get('/preview/{slug}/{page?}/{pageId?}',
       [
