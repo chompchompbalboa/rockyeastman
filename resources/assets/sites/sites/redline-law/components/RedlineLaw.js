@@ -111,7 +111,11 @@ export default class RedlineLaw extends Component {
               component={() => {return (<StyledImage width="828px" height="51px" src="/assets/redline-law/img/footer.jpg"/>)}}/>
           </Switch>
           <Switch>
-            <Route 
+            <Route
+              exact
+              path={urlPath} 
+              component={() => {return (<Footer></Footer>)}}/>
+            <Route
               path={urlPath + "/"} 
               component={() => {return (<Footer>A.L. REDLINE PLLC 425-879-4628 SERVING WASHINGTON STATE (C) 2012 - 2014</Footer>)}}/>
           </Switch>
