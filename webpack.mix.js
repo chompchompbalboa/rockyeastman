@@ -13,6 +13,9 @@ let mix = require('laravel-mix');
 mix.disableNotifications();
 
 mix.react('resources/assets/js/loaders/invitations.js', 'public/js/invitations.js')
+   .react('resources/assets/parser/parser.js', 'public/js/parser.js')
+   .react('resources/assets/editor/editor.js', 'public/js/editor.js')
+   .react('resources/assets/sites/site.js', 'public/js/site.js')
    .react('resources/assets/js/loaders/quick.js', 'public/js/quick.js')
-   .react('resources/assets/redlinelaw/js/redlinelaw.js', 'public/assets/redlinelaw/js/redlinelaw.js')
-   .react('resources/assets/schurman-law/js/schurman-law.js', 'public/assets/schurman-law/js/schurman-law.js');
+   .react('resources/assets/schurman-law/js/schurman-law.js', 'public/assets/schurman-law/js/schurman-law.js')
+   .react('resources/assets/criminal-defense/js/criminal-defense.js', 'public/assets/criminal-defense/js/criminal-defense.js');

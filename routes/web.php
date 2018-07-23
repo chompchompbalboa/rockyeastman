@@ -11,26 +11,17 @@ $rockyeastman = function() {
         return view('rockyeastman.home')->with('path', 'rockyeastman');
     });
 
-    // Invitations
-    Route::get('/invitations/view', 'InvitationsController@viewEmail');
-    Route::get('/invitations', function() {
-        return view('rockyeastman.invitations')->with('path', 'rockyeastman');
-    });
-
     // Login
     Route::get('/login', function() {
         return view('rockyeastman.login')->with('path', 'rockyeastman');
     });
 
-    // Specific previews
-    Route::get('/preview/redline-law/{page?}', function() {
-        return view('redlinelaw.react')->with([
-          "path" => "redlinelaw",
-          "assetsPath" => "/assets/redlinelaw",
-          "urlPath" => "/"
-        ]);
+    // Editor
+    Route::get('/editor/{slug?}', function() {
+        return view('rockyeastman.editor')->with('path', 'rockyeastman');
     });
 
+    // Specific previews
     Route::get('/preview/schurman-law/{page?}', function() {
         return view('schurman-law.react')->with([
           "path" => "schurman-law",
@@ -40,11 +31,9 @@ $rockyeastman = function() {
     });
 
     // Generic previews
-    Route::get('/preview/{slug}/{page?}/{pageId?}',
-      [
-        "uses" => "PreviewController@loadPreview",
-        "page" => "home"
-    ]);
+    Route::get('/preview/{slug}/{page?}/{pageId?}', function() {
+        return view('rockyeastman.preview')->with('path', 'rockyeastman');
+    });
 
     // Quick
     Route::get('/quick', function() {

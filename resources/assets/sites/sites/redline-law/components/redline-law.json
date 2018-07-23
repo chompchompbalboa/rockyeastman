@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "theme": "redline-law"
+  },
+  "config": {
+    "urlPath": "/preview/redline-law"
+  },
+  "styles": {},
+  "head": {},
+  "pages": {
+    "home": {
+
+    }
+  },
+  "blocks": {
+    "nav": {
+      "links": []
+    }
+  }
+}

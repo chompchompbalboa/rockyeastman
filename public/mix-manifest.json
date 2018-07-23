@@ -1,6 +1,9 @@
 {
     "/js/invitations.js": "/js/invitations.js",
     "/js/quick.js": "/js/quick.js",
+    "/js/editor.js": "/js/editor.js",
+    "/js/site.js": "/js/site.js",
     "/assets/schurman-law/js/schurman-law.js": "/assets/schurman-law/js/schurman-law.js",
-    "/assets/redlinelaw/js/redlinelaw.js": "/assets/redlinelaw/js/redlinelaw.js"
+    "/js/parser.js": "/js/parser.js",
+    "/assets/criminal-defense/js/criminal-defense.js": "/assets/criminal-defense/js/criminal-defense.js"
 }

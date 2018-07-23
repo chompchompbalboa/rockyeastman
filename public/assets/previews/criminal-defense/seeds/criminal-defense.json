@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "theme": "criminal-defense",
+    "version": "0.0.0"
+  },
+  "config": {
+    "urlPath": "/preview/criminal-defense"
+  },
+  "styles": {
+    "colors": {
+      "primary": "rgba(49,67,107,1)",
+      "primaryDark": "rgba(37,50,80,1)",
+      "secondary": "rgba(48,173,221,1)"
+    },
+    "layout": {
+      "breakpoints": {
+        "tabletUp": 1024,
+        "tabletUpString": "min-width: 1024px"
+      },
+      "navigationHeightDesktop": 15,
+      "navigationHeightMobile": 10
+    }
+  },
+  "head": {
+  },
+  "pages": {
+    "home": {
+      "splash": {
+        "img": "/assets/previews/criminal-defense/img/arrest.jpg",
+        "text": [
+          "Aggressive, Experienced",
+          "Criminal Defense"
+        ]
+      },
+      "practiceAreas": {
+        "header": "Get outstanding representation in Western Washington",
+        "practiceAreas": [
+          {
+            "header": "Domestic Violence",
+            "blurb": "From spousal abuse to kidnapping, our firm offers exceptional domestic violence representation. Eric Schurman is very experienced in this field and can help you through this difficult time."
+          },
+          {
+            "header": "Drug Crimes",
+            "blurb": "When you’re being accused of a drug crime, let us provide the criminal defense you require. Our attorney represents clients for petty drug possession, serious intent to distribute, and smugglings."
+          },
+          {
+            "header": "Vehicular Crimes",
+            "blurb": "A DUI or DWI can ruin your life. Call on Eric Schurman for aggressive legal representation in your traffic law case. He researches each case extensively to ensure the best results."
+          }
+        ],
+        "consultation": {
+          "blurb": "Since 1999, Eric Schurman has successfully defended clients throughout Western Washington. With aggressive and experienced legal representation, you will be confident you will get the best results possible. Choose Eric Schurman, Attorney at Law, to defend you against your criminal charge. Because arrests and criminal charges do not arise only during business hours, Eric Schurman is available 24 hours a day, 7 days a week for emergency consultation.",
+          "phone": "(206) 264-2979"
+        }
+      },
+      "about": {
+        "backgroundImage": "/assets/previews/criminal-defense/img/seattle.jpg",
+        "header": "About The Firm",
+        "details": [
+          {
+            "header": "Personalized Service",
+            "blurb": "What sets Eric apart from the rest of the industry is his dedication to personalized service.  Eric is available to his clients anytime.  He is happy to answer questions as they arise, and understands not all problems occur between 9 and 5, and is available after hours and weekends.  He’ll take your problems from you and make them his mission to solve."
+          },
+          {
+            "header": "Affordable Defense",
+            "blurb": "Superlative criminal defense doesn’t have to be expensive.  Eric’s affordable flat fee includes the personalized service you deserve and is far less costly than going without an experienced defense attorney or an overworked public defender, who could cost you your freedom, a criminal record, and excessive court fines and fees."
+          },
+          {
+            "header": "Extensive Experience",
+            "blurb": "Eric will help you navigate though the intimidating legal process.  He understands that being charged with a crime can cause anxiety, stress, even depression.  Eric is dedicated to providing aggressive and exceptional legal representation and has vast experience examining defense cases from all angles."
+          }
+        ],
+        "highlight": {
+          "img": "/assets/previews/criminal-defense/img/headshot.png",
+          "blurb": "Eric Schurman founded his law practice in 1999 on the principle that every person has the right to exceptional legal representation when charged with a crime.  The Washington State court system can be overwhelming and confusing without experience legal representation.  Eric will be your personal advocate, fighting for your constitutional rights and advocating for the best possible outcome."
+        }
+      },
+      "faqs": {
+        "questions": [
+          {
+            "question": "I was just arrested for a DUI. What's my first step?",
+            "answer": "Washington DUI and DWI laws are very strict, so it is important that you understand the long-term consequences of prosecution. You not only face long-term and permanent consequences on your record, but you could face even stiffer penalties enforced by society. If you are successfully prosecuted for a DUI or DWI offense, you will lose your license to drive and experience very large fines and court costs, probation, and incarceration in county jail or state prison. The court system even has the legal right to install an ignition interlock device in your vehicle at your cost."
+          },
+          {
+            "question": "My family member is under investigation for a serious drug crime. What can we do to?",
+            "answer": "The best decision you will make is to hire a lawyer that is highly educated on each of the drug laws in Washington. If you have been charged with a serious narcotics crime, your criminal defense attorney is the only person that can protect you from the punishment you will receive if convicted of a drug crime. \n\nEric Schurman has defended drug dealing or possessing clients charged with petty drug possession and serious intent to distribute, as well as large-scale drug offenders running meth labs and marijuana growth operations. Through the years, many cases have resulted in court-approved drug treatment programs, probation, and house arrest. When necessary, Mr. Schurman does handle probation violations."
+          },
+          {
+            "question": "What should I do if I was arrested for a domestic violence charge?",
+            "answer": "Physical abuse of a spouse, domestic partner, family member, or anyone you share a home with is a criminal act.  If you or someone you know was arrested for domestic violence, a domestic violence charge which leads prosecution is inevitable. \n\nSchurman Law can help you navigate through the complex and confusing Washington State court system, which is exceptionally tough on domestic violence. Eric will defend your constitutional rights and intervene in the prosecution process to minimize or eliminate additional jail time and court fees, can reduce your bail amount, and can work with the system to reduce or dismiss the charge, which can have long-lasting and expensive consequences throughout your life."
+          }
+        ]
+      },
+      "contact": {
+        "header": "Contact Eric",
+        "blurb": "When your freedom and reputation are at stake, you need an aggressive, experienced, and effective criminal law attorney to defend you. Eric Schurman has more than 19 years of trial experience, so you can trust him to provide the best defense for your case.",
+        "phone": "(206) 264-2979",
+        "email": "eric@schurmanlaw.com",
+        "address": "119 1st Avenue South, Suite 500, Seattle WA 98104"
+      }
+    }
+  },
+  "blocks": {
+    "nav": {
+      "logo": {
+        "type": "text",
+        "text": {
+          "name": "Eric Schurman",
+          "tag": "Criminal Defense",
+          "phone": "(206) 264-2979"
+        },
+        "img": "/assets/previews/criminal-defense/img/logo_white.png"
+      },
+      "links": [
+        {"text": "Home", "slug": ""},
+        {"text": "Domestic Violence", "slug": "domestic-violence"},
+        {"text": "Drug Crimes", "slug": "drug-crimes"},
+        {"text": "DUI/Vehicular Crimes", "slug": "vehicular-crimes"},
+        {"text": "About Eric Schurman", "slug": "about"}
+      ]
+    },
+    "footer": {}
+  }
+}

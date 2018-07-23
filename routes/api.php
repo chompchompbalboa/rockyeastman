@@ -32,6 +32,11 @@ $rockyeastman = function() {
     Route::get('/quick/initial-data', 'QuickController@initialData');
     Route::put('/quick/save', 'QuickController@save');
     Route::put('/quick/status/{status}/{business}', 'QuickController@updateStatus');
+
+    Route::any('/editor/initial-data', 'EditorController@getInitialData');
+    Route::any('/editor/save/{preview?}', 'EditorController@saveData');
+
+    Route::any('/preview/initial-data', 'PreviewController@getPreviewData');
 };
 Route::group(['domain' => 'rockyeastman.com'], $rockyeastman);
 Route::group(['domain' => 'rockyeastman.local'], $rockyeastman);

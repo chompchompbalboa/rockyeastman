@@ -1,6 +1,6 @@
 {
   "meta": {
-    "template": "Maven",
+    "theme": "Maven",
     "version": "0.0.0"
   },
   "head": {
