@@ -59,14 +59,6 @@
                                                   </td>
                                               </tr>
                                               <tr style="box-sizing: border-box;">
-                                                  <td style="box-sizing: border-box; padding: 0px;">
-                                                    <span style="box-sizing: border-box; font-weight: 600; color: rgb(61, 133, 198);">
-                                                      A:
-                                                    </span>
-                                                    2126 SW 114th St, Seattle, WA 98146
-                                                  </td>
-                                              </tr>
-                                              <tr style="box-sizing: border-box;">
                                                   <td style="box-sizing: border-box; padding: 8px 0px 0px;">
                                                     <a href="http://rockyeastman.com/" style="box-sizing: border-box; background-color: transparent; color: rgb(61, 133, 198);">
                                                       rockyeastman.com
